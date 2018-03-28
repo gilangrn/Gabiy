@@ -26,7 +26,7 @@
 							<p class="d-none">fullscreen</p>
 						</a>
 					</li>
-					<li class="dropdown nav-item">
+					<!-- <li class="dropdown nav-item">
 						<a id="dropdownBasic3" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle">
 							<i class="ft-flag font-medium-3 blue-grey darken-4"></i>
 							<span class="selected-language d-none"></span>
@@ -49,8 +49,8 @@
 								<span> French</span>
 							</a>
 						</div>
-					</li>
-					<li class="dropdown nav-item">
+					</li> -->
+					<!-- <li class="dropdown nav-item">
 						<a id="dropdownBasic2" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle">
 							<i class="ft-bell font-medium-3 blue-grey darken-4"></i>
 							<span class="notification badge badge-pill badge-danger">4</span>
@@ -89,7 +89,7 @@
 							</div>
 							<a class="noti-footer primary text-center d-block border-top border-top-blue-grey border-top-lighten-4 text-bold-400 py-1">Read All Notifications</a>
 						</div>
-					</li>
+					</li> -->
 					<li class="dropdown nav-item">
 						<a id="dropdownBasic3" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle">
 							<i class="ft-user font-medium-3 blue-grey darken-4"></i>
