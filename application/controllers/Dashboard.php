@@ -20,6 +20,11 @@ class Dashboard extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->view('head');
+		$this->load->view('leftmenu');
 		$this->load->view('dashboard');
+		$this->load->view('rightmenu');
+		$this->load->view('settingmenu');
+		$this->load->view('js');
 	}
 }
