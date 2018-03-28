@@ -22,6 +22,7 @@ class Dashboard extends CI_Controller {
 	{
 		$this->load->view('head');
 		$this->load->view('leftmenu');
+		$this->load->view('headmenu');
 		$this->load->view('dashboard');
 		$this->load->view('rightmenu');
 		$this->load->view('settingmenu');
