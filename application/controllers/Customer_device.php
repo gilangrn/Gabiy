@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Customers_device extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -23,7 +23,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('head');
 		$this->load->view('leftmenu');
 		$this->load->view('headmenu');
-		$this->load->view('dashboard');
+		$this->load->view('customers_device');
 		$this->load->view('rightmenu');
 		$this->load->view('settingmenu');
 		$this->load->view('js');

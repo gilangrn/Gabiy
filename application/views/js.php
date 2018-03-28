@@ -1,4 +1,3 @@
-
 <!-- BEGIN VENDOR JS-->
 <script src="assets/vendors/js/core/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="assets/vendors/js/core/popper.min.js" type="text/javascript"></script>
