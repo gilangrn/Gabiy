@@ -1,4 +1,4 @@
-<body data-col="2-columns" class=" 2-columns ">
+<body data-col="2-columns" class=" 2-columns " onload="startTime()">
 	<!-- ////////////////////////////////////////////////////////////////////////////-->
 	<div class="wrapper nav-collapsed menu-collapsed">
 		<!-- main menu-->
@@ -28,19 +28,19 @@
 			<div class="sidebar-content">
 				<div class="nav-container">
 					<ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
-						<li class="active nav-item">
+						<li class="<?php if($this->uri->segment(1)=="dashboard"){echo 'active';}?> nav-item">
 							<a href="<?php echo site_url('dashboard')?>">
 								<i class="ft-home"></i>
 								<span data-i18n="" class="menu-title">Dashboard</span>
 							</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item <?php if($this->uri->segment(1)=="customers"){echo 'active';}?>">
 							<a href="<?php echo site_url('customers')?>">
 								<i class="ft-users"></i>
 								<span data-i18n="" class="menu-title">Customers</span>
 							</a>
 						</li>
-						<li class=" nav-item">
+						<li class="<?php if($this->uri->segment(1)=="customer_device"){echo 'active';}?> nav-item">
 							<a href="<?php echo site_url('customer_device')?>">
 								<i class="ft-monitor"></i>
 								<span data-i18n="" class="menu-title">Customer Device</span>
