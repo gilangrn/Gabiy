@@ -30,6 +30,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/vendors/css/prism.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendors/css/chartist.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendors/css/tables/datatable/datatables.min.css">
+	<link rel="stylesheet" type="text/css" href="app-assets/vendors/css/sweetalert2.min.css">
 	<!-- END VENDOR CSS-->
 	<!-- BEGIN APEX CSS-->
 	<link rel="stylesheet" type="text/css" href="assets/css/app.css">

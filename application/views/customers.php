@@ -193,6 +193,9 @@
                               </div>
                             </div>
                           </div>
+                          <section id="action-option">
+                            <button type="button" class="btn btn-primary btn-raised btn-block" id="confirm-text" >Delete</button>
+                          </section>
                           <a class="danger p-0" data-original-title="" title="">
                             <i class="ft-x font-medium-3 mr-2"></i>
                           </a>
@@ -213,3 +216,5 @@
 <footer class="footer footer-static footer-light">
   <p class="clearfix text-muted text-sm-center px-2"><span>Copyright  &copy; 2018 <a href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" id="pixinventLink" target="_blank" class="text-bold-800 primary darken-2">PIXINVENT </a>, All rights reserved. </span></p>
 </footer>
+</div>
+</div>
