@@ -9,11 +9,11 @@
 							<div class="card-block pt-2 pb-0">
 								<div class="media">
 									<div class="media-body white text-left">
-										<h3 class="font-large-1 mb-0">$2156</h3>
-										<span>Total Tax</span>
+										<h3 class="font-large-1 mb-0" id="txt"></h3>
+										<span>Uptime Status</span>
 									</div>
 									<div class="media-right white text-right">
-										<i class="icon-pie-chart font-large-1"></i>
+										<i class="icon-bulb font-large-1"></i>
 									</div>
 								</div>
 							</div>
@@ -28,11 +28,11 @@
 							<div class="card-block pt-2 pb-0">
 								<div class="media">
 									<div class="media-body white text-left">
-										<h3 class="font-large-1 mb-0">$1567</h3>
-										<span>Total Cost</span>
+										<h3 class="font-large-1 mb-0">12</h3>
+										<span>Active User</span>
 									</div>
 									<div class="media-right white text-right">
-										<i class="icon-bulb font-large-1"></i>
+										<i class="ft-user font-large-1"></i>
 									</div>
 								</div>
 							</div>
