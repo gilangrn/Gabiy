@@ -25,7 +25,7 @@ class Customers extends CI_Controller {
 		$this->load->view('headmenu');
 		$this->load->view('customers');
 		$this->load->view('rightmenu');
-		$this->load->view('settingmenu');
+		/*$this->load->view('settingmenu');*/
 		$this->load->view('js');
 	}
 }
