@@ -11,7 +11,6 @@
               </div>
               <div class="card-body collapse show">
                 <div class="card-block card-dashboard">
-                  <p class="card-text">Scroll - horizontal DataTables has the ability to show tables with horizontal scrolling, which is very useful for when you have a wide table, but want to constrain it to a limited horizontal display area. To enable x-scrolling simply set the scrollX parameter to be whatever you want the container wrapper's width to be (this should be 100% in almost all cases with the width being constrained by the container element).</p>
                   <table class="table display nowrap table-striped table-bordered scroll-horizontal">
                     <thead>
                       <tr>
@@ -161,7 +160,7 @@
           </div>
         </div>
       </section>
-      <!--/ Scroll - horizontal table -->
+      <!--Table customer -->
     </div>
   </div>
   <footer class="footer footer-static footer-light">
