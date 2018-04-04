@@ -28,40 +28,44 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>C-1</td>
-                        <td>Nixon</td>
-                        <td>192.168.100.1</td>
-                        <td>0210229212</td>
-                        <td>email@gmail.com</td>
-                        <td>Jl. Lorem ipsueiciendis dolores!</td>
-                        <td><!-- tombol edit -->
-                          <a class="success p-0" data-toggle="modal" data-target="#editModalForm" data-original-title="" title="">
-                            <i class="ft-edit-2 font-medium-3 mr-2"></i>
-                          </a>
-                          <a class="danger p-0 btn" id="action-option" data-original-title="" title="">
-                            <i class="ft-x font-medium-3 mr-2" id="deletecustomer"></i>
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>C-2</td>
-                        <td>Nixon</td>
-                        <td>192.168.100.1</td>
-                        <td>0210229212</td>
-                        <td>email@gmail.com</td>
-                        <td> vero reiciendis dolores!</td>
-                        <td><!-- tombol edit -->
-                          <a class="success p-0" data-toggle="modal" data-target="#editModalForm" data-original-title="" title="">
-                            <i class="ft-edit-2 font-medium-3 mr-2"></i>
-                          </a>
-                          <a class="danger p-0 btn" id="action-option" data-original-title="" title="">
-                            <i class="ft-x font-medium-3 mr-2" id="deletecustomer"></i>
-                          </a>
-                        </td>
-                      </tr>
+                      <?php
+                      foreach ($customer->result_array() as $u): 
+                        $customer_id=$u['customer_id'];
+                        $name=$u['name'];
+                        $ip_address=$u['ip_address'];
+                        $contact_person=$u['contact_person'];
+                        $email=$u['email'];
+                        $address=$u['address'];
+                        ?>
+                        <tr>
+                          <td>
+                            <?php echo $customer_id; ?>
+                          </td>
+                          <td>
+                            <?php echo $name; ?>
+                          </td>
+                          <td>
+                            <?php echo $ip_address; ?>
+                          </td>
+                          <td>
+                            <?php echo $contact_person; ?>
+                          </td>
+                          <td>
+                            <?php echo $email; ?>
+                          </td>
+                          <td>
+                            <?php echo $address; ?>
+                          </td>
+                          <td><!-- tombol edit -->
+                            <a class="success p-0" data-toggle="modal" data-target="#editForm" data-original-title="" title="">
+                              <i class="ft-edit-2 font-medium-3 mr-2"></i>
+                            </a>
+                            <a class="danger p-0 btn" id="action-option" data-original-title="" title="">
+                              <i class="ft-x font-medium-3 mr-2" id="deletecustomer"></i>
+                            </a>
+                          </td>
+                        </tr>
+                      <?php endforeach;?>
                     </tbody>
                   </table>
                   <!-- modal edit customer -->
