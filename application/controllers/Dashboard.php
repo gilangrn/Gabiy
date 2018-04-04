@@ -26,7 +26,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('headmenu');
 		$this->load->view('dashboard');
 		$this->load->view('rightmenu');
-		$this->load->view('settingmenu');
+		$this->load->view('settingtheme');
 		$this->load->view('js');
 	}
 }

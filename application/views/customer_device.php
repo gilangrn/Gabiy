@@ -7,7 +7,7 @@
             <div class="card">
               <div class="card-header">
                 <div class="pull-left">
-                  <span style="font-size: 25px;">Table Customer</span>
+                  <span style="font-size: 25px;">Table Customer Device</span>
                 </div>
                 <div class="pull-right">
                   <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#tambahModalForm"><i class="ft-user-plus"></i> Add Customer</button>
@@ -19,46 +19,41 @@
                     <thead>
                       <tr>
                         <th>No</th>
+                        <th>Device Type</th>
                         <th>Customer ID</th>
-                        <th>Nama</th>
-                        <th>IP Address</th>
-                        <th>Contact Person</th>
-                        <th>Email</th>
-                        <th>Alamat</th>
+                        <th>Device ID</th>
+                        <th>Device Alias</th>
+                        <th>PIN</th>
+                        <th>Description</th>
+                        <th>Keyword</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <?php
-                      foreach ($customer->result_array() as $u): 
-                        $customer_id=$u['customer_id'];
-                        $name=$u['name'];
-                        $ip_address=$u['ip_address'];
-                        $contact_person=$u['contact_person'];
-                        $email=$u['email'];
-                        $address=$u['address'];
-                        ?>
                         <tr>
                           <td>
-
+                            1
                           </td>
                           <td>
-                            <?php echo $customer_id; ?>
+                            C-002
                           </td>
                           <td>
-                            <?php echo $name; ?>
+                            asoy
                           </td>
                           <td>
-                            <?php echo $ip_address; ?>
+                            192.192.120.1
                           </td>
                           <td>
-                            <?php echo $contact_person; ?>
+                            0892121313
                           </td>
                           <td>
-                            <?php echo $email; ?>
+                            test@gmail.com
                           </td>
                           <td>
-                            <?php echo $address; ?>
+                            jakabar
+                          </td>
+                          <td>
+                            asda
                           </td>
                           <td><!-- tombol edit -->
                             <a class="success p-0" data-toggle="modal" data-target="#editModalForm" data-original-title="" title="">
@@ -69,7 +64,6 @@
                             </a>
                           </td>
                         </tr>
-                      <?php endforeach;?>
                     </tbody>
                   </table>
                 </div>
