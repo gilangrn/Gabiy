@@ -77,8 +77,8 @@
                               </div>
                             </div>
                           </div>
-                          <a class="danger p-0" data-original-title="" title="">
-                            <i class="ft-x font-medium-3 mr-2"></i>
+                          <a class="danger p-0 btn" id="action-option" data-original-title="" title="">
+                            <i class="ft-x font-medium-3 mr-2" id="confirm-cancel"></i>
                           </a>
                         </td>
                       </tr>
@@ -135,8 +135,8 @@
                               </div>
                             </div>
                           </div>
-                          <a class="danger p-0" data-original-title="" title="">
-                            <i class="ft-x font-medium-3 mr-2"></i>
+                          <a class="danger p-0 btn" id="action-option" data-original-title="" title="">
+                            <i class="ft-x font-medium-3 mr-2" id="confirm-cancel"></i>
                           </a>
                         </td>
                       </tr>
@@ -193,11 +193,8 @@
                               </div>
                             </div>
                           </div>
-                          <section id="action-option">
-                            <button type="button" class="btn btn-primary btn-raised btn-block" id="confirm-text" >Delete</button>
-                          </section>
-                          <a class="danger p-0" data-original-title="" title="">
-                            <i class="ft-x font-medium-3 mr-2"></i>
+                          <a class="danger p-0 btn" id="action-option" data-original-title="" title="">
+                            <i class="ft-x font-medium-3 mr-2" id="confirm-cancel"></i>
                           </a>
                         </td>
                       </tr>
