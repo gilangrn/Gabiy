@@ -1,5 +1,4 @@
 <body data-col="2-columns" class=" 2-columns " onload="startTime()">
-	<!-- ////////////////////////////////////////////////////////////////////////////-->
 	<div class="wrapper nav-collapsed menu-collapsed">
 		<!-- main menu-->
 		<!--.main-menu(class="#{menuColor} #{menuOpenType}", class=(menuShadow == true ? 'menu-shadow' : ''))-->
@@ -28,7 +27,7 @@
 			<div class="sidebar-content">
 				<div class="nav-container">
 					<ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
-						<li class="<?php if($this->uri->segment(1)=="dashboard"){echo 'active';}?> nav-item">
+						<li class="nav-item <?php if($this->uri->segment(1)=="dashboard"){echo 'active';}?>">
 							<a href="<?php echo site_url('dashboard')?>">
 								<i class="ft-home"></i>
 								<span data-i18n="" class="menu-title">Dashboard</span>
@@ -40,8 +39,8 @@
 								<span data-i18n="" class="menu-title">Customers</span>
 							</a>
 						</li>
-						<li class="<?php if($this->uri->segment(1)=="customer_device"){echo 'active';}?> nav-item">
-							<a href="<?php echo site_url('customer_device')?>">
+						<li class="nav-item <?php if($this->uri->segment(1)=="customerdevice"){echo 'active';}?>">
+							<a href="<?php echo site_url('customerdevice')?>">
 								<i class="ft-monitor"></i>
 								<span data-i18n="" class="menu-title">Customer Device</span>
 							</a>
