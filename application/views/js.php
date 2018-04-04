@@ -9,6 +9,7 @@
 <script src="assets/vendors/js/pace/pace.min.js" type="text/javascript"></script>
 <!-- BEGIN VENDOR JS-->
 <!-- BEGIN PAGE VENDOR JS-->
+<script src="assets/vendors/js/sweetalert2.min.js" type="text/javascript"></script>
 <script src="assets/vendors/js/chartist.min.js" type="text/javascript"></script>
 <script src="assets/vendors/js/datatable/datatables.min.js" type="text/javascript"></script>
 <!-- END PAGE VENDOR JS-->
@@ -18,6 +19,7 @@
 <script src="assets/js/customizer.js" type="text/javascript"></script>
 <!-- END APEX JS-->
 <!-- BEGIN PAGE LEVEL JS-->
+<script src="assets/js/sweet-alerts.js" type="text/javascript"></script>
 <script src="assets/js/data-tables/datatable-basic.js" type="text/javascript"></script>
 <script src="assets/js/dashboard1.js" type="text/javascript"></script>
 <script src="assets/js/components-modal.min.js" type="text/javascript"></script>
@@ -33,7 +35,7 @@
 		m = checkTime(m);
 		s = checkTime(s);
 		document.getElementById('txt').innerHTML =
-			h + ":" + m + ":" + s;
+		h + ":" + m + ":" + s;
 		var t = setTimeout(startTime, 500);
 	}
 
