@@ -35,50 +35,8 @@
                           <a class="success p-0" data-toggle="modal" data-target="#editForm" data-original-title="" title="">
                             <i class="ft-edit-2 font-medium-3 mr-2"></i>
                           </a>
-                          <!-- modal edit -->
-                          <div class="modal fade text-left" id="editForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h3 class="modal-title" id="myModalLabel35"> Modal Title</h3>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <!-- form modal -->
-                                <form>
-                                  <div class="modal-body">
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="nama">Nama</label>
-                                      <input type="text" class="form-control" id="nama" placeholder="Nama Customer">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="ipaddress">IP Address</label>
-                                      <input type="text" class="form-control" id="ipaddress" placeholder="IP Address">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="contact">Contact</label>
-                                      <input type="text" class="form-control" id="contact" placeholder="Contact Person Customer">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="email">Email Address</label>
-                                      <input type="text" class="form-control" id="email" placeholder="Email Address">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="alamat">Alamat</label>
-                                      <textarea class="form-control" id="alamat" rows="3" placeholder="Alamat"></textarea>
-                                    </fieldset>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-                                    <input type="submit" class="btn btn-outline-primary btn-lg" value="Edit">
-                                  </div>
-                                </form>
-                              </div>
-                            </div>
-                          </div>
                           <a class="danger p-0 btn" id="action-option" data-original-title="" title="">
-                            <i class="ft-x font-medium-3 mr-2" id="confirm-cancel"></i>
+                            <i class="ft-x font-medium-3 mr-2" id="deletecustomer"></i>
                           </a>
                         </td>
                       </tr>
@@ -93,50 +51,8 @@
                           <a class="success p-0" data-toggle="modal" data-target="#editForm" data-original-title="" title="">
                             <i class="ft-edit-2 font-medium-3 mr-2"></i>
                           </a>
-                          <!-- modal edit -->
-                          <div class="modal fade text-left" id="editForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h3 class="modal-title" id="myModalLabel35"> Modal Title</h3>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <!-- form modal -->
-                                <form>
-                                  <div class="modal-body">
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="nama">Nama</label>
-                                      <input type="text" class="form-control" id="nama" placeholder="Nama Customer">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="ipaddress">IP Address</label>
-                                      <input type="text" class="form-control" id="ipaddress" placeholder="IP Address">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="contact">Contact</label>
-                                      <input type="text" class="form-control" id="contact" placeholder="Contact Person Customer">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="email">Email Address</label>
-                                      <input type="text" class="form-control" id="email" placeholder="Email Address">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="alamat">Alamat</label>
-                                      <textarea class="form-control" id="alamat" rows="3" placeholder="Alamat"></textarea>
-                                    </fieldset>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-                                    <input type="submit" class="btn btn-outline-primary btn-lg" value="Edit">
-                                  </div>
-                                </form>
-                              </div>
-                            </div>
-                          </div>
                           <a class="danger p-0 btn" id="action-option" data-original-title="" title="">
-                            <i class="ft-x font-medium-3 mr-2" id="confirm-cancel"></i>
+                            <i class="ft-x font-medium-3 mr-2" id="deletecustomer"></i>
                           </a>
                         </td>
                       </tr>
@@ -151,55 +67,55 @@
                           <a class="success p-0" data-toggle="modal" data-target="#editForm" data-original-title="" title="">
                             <i class="ft-edit-2 font-medium-3 mr-2"></i>
                           </a>
-                          <!-- modal edit -->
-                          <div class="modal fade text-left" id="editForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h3 class="modal-title" id="myModalLabel35"> Modal Title</h3>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <!-- form modal -->
-                                <form>
-                                  <div class="modal-body">
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="nama">Nama</label>
-                                      <input type="text" class="form-control" id="nama" placeholder="Nama Customer">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="ipaddress">IP Address</label>
-                                      <input type="text" class="form-control" id="ipaddress" placeholder="IP Address">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="contact">Contact</label>
-                                      <input type="text" class="form-control" id="contact" placeholder="Contact Person Customer">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="email">Email Address</label>
-                                      <input type="text" class="form-control" id="email" placeholder="Email Address">
-                                    </fieldset>
-                                    <fieldset class="form-group floating-label-form-group">
-                                      <label for="alamat">Alamat</label>
-                                      <textarea class="form-control" id="alamat" rows="3" placeholder="Alamat"></textarea>
-                                    </fieldset>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-                                    <input type="submit" class="btn btn-outline-primary btn-lg" value="Edit">
-                                  </div>
-                                </form>
-                              </div>
-                            </div>
-                          </div>
                           <a class="danger p-0 btn" id="action-option" data-original-title="" title="">
-                            <i class="ft-x font-medium-3 mr-2" id="confirm-cancel"></i>
+                            <i class="ft-x font-medium-3 mr-2" id="deletecustomer"></i>
                           </a>
                         </td>
                       </tr>
                     </tbody>
                   </table>
+                </div>
+              </div>
+              <!-- modal edit -->
+              <div class="modal fade text-left" id="editForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title" id="myModalLabel35"> Modal Title</h3>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <!-- form modal -->
+                    <form>
+                      <div class="modal-body">
+                        <fieldset class="form-group floating-label-form-group">
+                          <label for="nama">Nama</label>
+                          <input type="text" class="form-control" id="nama" placeholder="Nama Customer">
+                        </fieldset>
+                        <fieldset class="form-group floating-label-form-group">
+                          <label for="ipaddress">IP Address</label>
+                          <input type="text" class="form-control" id="ipaddress" placeholder="IP Address">
+                        </fieldset>
+                        <fieldset class="form-group floating-label-form-group">
+                          <label for="contact">Contact</label>
+                          <input type="text" class="form-control" id="contact" placeholder="Contact Person Customer">
+                        </fieldset>
+                        <fieldset class="form-group floating-label-form-group">
+                          <label for="email">Email Address</label>
+                          <input type="text" class="form-control" id="email" placeholder="Email Address">
+                        </fieldset>
+                        <fieldset class="form-group floating-label-form-group">
+                          <label for="alamat">Alamat</label>
+                          <textarea class="form-control" id="alamat" rows="3" placeholder="Alamat"></textarea>
+                        </fieldset>
+                      </div>
+                      <div class="modal-footer">
+                        <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
+                        <input type="submit" class="btn btn-outline-primary btn-lg" value="Edit">
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
