@@ -6,8 +6,12 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title">Scroll - horizontal</h4>
-                <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary text-right btn-min-width" data-toggle="modal" data-target="#tambahModalForm"><i class="ft-user-plus"></i> Add Customer</button>
+                <div class="pull-left">
+                  <span style="font-size: 25px;">Table Customer</span>
+                </div>
+                <div class="pull-right">
+                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#tambahModalForm"><i class="ft-user-plus"></i> Add Customer</button>
+                </div>
               </div>
               <div class="card-body collapse show">
                 <div class="card-block card-dashboard">
