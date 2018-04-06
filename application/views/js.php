@@ -46,6 +46,52 @@
 	}
 
 </script>
+<script>
+	$(document).ready(function () {
+	// Delete Customer
+	$('#deleteCustomer').on('click', function () {
+		swal({
+			title: 'Delete Customer?',
+			type: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#0CC27E',
+			cancelButtonColor: '#FF586B',
+			confirmButtonText: 'Delete',
+			cancelButtonText: 'Cancel',
+			confirmButtonClass: 'btn btn-success btn-raised mr-5',
+			cancelButtonClass: 'btn btn-danger btn-raised',
+			buttonsStyling: false
+		}).then(function () {
+			swal(
+				'Deleted!',
+				'Success delete customer'
+				)
+		})
+	});
+
+	// Delete Device
+	$('#deleteDevice').on('click', function () {
+		swal({
+			title: 'Delete Device?',
+			type: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#0CC27E',
+			cancelButtonColor: '#FF586B',
+			confirmButtonText: 'Delete',
+			cancelButtonText: 'Cancel',
+			confirmButtonClass: 'btn btn-success btn-raised mr-5',
+			cancelButtonClass: 'btn btn-danger btn-raised',
+			buttonsStyling: false
+		}).then(function () {
+			swal(
+				'Deleted!',
+				'Success delete device'
+				)
+		})
+	});
+
+});
+</script>
 </body>
 
 <!-- Mirrored from pixinvent.com/apex-angular-4-bootstrap-admin-template/html-demo-2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Mar 2018 10:55:36 GMT -->
