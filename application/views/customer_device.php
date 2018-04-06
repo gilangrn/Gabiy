@@ -19,7 +19,7 @@
                     <thead>
                       <tr>
                         <th>No</th>
-                        <th>Device Type</th>
+                        <th>Customer Device ID</th>
                         <th>Customer ID</th>
                         <th>Device ID</th>
                         <th>Device Alias</th>
