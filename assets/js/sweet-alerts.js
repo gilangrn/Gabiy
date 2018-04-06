@@ -218,46 +218,4 @@
 		}).catch(swal.noop);
 	});
 
-	// Delete Customer
-	$('#deletecustomer').on('click', function () {
-		swal({
-			title: 'Hapus Customer?',
-			type: 'warning',
-			showCancelButton: true,
-			confirmButtonColor: '#0CC27E',
-			cancelButtonColor: '#FF586B',
-			confirmButtonText: 'Yes, delete it!',
-			cancelButtonText: 'No, cancel!',
-			confirmButtonClass: 'btn btn-success btn-raised mr-5',
-			cancelButtonClass: 'btn btn-danger btn-raised',
-			buttonsStyling: false
-		}).then(function () {
-			swal(
-				'Deleted!',
-				'success delete'
-				)
-		}, function (dismiss) {
-			// dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
-			if (dismiss === 'cancel') {
-				swal(
-					'Cancelled',
-					'cancel delete'
-					)
-			}
-		})
-	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
