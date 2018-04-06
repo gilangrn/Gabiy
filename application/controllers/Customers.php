@@ -15,6 +15,7 @@ class Customers extends CI_Controller {
 		$this->load->view('menu');
 		$data['customer'] = $this->tampilcustomer_model->tampil_data_customer();
 		$this->load->view('customers',$data);
+		$this->load->view('footer');
 		$this->load->view('rightmenu');
 		/*$this->load->view('settingtheme');*/
 		$this->load->view('js');

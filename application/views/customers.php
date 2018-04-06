@@ -10,12 +10,11 @@
                   <span style="font-size: 25px;">Table Customer</span>
                 </div>
                 <div class="pull-right">
-                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addModalForm"><i class="ft-user-plus"></i> Add Customer</button>
+                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal"><i class="ft-user-plus"></i> Add Customer</button>
                 </div>
               </div>
               <div class="card-body collapse show">
-                <div class="card-block card-dashboard">
-                  <!-- <table class="table display nowrap table-striped table-bordered scroll-horizontal"> -->
+                <div class="card-block card-dashboard"><!-- <table class="table display nowrap table-striped table-bordered scroll-horizontal"> -->
                   <table class="table table-striped table-bordered dynamic-height">
                     <thead>
                       <tr>
@@ -63,11 +62,11 @@
                           </td>
                           <td>
                             <!-- tombol edit customer-->
-                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#editCustomer"><i class="ft-edit-2"></i> Edit</button>
+                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#editCustomerModal"><i class="ft-edit-2"></i> Edit</button>
                             <!-- tombol delete customer -->
-                            <button type="button" id="deleteCustomer" class="btn mr-1 mb-1 btn-danger btn-sm" data-original-title="" title=""><i class="ft-x"></i> Delete</button>
+                            <button type="button" id="deleteCustomer" class="btn mr-1 mb-1 btn-danger btn-sm"><i class="ft-x"></i> Delete</button>
                             <!-- tombol detail customer -->
-                            <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomer" class="btn mr-1 mb-1 btn-info btn-sm"><i class="icon-info"></i> Detail</button>
+                            <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal" class="btn mr-1 mb-1 btn-info btn-sm"><i class="icon-info"></i> Detail</button>
                           </td>
                         </tr>
                       <?php endforeach;?>
@@ -78,7 +77,7 @@
 
 
               <!-- modal edit customer -->
-              <div class="modal fade text-left" id="editCustomer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+              <div class="modal fade text-left" id="editCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -135,7 +134,7 @@
 
 
               <!-- modal add new customer-->
-              <div class="modal fade text-left" id="addModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+              <div class="modal fade text-left" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -196,8 +195,4 @@
       <!--Table customer -->
     </div>
   </div>
-  <footer class="footer footer-static footer-light">
-    <p class="clearfix text-muted text-sm-center px-2"><span>Copyright  &copy; 2018 <a href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" id="pixinventLink" target="_blank" class="text-bold-800 primary darken-2">PIXINVENT </a>, All rights reserved. </span></p>
-  </footer>
 </div>
-<!-- </div> jangan diapus dulu, dikomen saja-->
