@@ -2,7 +2,7 @@
 	<div class="wrapper nav-collapsed menu-collapsed">
 		<!-- main menu-->
 		<!--.main-menu(class="#{menuColor} #{menuOpenType}", class=(menuShadow == true ? 'menu-shadow' : ''))-->
-		<div data-active-color="white" data-background-color="purple-bliss" data-image="assets/img/sidebar-bg/01.jpg" class="app-sidebar">
+		<div data-active-color="white" data-background-color="primary" data-image="assets/img/sidebar-bg/01.jpg" class="app-sidebar">
 			<!-- main menu header-->
 			<!-- Sidebar Header starts-->
 			<div class="sidebar-header">

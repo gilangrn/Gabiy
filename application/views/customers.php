@@ -1,7 +1,7 @@
 <div class="main-panel">
   <div class="main-content">
     <div class="content-wrapper">
-      <section id="horizontal">
+      <section id="scroll-dynamic"><!-- <section id="horizontal"> -->
         <div class="row">
           <div class="col-12">
             <div class="card">
@@ -15,7 +15,8 @@
               </div>
               <div class="card-body collapse show">
                 <div class="card-block card-dashboard">
-                  <table class="table display nowrap table-striped table-bordered scroll-horizontal">
+                  <!-- <table class="table display nowrap table-striped table-bordered scroll-horizontal"> -->
+                  <table class="table table-striped table-bordered dynamic-height">
                     <thead>
                       <tr>
                         <th>No</th>
@@ -61,18 +62,12 @@
                             <?php echo $address; ?>
                           </td>
                           <td>
-                            <!-- tombol edit -->
-                            <a class="success p-0" data-toggle="modal" data-target="#editModalForm" data-original-title="" title="">
-                              <i class="ft-edit-2 font-medium-3 mr-2"></i>
-                            </a>
-                            <!-- tombol delete -->
-                            <a class="danger p-0 btn" id="action-option" data-original-title="" title="">
-                              <i class="ft-x font-medium-3 mr-2" id="deletecustomer"></i>
-                            </a>
-                            <!-- tombol detail view -->
-                            <a class="info" p-0 btn data-toggle="modal" data-target="#viewModal" data-original-title="" title="">
-                              <i class="icon-info font-medium-3 mr-2"></i>
-                            </a>
+                            <!-- tombol edit customer-->
+                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#editCustomer"><i class="ft-edit-2"></i> Edit</button>
+                            <!-- tombol delete customer -->
+                            <button type="button" id="deleteCustomer" class="btn mr-1 mb-1 btn-danger btn-sm" data-original-title="" title=""><i class="ft-x"></i> Delete</button>
+                            <!-- tombol detail customer -->
+                            <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomer" class="btn mr-1 mb-1 btn-info btn-sm"><i class="icon-info"></i> Detail</button>
                           </td>
                         </tr>
                       <?php endforeach;?>
@@ -80,8 +75,10 @@
                   </table>
                 </div>
               </div>
+
+
               <!-- modal edit customer -->
-              <div class="modal fade text-left" id="editModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+              <div class="modal fade text-left" id="editCustomer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -135,6 +132,8 @@
                 </div>
               </div>
               <!-- akhir modal edit customer -->
+
+
               <!-- modal add new customer-->
               <div class="modal fade text-left" id="addModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
