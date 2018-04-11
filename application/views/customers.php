@@ -90,9 +90,9 @@
                               <i class="ft-edit-2"></i> Edit
                             </button>
                             <!-- tombol delete customer -->
-                            <button type="button" id="deleteCustomer" class="btn mr-1 mb-1 btn-danger btn-sm">
+                            <button type="button" id="" class="btn mr-1 mb-1 btn-danger btn-sm" data-toggle="modal" data-target="#modal_hapus<?php echo $customer_id;?>">
                               <i class="ft-x"></i> Delete
-                            </button>
+                            </button>                            
                             <!-- tombol detail customer -->
                             <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal" class="btn mr-1 mb-1 btn-info btn-sm">
                               <i class="icon-info"></i> Detail
@@ -290,6 +290,38 @@
                 </div>
               </div>
               <!-- akhir modal detail customer -->
+              <?php
+                foreach ($customer->result_array() as $i): 
+                $customer_id=$i['customer_id'];
+                $name=$i['name'];
+                $ip_address=$i['ip_address'];
+                $contact_person=$i['contact_person'];
+                $email=$i['email'];
+                $address=$i['address'];
+              ?>
+              <!-- ============ MODAL HAPUS CUSTOMER =============== -->
+              <div class="modal fade" id="modal_hapus<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                      <h3 class="modal-title" id="myModalLabel">Hapus Customer</h3>
+                  </div>
+                  <?php echo form_open('customers/hapus_data',array('class'=>'form-horizontal','method'=>'post')); ?>
+                      <div class="modal-body">
+                          <p>Anda yakin mau menghapus <b><?php echo $name;?></b></p>
+                      </div>
+                      <div class="modal-footer">
+                          <input type="hidden" name="customer_id" value="<?php echo $customer_id;?>">
+                          <button class="btn" data-dismiss="modal" aria-hidden="true">Tutup</button>
+                          <button id="deleteCustomer" class="btn btn-danger">Hapus</button>
+                      </div>
+                  <?php echo form_close() ?>
+                  </div>
+                  </div>
+              </div>
+              <?php endforeach;?>
+              <!--END MODAL HAPUS CUSTOMER-->
             </div>
           </div>
         </div>
