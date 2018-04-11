@@ -12,6 +12,12 @@
 <script src="assets/vendors/js/sweetalert2.min.js" type="text/javascript"></script>
 <script src="assets/vendors/js/chartist.min.js" type="text/javascript"></script>
 <script src="assets/vendors/js/datatable/datatables.min.js" type="text/javascript"></script>
+<script src="assets/vendors/js/pickadate/picker.js" type="text/javascript"></script>
+<script src="assets/vendors/js/pickadate/picker.date.js" type="text/javascript"></script>
+<script src="assets/vendors/js/pickadate/picker.time.js" type="text/javascript"></script>
+<script src="assets/vendors/js/pickadate/legacy.js" type="text/javascript"></script>
+<script src="assets/vendors/js/dragula.min.js" type="text/javascript"></script>
+<script src="assets/vendors/js/switchery.min.js" type="text/javascript"></script>
 <!-- END PAGE VENDOR JS-->
 <!-- BEGIN APEX JS-->
 <script src="assets/js/app-sidebar.js" type="text/javascript"></script>
@@ -19,10 +25,14 @@
 <script src="assets/js/customizer.js" type="text/javascript"></script>
 <!-- END APEX JS-->
 <!-- BEGIN PAGE LEVEL JS-->
+<script src="assets/js/taskboard.js" type="text/javascript"></script>
 <script src="assets/js/sweet-alerts.js" type="text/javascript"></script>
 <script src="assets/js/data-tables/datatable-basic.js" type="text/javascript"></script>
+<script src="assets/js/dashboard2.js" type="text/javascript"></script>
 <script src="assets/js/dashboard1.js" type="text/javascript"></script>
 <script src="assets/js/components-modal.min.js" type="text/javascript"></script>
+<script src="assets/js/pick-a-datetime.js" type="text/javascript"></script>
+<script src="assets/js/switch.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS-->
 
 <!-- waktu uptime -->
