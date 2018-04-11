@@ -34,6 +34,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/sweetalert2.min.css')?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/dragula.min.css')?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/switchery.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/tagging.css')?>">
 	<!-- END VENDOR CSS-->
 	<!-- BEGIN APEX CSS-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/app.css')?>">

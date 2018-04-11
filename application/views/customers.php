@@ -6,14 +6,17 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: center;">Table Customer</span>
-                <span class="col-md-6 col-sm-12 pull-right mb-2" style="font-size: 25px;text-align: center;">Date Filter</span>
-                <br>
-                <br>
-                <div class="row mt-3">
+                <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: left;">Table Customer</span>
+                <div class="pull-right">
+                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
+                    <i class="ft-user-plus"></i> Add Customer
+                  </button>
+                </div><br><br>
+                <div class="card row mt-3">
+                  <span class="col-md-12 col-sm-12 pull-right" style="font-size: 25px;text-align: left;">Date Filter</span>
                   <div class="form-group col-md-12">
                     <div class="row">
-                      <div class="input-group col-md-4 col-sm-12 mx-auto">
+                      <div class="pull-left input-group col-md-4 col-sm-12">
                         <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date Begin"/>
                         <div class="input-group-append">
                           <span class="input-group-text">
@@ -21,7 +24,7 @@
                           </span>
                         </div>
                       </div>
-                      <div class="input-group col-md-4 col-sm-12 mx-auto">
+                      <div class="pull-left input-group col-md-4 col-sm-12">
                         <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date End"/>
                         <div class="input-group-append">
                           <span class="input-group-text">
@@ -31,11 +34,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="text-center">
-                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
-                    <i class="ft-user-plus"></i> Add Customer
-                  </button>
                 </div>
               </div>
               <div class="card-body collapse show">
@@ -88,13 +86,13 @@
                           </td>
                           <td>
                             <!-- tombol edit customer-->
-                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#editCustomerModal">
+                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#modal_edit<?php echo $customer_id;?>">
                               <i class="ft-edit-2"></i> Edit
                             </button>
                             <!-- tombol delete customer -->
-                            <button type="button" id="deleteCustomer" class="btn mr-1 mb-1 btn-danger btn-sm">
+                            <button type="button" id="" class="btn mr-1 mb-1 btn-danger btn-sm" data-toggle="modal" data-target="#modal_hapus<?php echo $customer_id;?>">
                               <i class="ft-x"></i> Delete
-                            </button>
+                            </button>                            
                             <!-- tombol detail customer -->
                             <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal" class="btn mr-1 mb-1 btn-info btn-sm">
                               <i class="icon-info"></i> Detail
@@ -107,7 +105,16 @@
                 </div>
               </div>
               <!-- modal edit customer -->
-              <div class="modal fade text-left" id="editCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+              <?php
+                foreach ($customer->result_array() as $i): 
+                $customer_id=$i['customer_id'];
+                $name=$i['name'];
+                $ip_address=$i['ip_address'];
+                $contact_person=$i['contact_person'];
+                $email=$i['email'];
+                $address=$i['address'];
+              ?>
+              <div class="modal fade text-left" id="modal_edit<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -117,19 +124,25 @@
                       </button>
                     </div>
                     <!-- form modal edit customer-->
-                    <form>
+                    <?php echo form_open('customers/edit_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
                       <div class="modal-body">
                         <div class="row">
                           <div class="col-8">
                             <div class="form-group">
+                              <label>Customer Id</label>
+                              <input name="customer_id" value="<?php echo $customer_id;?>" class="form-control" type="text" placeholder="Customer Id" readonly>
+                            </div>
+                          </div>
+                          <div class="col-8">
+                            <div class="form-group">
                               <label>Full Name</label>
-                              <input type="text" class="form-control" id="name" placeholder="Customer Name">
+                              <input name="name" value="<?php echo $name;?>" class="form-control" type="text" placeholder="Full Name" required>
                             </div>
                           </div>
                           <div class="col-4">
                             <div class="form-group">
                               <label>IP Address</label>
-                              <input type="text" class="form-control" id="ipaddress" placeholder="IP Address">
+                              <input name="ip_address" value="<?php echo $ip_address;?>" class="form-control" type="text" placeholder="IP Address" required>
                             </div>
                           </div>
                         </div>
@@ -137,29 +150,32 @@
                           <div class="col-6">
                             <div class="form-group">
                               <label>Contact</label>
-                              <input type="text" class="form-control" id="contact" placeholder="Contact Person">
+                              <input name="contact_person" value="<?php echo $contact_person;?>" class="form-control" type="text" placeholder="Contact" required>
                             </div>
                           </div>
                           <div class="col-6">
                             <div class="form-group">
                               <label>Email</label>
-                              <input type="text" class="form-control" id="email" placeholder="Email Address">
+                              <input name="email" value="<?php echo $email;?>" class="form-control" type="text" placeholder="Email" required>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-group">
+                              <label>Address</label>
+                              <input name="address" value="<?php echo $address;?>" class="form-control" type="text" placeholder="Address" required>
                             </div>
                           </div>
                         </div>
-                        <fieldset class="form-group">
-                          <label for="address">Address</label>
-                          <textarea class="form-control" id="address" rows="3" placeholder="Full Address"></textarea>
-                        </fieldset>
                       </div>
                       <div class="modal-footer">
                         <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
                         <input type="submit" class="btn btn-outline-primary btn-lg" value="Edit">
                       </div>
-                    </form>
+                    <?php echo form_close() ?>
                   </div>
                 </div>
               </div>
+              <?php endforeach;?>
               <!-- akhir modal edit customer -->
               <!-- modal add new customer-->
               <div class="modal fade text-left" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
@@ -274,6 +290,38 @@
                 </div>
               </div>
               <!-- akhir modal detail customer -->
+              <?php
+                foreach ($customer->result_array() as $i): 
+                $customer_id=$i['customer_id'];
+                $name=$i['name'];
+                $ip_address=$i['ip_address'];
+                $contact_person=$i['contact_person'];
+                $email=$i['email'];
+                $address=$i['address'];
+              ?>
+              <!-- ============ MODAL HAPUS CUSTOMER =============== -->
+              <div class="modal fade" id="modal_hapus<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                      <h3 class="modal-title" id="myModalLabel">Hapus Customer</h3>
+                  </div>
+                  <?php echo form_open('customers/hapus_data',array('class'=>'form-horizontal','method'=>'post')); ?>
+                      <div class="modal-body">
+                          <p>Anda yakin mau menghapus <b><?php echo $name;?></b></p>
+                      </div>
+                      <div class="modal-footer">
+                          <input type="hidden" name="customer_id" value="<?php echo $customer_id;?>">
+                          <button class="btn" data-dismiss="modal" aria-hidden="true">Tutup</button>
+                          <button id="deleteCustomer" class="btn btn-danger">Hapus</button>
+                      </div>
+                  <?php echo form_close() ?>
+                  </div>
+                  </div>
+              </div>
+              <?php endforeach;?>
+              <!--END MODAL HAPUS CUSTOMER-->
             </div>
           </div>
         </div>
@@ -281,4 +329,3 @@
       <!--Table customer -->
     </div>
   </div>
-<!-- </div></div> -->
