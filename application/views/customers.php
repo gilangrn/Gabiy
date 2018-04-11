@@ -7,7 +7,9 @@
             <div class="card">
               <div class="card-header">
                 <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: center;">Table Customer</span>
-                <span class="col-md-6 col-sm-12 pull-right mb-2" style="font-size: 25px;text-align: center;">Date Filter</span><br><br>
+                <span class="col-md-6 col-sm-12 pull-right mb-2" style="font-size: 25px;text-align: center;">Date Filter</span>
+                <br>
+                <br>
                 <div class="row mt-3">
                   <div class="form-group col-md-12">
                     <div class="row">
@@ -86,11 +88,17 @@
                           </td>
                           <td>
                             <!-- tombol edit customer-->
-                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#editCustomerModal"><i class="ft-edit-2"></i> Edit</button>
+                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#editCustomerModal">
+                              <i class="ft-edit-2"></i> Edit
+                            </button>
                             <!-- tombol delete customer -->
-                            <button type="button" id="deleteCustomer" class="btn mr-1 mb-1 btn-danger btn-sm"><i class="ft-x"></i> Delete</button>
+                            <button type="button" id="deleteCustomer" class="btn mr-1 mb-1 btn-danger btn-sm">
+                              <i class="ft-x"></i> Delete
+                            </button>
                             <!-- tombol detail customer -->
-                            <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal" class="btn mr-1 mb-1 btn-info btn-sm"><i class="icon-info"></i> Detail</button>
+                            <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal" class="btn mr-1 mb-1 btn-info btn-sm">
+                              <i class="icon-info"></i> Detail
+                            </button>
                           </td>
                         </tr>
                       <?php endforeach;?>
@@ -98,8 +106,6 @@
                   </table>
                 </div>
               </div>
-
-
               <!-- modal edit customer -->
               <div class="modal fade text-left" id="editCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -155,8 +161,6 @@
                 </div>
               </div>
               <!-- akhir modal edit customer -->
-
-
               <!-- modal add new customer-->
               <div class="modal fade text-left" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -212,7 +216,6 @@
                 </div>
               </div>
               <!-- akhir modal add customer -->
-
               <!-- modal detail customer -->
               <div class="modal fade text-left" id="detailCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
@@ -234,9 +237,7 @@
                             <a class="nav-link active" id="profile-tab3" data-toggle="tab" href="#profile3" aria-controls="profile3" aria-expanded="false">TV</a>
                           </li>
                           <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                              Dropdown
-                            </a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                             <div class="dropdown-menu">
                               <a class="dropdown-item" id="dropdown31-tab" href="#dropdown31" data-toggle="tab" aria-controls="dropdown31" aria-expanded="true">@fat</a>
                               <a class="dropdown-item" id="dropdown32-tab" href="#dropdown32" data-toggle="tab" aria-controls="dropdown32" aria-expanded="true">@mdo</a>
@@ -273,13 +274,11 @@
                 </div>
               </div>
               <!-- akhir modal detail customer -->
-
-
             </div>
           </div>
         </div>
       </section>
       <!--Table customer -->
     </div>
-  <!-- </div>
-  </div> -->
+  </div>
+<!-- </div></div> -->
