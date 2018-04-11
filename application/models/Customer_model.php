@@ -21,7 +21,7 @@ class Customer_model extends CI_Model
 		return $hasil;
 	}
 
-	public function hapus_barang($customer_id){
+	public function hapus_data($customer_id){
         $hasil=$this->db->query("DELETE FROM customer WHERE customer_id='$customer_id'");
         return $hasil;
     }
