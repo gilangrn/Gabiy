@@ -167,19 +167,19 @@
                       </button>
                     </div>
                     <!-- form modal add customer-->
-                    <form>
+                    <?php echo form_open('customers/tambah_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
                       <div class="modal-body">
                         <div class="row">
                           <div class="col-8">
                             <div class="form-group">
                               <label>Name</label>
-                              <input type="text" class="form-control" id="name" placeholder="Customer Name">
+                              <input type="text" class="form-control" name="name" id="name" placeholder="Customer Name">
                             </div>
                           </div>
                           <div class="col-4">
                             <div class="form-group">
                               <label>IP Address</label>
-                              <input type="text" class="form-control" id="ipaddress" placeholder="IP Address">
+                              <input type="text" class="form-control" name="ip_address" id="ip_address" placeholder="IP Address">
                             </div>
                           </div>
                         </div>
@@ -187,26 +187,26 @@
                           <div class="col-6">
                             <div class="form-group">
                               <label>Contact</label>
-                              <input type="text" class="form-control" id="contact" placeholder="Contact Person">
+                              <input type="text" class="form-control" name="contact_person" id="contact_person" placeholder="Contact Person">
                             </div>
                           </div>
                           <div class="col-6">
                             <div class="form-group">
                               <label>Email</label>
-                              <input type="text" class="form-control" id="email" placeholder="Email Address">
+                              <input type="text" class="form-control" name="email" id="email" placeholder="Email Address">
                             </div>
                           </div>
                         </div>
                         <fieldset class="form-group">
                           <label for="address">Address</label>
-                          <textarea class="form-control" id="address" rows="3" placeholder="Full Address"></textarea>
+                          <textarea class="form-control" name="address" id="address" rows="3" placeholder="Full Address"></textarea>
                         </fieldset>
                       </div>
                       <div class="modal-footer">
                         <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
                         <input type="submit" class="btn btn-outline-primary btn-lg" value="Add">
                       </div>
-                    </form>
+                    <?php echo form_close() ?>
                   </div>
                 </div>
               </div>
