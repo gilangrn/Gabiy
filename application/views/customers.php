@@ -6,34 +6,36 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <div class="pull-left">
-                  <span style="font-size: 25px;">Table Customer</span><br><br>
-                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal"><i class="ft-user-plus"></i> Add Customer</button>
-                </div>
-                <div class="row text-right">
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <span style="font-size: 25px;">Date Filter</span><br><br>
-                      <div class="row pull-right">
-                        <div class="input-group col-md-6">
-                          <input type='text' class="form-control pickadate-selectors" placeholder="Date Begin"/>
-                          <div class="input-group-append">
-                            <span class="input-group-text">
-                              <span class="fa fa-calendar-o"></span>
-                            </span>
-                          </div>
+                <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: center;">Table Customer</span>
+                <span class="col-md-6 col-sm-12 pull-right mb-2" style="font-size: 25px;text-align: center;">Date Filter</span>
+                <br>
+                <br>
+                <div class="row mt-3">
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      <div class="input-group col-md-4 col-sm-12 mx-auto">
+                        <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date Begin"/>
+                        <div class="input-group-append">
+                          <span class="input-group-text">
+                            <span class="fa fa-calendar-o"></span>
+                          </span>
                         </div>
-                        <div class="input-group col-md-6">
-                          <input type='text' class="form-control pickadate-selectors" placeholder="Date End"/>
-                          <div class="input-group-append">
-                            <span class="input-group-text">
-                              <span class="fa fa-calendar-o"></span>
-                            </span>
-                          </div>
+                      </div>
+                      <div class="input-group col-md-4 col-sm-12 mx-auto">
+                        <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date End"/>
+                        <div class="input-group-append">
+                          <span class="input-group-text">
+                            <span class="fa fa-calendar-o"></span>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
+                    <i class="ft-user-plus"></i> Add Customer
+                  </button>
                 </div>
               </div>
               <div class="card-body collapse show">
@@ -53,6 +55,7 @@
                     </thead>
                     <tbody>
                       <?php
+                      $no = 1;
                       foreach ($customer->result_array() as $u): 
                         $customer_id=$u['customer_id'];
                         $name=$u['name'];
@@ -63,7 +66,7 @@
                         ?>
                         <tr>
                           <td>
-
+                            <?php echo $no++; ?>
                           </td>
                           <td>
                             <?php echo $customer_id; ?>
@@ -85,11 +88,17 @@
                           </td>
                           <td>
                             <!-- tombol edit customer-->
-                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#editCustomerModal"><i class="ft-edit-2"></i> Edit</button>
+                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#editCustomerModal">
+                              <i class="ft-edit-2"></i> Edit
+                            </button>
                             <!-- tombol delete customer -->
-                            <button type="button" id="deleteCustomer" class="btn mr-1 mb-1 btn-danger btn-sm"><i class="ft-x"></i> Delete</button>
+                            <button type="button" id="deleteCustomer" class="btn mr-1 mb-1 btn-danger btn-sm">
+                              <i class="ft-x"></i> Delete
+                            </button>
                             <!-- tombol detail customer -->
-                            <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal" class="btn mr-1 mb-1 btn-info btn-sm"><i class="icon-info"></i> Detail</button>
+                            <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal" class="btn mr-1 mb-1 btn-info btn-sm">
+                              <i class="icon-info"></i> Detail
+                            </button>
                           </td>
                         </tr>
                       <?php endforeach;?>
@@ -97,8 +106,6 @@
                   </table>
                 </div>
               </div>
-
-
               <!-- modal edit customer -->
               <div class="modal fade text-left" id="editCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -154,8 +161,6 @@
                 </div>
               </div>
               <!-- akhir modal edit customer -->
-
-
               <!-- modal add new customer-->
               <div class="modal fade text-left" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -167,57 +172,56 @@
                       </button>
                     </div>
                     <!-- form modal add customer-->
-                    <form>
-                      <div class="modal-body">
-                        <div class="row">
-                          <div class="col-8">
-                            <div class="form-group">
-                              <label>Name</label>
-                              <input type="text" class="form-control" id="name" placeholder="Customer Name">
-                            </div>
-                          </div>
-                          <div class="col-4">
-                            <div class="form-group">
-                              <label>IP Address</label>
-                              <input type="text" class="form-control" id="ipaddress" placeholder="IP Address">
-                            </div>
+                    <?php echo form_open('customers/tambah_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-8">
+                          <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Customer Name">
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="col-6">
-                            <div class="form-group">
-                              <label>Contact</label>
-                              <input type="text" class="form-control" id="contact" placeholder="Contact Person">
-                            </div>
-                          </div>
-                          <div class="col-6">
-                            <div class="form-group">
-                              <label>Email</label>
-                              <input type="text" class="form-control" id="email" placeholder="Email Address">
-                            </div>
+                        <div class="col-4">
+                          <div class="form-group">
+                            <label>IP Address</label>
+                            <input type="text" class="form-control" name="ip_address" id="ip_address" placeholder="IP Address">
                           </div>
                         </div>
-                        <fieldset class="form-group">
-                          <label for="address">Address</label>
-                          <textarea class="form-control" id="address" rows="3" placeholder="Full Address"></textarea>
-                        </fieldset>
                       </div>
-                      <div class="modal-footer">
-                        <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-                        <input type="submit" class="btn btn-outline-primary btn-lg" value="Add">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label>Contact</label>
+                            <input type="text" class="form-control" name="contact_person" id="contact_person" placeholder="Contact Person">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email Address">
+                          </div>
+                        </div>
                       </div>
-                    </form>
+                      <fieldset class="form-group">
+                        <label for="address">Address</label>
+                        <textarea class="form-control" name="address" id="address" rows="3" placeholder="Full Address"></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                      <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
+                      <input type="submit" class="btn btn-outline-primary btn-lg" value="Add">
+                    </div>
+                    <?php echo form_close() ?>
                   </div>
                 </div>
               </div>
               <!-- akhir modal add customer -->
-
               <!-- modal detail customer -->
               <div class="modal fade text-left" id="detailCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h3 class="modal-title">Detail Customer</h3>
+                      <h3 class="modal-title">Detail Device Customer</h3>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -227,15 +231,13 @@
                       <div class="justified-tabs">
                         <ul class="nav nav-tabs nav-justified">
                           <li class="nav-item">
-                            <a class="nav-link" id="home-tab3" data-toggle="tab" href="#home3" aria-controls="home3" aria-expanded="true">Home</a>
+                            <a class="nav-link" id="home-tab3" data-toggle="tab" href="#home3" aria-controls="home3" aria-expanded="true">AC</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" id="profile-tab3" data-toggle="tab" href="#profile3" aria-controls="profile3" aria-expanded="false">Profile</a>
+                            <a class="nav-link active" id="profile-tab3" data-toggle="tab" href="#profile3" aria-controls="profile3" aria-expanded="false">TV</a>
                           </li>
                           <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                              Dropdown
-                            </a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                             <div class="dropdown-menu">
                               <a class="dropdown-item" id="dropdown31-tab" href="#dropdown31" data-toggle="tab" aria-controls="dropdown31" aria-expanded="true">@fat</a>
                               <a class="dropdown-item" id="dropdown32-tab" href="#dropdown32" data-toggle="tab" aria-controls="dropdown32" aria-expanded="true">@mdo</a>
@@ -272,8 +274,6 @@
                 </div>
               </div>
               <!-- akhir modal detail customer -->
-
-
             </div>
           </div>
         </div>
@@ -281,4 +281,4 @@
       <!--Table customer -->
     </div>
   </div>
-</div>
+<!-- </div></div> -->
