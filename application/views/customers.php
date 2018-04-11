@@ -8,10 +8,10 @@
               <div class="card-header">
                 <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: center;">Table Customer</span>
                 <span class="col-md-6 col-sm-12 pull-right mb-2" style="font-size: 25px;text-align: center;">Date Filter</span><br><br>
-                <div class="row mt-1">
+                <div class="row mt-3">
                   <div class="form-group col-md-12">
                     <div class="row">
-                      <div class="input-group col-md-4 col-sm-12">
+                      <div class="input-group col-md-4 col-sm-12 mx-auto">
                         <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date Begin"/>
                         <div class="input-group-append">
                           <span class="input-group-text">
@@ -19,7 +19,7 @@
                           </span>
                         </div>
                       </div>
-                      <div class="input-group col-md-4 col-sm-12">
+                      <div class="input-group col-md-4 col-sm-12 mx-auto">
                         <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date End"/>
                         <div class="input-group-append">
                           <span class="input-group-text">
@@ -30,10 +30,11 @@
                     </div>
                   </div>
                 </div>
-                <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
-                  <i class="ft-user-plus"></i> Add Customer
-                </button>
-                
+                <div class="text-center">
+                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
+                    <i class="ft-user-plus"></i> Add Customer
+                  </button>
+                </div>
               </div>
               <div class="card-body collapse show">
                 <div class="card-block card-dashboard">
@@ -168,44 +169,44 @@
                     </div>
                     <!-- form modal add customer-->
                     <?php echo form_open('customers/tambah_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
-                      <div class="modal-body">
-                        <div class="row">
-                          <div class="col-8">
-                            <div class="form-group">
-                              <label>Name</label>
-                              <input type="text" class="form-control" name="name" id="name" placeholder="Customer Name">
-                            </div>
-                          </div>
-                          <div class="col-4">
-                            <div class="form-group">
-                              <label>IP Address</label>
-                              <input type="text" class="form-control" name="ip_address" id="ip_address" placeholder="IP Address">
-                            </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-8">
+                          <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Customer Name">
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="col-6">
-                            <div class="form-group">
-                              <label>Contact</label>
-                              <input type="text" class="form-control" name="contact_person" id="contact_person" placeholder="Contact Person">
-                            </div>
-                          </div>
-                          <div class="col-6">
-                            <div class="form-group">
-                              <label>Email</label>
-                              <input type="text" class="form-control" name="email" id="email" placeholder="Email Address">
-                            </div>
+                        <div class="col-4">
+                          <div class="form-group">
+                            <label>IP Address</label>
+                            <input type="text" class="form-control" name="ip_address" id="ip_address" placeholder="IP Address">
                           </div>
                         </div>
-                        <fieldset class="form-group">
-                          <label for="address">Address</label>
-                          <textarea class="form-control" name="address" id="address" rows="3" placeholder="Full Address"></textarea>
-                        </fieldset>
                       </div>
-                      <div class="modal-footer">
-                        <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-                        <input type="submit" class="btn btn-outline-primary btn-lg" value="Add">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label>Contact</label>
+                            <input type="text" class="form-control" name="contact_person" id="contact_person" placeholder="Contact Person">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email Address">
+                          </div>
+                        </div>
                       </div>
+                      <fieldset class="form-group">
+                        <label for="address">Address</label>
+                        <textarea class="form-control" name="address" id="address" rows="3" placeholder="Full Address"></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                      <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
+                      <input type="submit" class="btn btn-outline-primary btn-lg" value="Add">
+                    </div>
                     <?php echo form_close() ?>
                   </div>
                 </div>

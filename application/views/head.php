@@ -11,12 +11,12 @@
 	<meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
 	<meta name="author" content="PIXINVENT">
 	<title>Admin</title>
-	<link rel="apple-touch-icon" sizes="60x60" href="assets/img/ico/apple-icon-60.html">
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/ico/apple-icon-76.html">
-	<link rel="apple-touch-icon" sizes="120x120" href="assets/img/ico/apple-icon-120.html">
-	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/ico/apple-icon-152.html">
-	<link rel="shortcut icon" type="image/x-icon" href="assets/img/ico/favicon.ico">
-	<link rel="shortcut icon" type="image/png" href="assets/img/ico/favicon-32.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url('assets/img/ico/apple-icon-60.html')?>">
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url('assets/img/ico/apple-icon-76.html')?>">
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url('assets/img/ico/apple-icon-120.html')?>">
+	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url('assets/img/ico/apple-icon-152.html')?>">
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/img/ico/favicon.ico')?>">
+	<link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/img/ico/favicon-32.png')?>">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-touch-fullscreen" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
