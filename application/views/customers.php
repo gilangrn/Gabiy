@@ -88,7 +88,7 @@
                           </td>
                           <td>
                             <!-- tombol edit customer-->
-                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#editCustomerModal">
+                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#modal_edit<?php echo $customer_id;?>">
                               <i class="ft-edit-2"></i> Edit
                             </button>
                             <!-- tombol delete customer -->
@@ -107,7 +107,16 @@
                 </div>
               </div>
               <!-- modal edit customer -->
-              <div class="modal fade text-left" id="editCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+              <?php
+                foreach ($customer->result_array() as $i): 
+                $customer_id=$i['customer_id'];
+                $name=$i['name'];
+                $ip_address=$i['ip_address'];
+                $contact_person=$i['contact_person'];
+                $email=$i['email'];
+                $address=$i['address'];
+              ?>
+              <div class="modal fade text-left" id="modal_edit<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -117,19 +126,25 @@
                       </button>
                     </div>
                     <!-- form modal edit customer-->
-                    <form>
+                    <?php echo form_open('customers/edit_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
                       <div class="modal-body">
                         <div class="row">
                           <div class="col-8">
                             <div class="form-group">
+                              <label>Customer Id</label>
+                              <input name="customer_id" value="<?php echo $customer_id;?>" class="form-control" type="text" placeholder="Customer Id" readonly>
+                            </div>
+                          </div>
+                          <div class="col-8">
+                            <div class="form-group">
                               <label>Full Name</label>
-                              <input type="text" class="form-control" id="name" placeholder="Customer Name">
+                              <input name="name" value="<?php echo $name;?>" class="form-control" type="text" placeholder="Full Name" required>
                             </div>
                           </div>
                           <div class="col-4">
                             <div class="form-group">
                               <label>IP Address</label>
-                              <input type="text" class="form-control" id="ipaddress" placeholder="IP Address">
+                              <input name="ip_address" value="<?php echo $ip_address;?>" class="form-control" type="text" placeholder="IP Address" required>
                             </div>
                           </div>
                         </div>
@@ -137,29 +152,32 @@
                           <div class="col-6">
                             <div class="form-group">
                               <label>Contact</label>
-                              <input type="text" class="form-control" id="contact" placeholder="Contact Person">
+                              <input name="contact_person" value="<?php echo $contact_person;?>" class="form-control" type="text" placeholder="Contact" required>
                             </div>
                           </div>
                           <div class="col-6">
                             <div class="form-group">
                               <label>Email</label>
-                              <input type="text" class="form-control" id="email" placeholder="Email Address">
+                              <input name="email" value="<?php echo $email;?>" class="form-control" type="text" placeholder="Email" required>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-group">
+                              <label>Address</label>
+                              <input name="address" value="<?php echo $address;?>" class="form-control" type="text" placeholder="Address" required>
                             </div>
                           </div>
                         </div>
-                        <fieldset class="form-group">
-                          <label for="address">Address</label>
-                          <textarea class="form-control" id="address" rows="3" placeholder="Full Address"></textarea>
-                        </fieldset>
                       </div>
                       <div class="modal-footer">
                         <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
                         <input type="submit" class="btn btn-outline-primary btn-lg" value="Edit">
                       </div>
-                    </form>
+                    <?php echo form_close() ?>
                   </div>
                 </div>
               </div>
+              <?php endforeach;?>
               <!-- akhir modal edit customer -->
               <!-- modal add new customer-->
               <div class="modal fade text-left" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
