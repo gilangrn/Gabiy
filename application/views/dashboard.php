@@ -73,7 +73,7 @@
 				</div>
 			</div>
 			<!--info cards Ends-->
-			<div class="row">
+			<div class="row" matchHeight="card">
 				<div class="col-xl-6 col-lg-6 col-sm-6">
 					<div class="card">
 						<div class="card-header pb-0">
@@ -169,4 +169,3 @@
 			</div>
 		</div>
 	</div>
-</div>
