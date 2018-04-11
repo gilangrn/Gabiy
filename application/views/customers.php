@@ -10,12 +10,12 @@
                   <span style="font-size: 25px;">Table Customer</span><br><br>
                   <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal"><i class="ft-user-plus"></i> Add Customer</button>
                 </div>
-                <div class="row text-right">
-                  <div class="col-md-12">
+                <div class="row text-right col-sm-12">
+                  <div class="col-md-12 col-sm-12">
                     <div class="form-group">
                       <span style="font-size: 25px;">Date Filter</span><br><br>
                       <div class="row pull-right">
-                        <div class="input-group col-md-6">
+                        <div class="input-group col-md-6 col-sm-12">
                           <input type='text' class="form-control pickadate-selectors" placeholder="Date Begin"/>
                           <div class="input-group-append">
                             <span class="input-group-text">
@@ -23,7 +23,7 @@
                             </span>
                           </div>
                         </div>
-                        <div class="input-group col-md-6">
+                        <div class="input-group col-md-6 col-sm-12">
                           <input type='text' class="form-control pickadate-selectors" placeholder="Date End"/>
                           <div class="input-group-append">
                             <span class="input-group-text">
@@ -53,6 +53,7 @@
                     </thead>
                     <tbody>
                       <?php
+                      $no = 1;
                       foreach ($customer->result_array() as $u): 
                         $customer_id=$u['customer_id'];
                         $name=$u['name'];
@@ -63,7 +64,7 @@
                         ?>
                         <tr>
                           <td>
-
+                            <?php echo $no++; ?>
                           </td>
                           <td>
                             <?php echo $customer_id; ?>
@@ -217,7 +218,7 @@
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h3 class="modal-title">Detail Customer</h3>
+                      <h3 class="modal-title">Detail Device Customer</h3>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -227,10 +228,10 @@
                       <div class="justified-tabs">
                         <ul class="nav nav-tabs nav-justified">
                           <li class="nav-item">
-                            <a class="nav-link" id="home-tab3" data-toggle="tab" href="#home3" aria-controls="home3" aria-expanded="true">Home</a>
+                            <a class="nav-link" id="home-tab3" data-toggle="tab" href="#home3" aria-controls="home3" aria-expanded="true">AC</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" id="profile-tab3" data-toggle="tab" href="#profile3" aria-controls="profile3" aria-expanded="false">Profile</a>
+                            <a class="nav-link active" id="profile-tab3" data-toggle="tab" href="#profile3" aria-controls="profile3" aria-expanded="false">TV</a>
                           </li>
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -280,5 +281,5 @@
       </section>
       <!--Table customer -->
     </div>
-  </div>
-</div>
+  <!-- </div>
+  </div> -->
