@@ -15,7 +15,7 @@
                                     </button>
                                 </div>
                                 <div class="row text-right">
-                                    <div class="col-md-12">
+                                    <div class="col-md-12"> 
                                         <div class="form-group">
                                             <span style="font-size: 25px;">Date Filter</span>
                                             <br>
