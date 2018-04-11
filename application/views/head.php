@@ -23,20 +23,20 @@
 	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
 	<!-- BEGIN VENDOR CSS-->
 	<!-- font icons-->
-	<link rel="stylesheet" type="text/css" href="assets/fonts/feather/style.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/fonts/simple-line-icons/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendors/css/perfect-scrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendors/css/prism.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendors/css/pickadate/pickadate.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendors/css/chartist.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendors/css/tables/datatable/datatables.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendors/css/sweetalert2.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendors/css/dragula.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendors/css/switchery.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/fonts/feather/style.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/fonts/simple-line-icons/style.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/fonts/font-awesome/css/font-awesome.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/perfect-scrollbar.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/prism.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/pickadate/pickadate.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/chartist.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/tables/datatable/datatables.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/sweetalert2.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/dragula.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendors/css/switchery.min.css')?>">
 	<!-- END VENDOR CSS-->
 	<!-- BEGIN APEX CSS-->
-	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/app.css')?>">
 	<!-- END APEX CSS-->
 	<!-- BEGIN Page Level CSS-->
 	<!-- END Page Level CSS-->

@@ -6,35 +6,34 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <div class="pull-left">
-                  <span style="font-size: 25px;">Table Customer</span><br><br>
-                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal"><i class="ft-user-plus"></i> Add Customer</button>
-                </div>
-                <div class="row text-right col-sm-12">
-                  <div class="col-md-12 col-sm-12">
-                    <div class="form-group">
-                      <span style="font-size: 25px;">Date Filter</span><br><br>
-                      <div class="row pull-right">
-                        <div class="input-group col-md-6 col-sm-12">
-                          <input type='text' class="form-control pickadate-selectors" placeholder="Date Begin"/>
-                          <div class="input-group-append">
-                            <span class="input-group-text">
-                              <span class="fa fa-calendar-o"></span>
-                            </span>
-                          </div>
+                <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: center;">Table Customer</span>
+                <span class="col-md-6 col-sm-12 pull-right mb-2" style="font-size: 25px;text-align: center;">Date Filter</span><br><br>
+                <div class="row mt-1">
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      <div class="input-group col-md-4 col-sm-12">
+                        <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date Begin"/>
+                        <div class="input-group-append">
+                          <span class="input-group-text">
+                            <span class="fa fa-calendar-o"></span>
+                          </span>
                         </div>
-                        <div class="input-group col-md-6 col-sm-12">
-                          <input type='text' class="form-control pickadate-selectors" placeholder="Date End"/>
-                          <div class="input-group-append">
-                            <span class="input-group-text">
-                              <span class="fa fa-calendar-o"></span>
-                            </span>
-                          </div>
+                      </div>
+                      <div class="input-group col-md-4 col-sm-12">
+                        <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date End"/>
+                        <div class="input-group-append">
+                          <span class="input-group-text">
+                            <span class="fa fa-calendar-o"></span>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
+                  <i class="ft-user-plus"></i> Add Customer
+                </button>
+                
               </div>
               <div class="card-body collapse show">
                 <div class="card-block card-dashboard">
