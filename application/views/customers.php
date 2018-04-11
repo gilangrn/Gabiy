@@ -6,14 +6,17 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: center;">Table Customer</span>
-                <span class="col-md-6 col-sm-12 pull-right mb-2" style="font-size: 25px;text-align: center;">Date Filter</span>
-                <br>
-                <br>
-                <div class="row mt-3">
+                <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: left;">Table Customer</span>
+                <div class="pull-right">
+                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
+                    <i class="ft-user-plus"></i> Add Customer
+                  </button>
+                </div><br><br>
+                <div class="card row mt-3">
+                  <span class="col-md-12 col-sm-12 pull-right" style="font-size: 25px;text-align: left;">Date Filter</span>
                   <div class="form-group col-md-12">
                     <div class="row">
-                      <div class="input-group col-md-4 col-sm-12 mx-auto">
+                      <div class="pull-left input-group col-md-4 col-sm-12">
                         <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date Begin"/>
                         <div class="input-group-append">
                           <span class="input-group-text">
@@ -21,7 +24,7 @@
                           </span>
                         </div>
                       </div>
-                      <div class="input-group col-md-4 col-sm-12 mx-auto">
+                      <div class="pull-left input-group col-md-4 col-sm-12">
                         <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date End"/>
                         <div class="input-group-append">
                           <span class="input-group-text">
@@ -31,11 +34,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="text-center">
-                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
-                    <i class="ft-user-plus"></i> Add Customer
-                  </button>
                 </div>
               </div>
               <div class="card-body collapse show">
@@ -331,4 +329,3 @@
       <!--Table customer -->
     </div>
   </div>
-<!-- </div></div> -->
