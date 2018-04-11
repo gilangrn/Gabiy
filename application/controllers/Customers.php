@@ -20,4 +20,15 @@ class Customers extends CI_Controller {
 		/*$this->load->view('settingtheme');*/
 		$this->load->view('js');
 	}
+
+	public function tambah_data_customer()
+	{
+		$name			=$this->input->post('name');
+		$address 		=$this->input->post('address');
+		$contact_person	=$this->input->post('contact_person');
+		$email 			=$this->input->post('email');
+		$ip_address 	=$this->input->post('ip_address');
+		$this->tampilcustomer_model->tambah_data_customer($name,$address,$contact_person,$email,$ip_address);
+		redirect('Customers');
+	}
 }
