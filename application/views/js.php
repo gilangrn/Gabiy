@@ -35,6 +35,8 @@
 <script src="<?php echo base_url('assets/js/pick-a-datetime.js')?>" type="text/javascript"></script>
 <script src="<?php echo base_url('assets/js/switch.min.js')?>" type="text/javascript"></script>
 <script src="<?php echo base_url('assets/js/tagging.js')?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/js/tooltip.js')?>" type="text/javascript"></script>
+
 <!-- END PAGE LEVEL JS-->
 
 <!-- waktu uptime -->
