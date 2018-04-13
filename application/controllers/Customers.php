@@ -10,7 +10,7 @@ class Customers extends CI_Controller {
 		//validasi jika session dengan level customer mengakses halaman ini maka akan dialihkan ke halaman customer
 		if ($this->session->userdata('level') == "customer") {
 			redirect('customer');
-		}
+		} 
 	}
 
 		public function index()
