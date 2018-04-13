@@ -53,21 +53,29 @@
                                         <div class="card-body">
                                             <div class="card-block">
                                                 <h2 class="white">Login</h2>
-                                                <form>
+                                                <form method="POST" action="<?php echo base_url('auth/login'); ?>" role="login">
+                                                    <?php
+                                                    //menampilkan error menggunakan alert javascript
+                                                    if(isset($error)){
+                                                    echo '<script>
+                                                    alert("'.$error.'");
+                                                    </script>';
+                                                    }
+                                                    ?>
                                                     <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <input type="text" class="form-control" name="inputUsername" id="inputUsername" placeholder="Username" required >
+                                                            <input type="text" class="form-control" name="username" id="username" placeholder="Username" required >
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <input type="password" class="form-control" name="inputPass" id="inputPass" placeholder="Password" required>
+                                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
                                                         </div>
                                                     </div>
                                                     <br>
                                                     <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <button type="button" class="btn btn-pink btn-block btn-raised">Login</button>
+                                                            <button type="submit" class="btn btn-pink btn-block btn-raised">Login</button>
                                                             <button type="reset" class="btn btn-secondary btn-block btn-raised">Cancel</button>
                                                         </div>
                                                     </div>
