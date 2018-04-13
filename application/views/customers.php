@@ -12,8 +12,8 @@
                     <i class="ft-user-plus"></i> Add Customer
                   </button>
                 </div><br><br>
-                <div class="card row mt-3">
-                  <span class="col-md-12 col-sm-12 pull-right" style="font-size: 25px;text-align: left;">Date Filter</span>
+                <div class="card row pull-left">
+                  <span class="col-md-12 col-sm-12" style="font-size: 25px;">Date Filter</span><br>
                   <div class="form-group col-md-12">
                     <div class="row">
                       <div class="pull-left input-group col-md-4 col-sm-12">
