@@ -79,6 +79,9 @@
 				<div class="navbar-container">
 					<div id="navbarSupportedContent" class="collapse navbar-collapse">
 						<ul class="navbar-nav">
+							<li class="nav-item mr-2 mt-1">
+								<h4 align="center">Hello, <?php echo $username;?>!</h4>
+							</li>
 							<li class="nav-item mr-2">
 								<a id="navbar-fullscreen" href="javascript:;" class="nav-link apptogglefullscreen">
 									<i class="ft-maximize font-medium-3 blue-grey darken-4"></i>
@@ -96,7 +99,7 @@
 										<span>Edit Profile</span>
 									</a>
 									<div class="dropdown-divider"></div>
-									<a href="javascript:;" class="dropdown-item">
+									<a href="<?php echo base_url('login/keluar')?>" class="dropdown-item">
 										<i class="ft-power mr-2"></i>
 										<span>Logout</span>
 									</a>
