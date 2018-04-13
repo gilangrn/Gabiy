@@ -11,7 +11,6 @@
                   <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
                     <i class="ft-user-plus"></i> Add Customer
                   </button>
-                  <h3 align="center">Hello, <?php echo $username;?>! <button type="button" class="btn btn-info btn-sm" onclick="window.location='<?php echo base_url("login/keluar");?>'">Logout</button></h3>
                 </div><br><br>
                 <div class="card row pull-left">
                   <span class="col-md-12 col-sm-12" style="font-size: 25px;">Date Filter</span><br>
