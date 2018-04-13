@@ -80,6 +80,9 @@
 					<div id="navbarSupportedContent" class="collapse navbar-collapse">
 						<ul class="navbar-nav">
 							<li class="nav-item mr-2">
+								<h3 align="center">Hello, <?php echo $username;?>!</h3>
+							</li>
+							<li class="nav-item mr-2">
 								<a id="navbar-fullscreen" href="javascript:;" class="nav-link apptogglefullscreen">
 									<i class="ft-maximize font-medium-3 blue-grey darken-4"></i>
 									<p class="d-none">fullscreen</p>
@@ -96,7 +99,8 @@
 										<span>Edit Profile</span>
 									</a>
 									<div class="dropdown-divider"></div>
-									<a href="javascript:;" class="dropdown-item">
+									<!-- <button type="button" class="btn btn-info btn-sm" onclick="window.location='<?php echo base_url("login/keluar");?>'">Logout</button> -->
+									<a href="<?php echo base_url('login/keluar')?>" class="dropdown-item">
 										<i class="ft-power mr-2"></i>
 										<span>Logout</span>
 									</a>

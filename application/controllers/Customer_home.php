@@ -14,9 +14,9 @@ class Customer_home extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('head');
-		$this->load->view('customer/menu');
 		$data['username'] = $this->session->userdata('username');
-		$this->load->view('customer/dashboard',$data);
+		$this->load->view('customer/menu',$data);
+		$this->load->view('customer/home',$data);
 		$this->load->view('footer');
 		$this->load->view('rightmenu');
 		/*$this->load->view('settingtheme');*/
