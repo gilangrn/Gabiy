@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Home_customer extends CI_Controller {
+class Customer_home extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
