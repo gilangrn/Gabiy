@@ -161,6 +161,7 @@
 								</div>
 							</div>
 						</div>
+					<h3 align="center">Hello, <?php echo $username;?>! <button type="button" class="btn btn-info btn-sm" onclick="window.location='<?php echo base_url("login/keluar");?>'">Logout</button></h3>
 					</div>
 				</div>
 			</div>
