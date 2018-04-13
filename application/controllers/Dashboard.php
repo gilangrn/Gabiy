@@ -2,34 +2,24 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Dashboard extends CI_Controller {
 
-	public function __construct(){
+	function __construct(){
 		parent::__construct();
-
-		//memanggil function dari controller MY_Controller
-		$this->cekLogin();
-
-		//validasi jika session dengan level manager mengakses halaman ini maka akan dialihkan ke halaman manager
-    if ($this->session->userdata('level') == "admin") {
-      redirect('dashboard');
+		//redirect jika level bukan customer(2)
+		if($this->session->userdata('level') <> '1')
+		{
+			redirect('login');
+		}
 	}
-}
 
 	public function index()
 	{
 		$this->load->view('head');
 		$this->load->view('menu');
-		$this->load->view('dashboard');
+		$data['username'] = $this->session->userdata('username');
+		$this->load->view('dashboard',$data);
 		$this->load->view('footer');
 		$this->load->view('rightmenu');
 		/*$this->load->view('settingtheme');*/
 		$this->load->view('js');
-	}
-
-	public function cekLogin()
-	{
-		//Jika tidak ada session (username) maka alihkan ke controller login
-		if (!$this->session->userdata('username')) {
-			redirect('auth/login');
-		}
 	}
 }

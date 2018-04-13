@@ -53,15 +53,7 @@
                                         <div class="card-body">
                                             <div class="card-block">
                                                 <h2 class="white">Login</h2>
-                                                <form method="POST" action="<?php echo base_url('auth/login'); ?>" role="login">
-                                                    <?php
-                                                    //menampilkan error menggunakan alert javascript
-                                                    if(isset($error)){
-                                                    echo '<script>
-                                                    alert("'.$error.'");
-                                                    </script>';
-                                                    }
-                                                    ?>
+                                                <form action="<?php echo base_url('login/masuk');?>" method="post">
                                                     <div class="form-group">
                                                         <div class="col-md-12">
                                                             <input type="text" class="form-control" name="username" id="username" placeholder="Username" required >
@@ -79,6 +71,15 @@
                                                             <button type="reset" class="btn btn-secondary btn-block btn-raised">Cancel</button>
                                                         </div>
                                                     </div>
+                                                    <?php
+                                                    if($this->session->flashdata('pesan') <> ''){
+                                                    ?>
+                                                    <div class="alert alert-dismissible alert-danger">
+                                                        <?php echo $this->session->flashdata('pesan');?>
+                                                    </div>
+                                                    <?php
+                                                    }
+                                                    ?>
                                                 </form>
                                             </div>
                                         </div>
