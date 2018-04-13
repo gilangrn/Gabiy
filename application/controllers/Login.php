@@ -24,17 +24,13 @@ class Login extends CI_Controller{
       //level 1 adalah admin
       if($this->session->userdata('level') == '1')
       {
-        redirect('dashboard');
+        redirect('admin_home');
       }
       //level 2 adalah customer
       elseif($this->session->userdata('level') == '2')
       {
-        redirect('customers');
+        redirect('customer_home');
       }
-    /*  elseif($this->session->userdata('level') == '0')
-      {
-        redirect('home');
-      }*/
     }
     else
     {
