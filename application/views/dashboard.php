@@ -105,8 +105,7 @@
 										</div>
 									</div>
 									<p>Description device.</p>
-									<img src="assets/img/icon/tv-icon.png" class="rounded-circle width-50 mr-2">
-									<span class="info">Apr 11</span>
+									<img src="assets/img/icon/tv-icon.png" class="rounded-circle width-50 mr-2" data-toggle="tooltip" data-trigger="click" data-placement="right" title data-original-title="ID: TV-001">
 								</div>
 							</div>
 						</div>
@@ -121,9 +120,8 @@
 											</div>
 										</div>
 									</div>
-									<p>Description device.</p>
-									<img src="assets/img/icon/ac-icon.png" class="rounded-circle width-50 mr-2">
-									<span class="info">Apr 11</span>
+									<p>AC Ruang Tengah</p>
+									<img src="assets/img/icon/ac-icon.png" class="rounded-circle width-50 mr-2" data-toggle="tooltip" data-trigger="click" data-placement="right" title data-original-title="ID: AC-001">
 								</div>
 							</div>
 						</div>
@@ -141,12 +139,11 @@
 										</div>
 									</div>
 									<p>Description device.</p>
-									<img src="assets/img/icon/lamp-icon.png" class="rounded-circle width-50 mr-2">
-									<span class="info">Apr 11</span>
+									<img src="assets/img/icon/lamp-icon.png" class="rounded-circle width-50 mr-2" data-toggle="tooltip" data-trigger="click" data-placement="right" data-original-title="ID: L-001">
+									<!-- <span class="info">Apr 11</span> -->
 								</div>
 							</div>
 						</div>
-
 						<div class='col-sm-6 col-md-6 col-lg-6'>
 							<div class="card">
 								<div class="card-block pt-3">
@@ -159,11 +156,11 @@
 										</div>
 									</div>
 									<p>Description device.</p>
-									<img src="assets/img/icon/lamp-icon.png" class="rounded-circle width-50 mr-2">
-									<span class="info">Apr 11</span>
+									<img src="assets/img/icon/lamp-icon.png" class="rounded-circle width-50 mr-2" data-toggle="tooltip" data-trigger="click" data-placement="right" data-original-title="ID: L-002">
+									<!-- <span class="info">Apr 11</span> -->
 								</div>
 							</div>
-						</div>			
+						</div>
 					</div>
 				</div>
 			</div>
