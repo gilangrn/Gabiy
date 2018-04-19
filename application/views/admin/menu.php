@@ -47,7 +47,7 @@
 						</li>
 					</ul>
 				</div>
-			</div>
+			</div> 
 			<!-- main menu content-->
 			<div class="sidebar-background"></div>
 			<!-- main menu footer-->
