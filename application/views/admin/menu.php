@@ -2,7 +2,7 @@
 	<div class="wrapper nav-collapsed menu-collapsed">
 		<!-- main menu-->
 		<!--.main-menu(class="#{menuColor} #{menuOpenType}", class=(menuShadow == true ? 'menu-shadow' : ''))-->
-		<div data-active-color="white" data-background-color="primary" data-image="assets/img/sidebar-bg/01.jpg" class="app-sidebar">
+		<div data-active-color="white" data-background-color="primary" data-image="<?php echo base_url('assets/img/sidebar-bg/01.jpg')?>" class="app-sidebar">
 			<!-- main menu header-->
 			<!-- Sidebar Header starts-->
 			<div class="sidebar-header">
@@ -82,7 +82,7 @@
 							<li class="nav-item mr-2 mt-1">
 								<h4 align="center">Hello, <?php echo $username;?>!</h4>
 							</li>
-							<li class="nav-item mr-2">
+							<li class="nav-item">
 								<a id="navbar-fullscreen" href="javascript:;" class="nav-link apptogglefullscreen">
 									<i class="ft-maximize font-medium-3 blue-grey darken-4"></i>
 									<p class="d-none">fullscreen</p>

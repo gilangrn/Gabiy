@@ -16,7 +16,7 @@
                   <span class="col-md-12 col-sm-12" style="font-size: 25px;">Date Filter</span><br>
                   <div class="form-group col-md-12">
                     <div class="row">
-                      <div class="pull-left input-group col-md-4 col-sm-12">
+                      <div class="pull-left input-group col-md-6 col-sm-12">
                         <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date Begin"/>
                         <div class="input-group-append">
                           <span class="input-group-text">
@@ -24,7 +24,7 @@
                           </span>
                         </div>
                       </div>
-                      <div class="pull-left input-group col-md-4 col-sm-12">
+                      <div class="pull-left input-group col-md-6 col-sm-12">
                         <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date End"/>
                         <div class="input-group-append">
                           <span class="input-group-text">
