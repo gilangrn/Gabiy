@@ -79,8 +79,8 @@
 				<div class="navbar-container">
 					<div id="navbarSupportedContent" class="collapse navbar-collapse">
 						<ul class="navbar-nav">
-							<li class="nav-item mr-2">
-								<h3 align="center">Hello, <?php echo $username;?>!</h3>
+							<li class="nav-item mr-2 mt-1">
+								<h4 align="center">Hello, <?php echo $username;?>!</h4>
 							</li>
 							<li class="nav-item mr-2">
 								<a id="navbar-fullscreen" href="javascript:;" class="nav-link apptogglefullscreen">
