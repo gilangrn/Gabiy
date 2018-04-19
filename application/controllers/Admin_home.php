@@ -5,7 +5,7 @@ class Admin_home extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('customer_model');		
+		//$this->load->model('customer_model');		
 		//redirect jika level bukan customer(2)
 		//redirect jika level bukan admin(1)
 		if($this->session->userdata('level') <> '1')
