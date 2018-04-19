@@ -492,41 +492,34 @@
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
-                    <!-- form modal edit customer-->
+                    <!-- form modal detail customer-->
                     <div class="col-xl-12 col-sm-12 col-lg-12">
                       <div class="justified-tabs">
                         <ul class="nav nav-tabs nav-justified">
                           <li class="nav-item">
-                            <a class="nav-link" id="home-tab3" data-toggle="tab" href="#home3" aria-controls="home3" aria-expanded="true">AC</a>
+                            <a class="nav-link" id="home-tab3" data-toggle="tab" href="#ac" aria-controls="ac" aria-expanded="true">AC</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" id="profile-tab3" data-toggle="tab" href="#profile3" aria-controls="profile3" aria-expanded="false">TV</a>
-                          </li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" id="dropdown31-tab" href="#dropdown31" data-toggle="tab" aria-controls="dropdown31" aria-expanded="true">@fat</a>
-                              <a class="dropdown-item" id="dropdown32-tab" href="#dropdown32" data-toggle="tab" aria-controls="dropdown32" aria-expanded="true">@mdo</a>
-                            </div>
+                            <a class="nav-link active" id="profile-tab3" data-toggle="tab" href="#tv" aria-controls="tv" aria-expanded="false">TV</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" id="about-tab3" data-toggle="tab" href="#about3" aria-controls="about3" aria-expanded="false">About</a>
+                            <a class="nav-link" id="about-tab3" data-toggle="tab" href="#lamp" aria-controls="lamp" aria-expanded="false">Lamp</a>
+                          </li>
+                           <li class="nav-item">
+                            <a class="nav-link" id="about-tab3" data-toggle="tab" href="#lockdoor" aria-controls="lockdoor" aria-expanded="false">Lamp</a>
                           </li>
                         </ul>
                         <div class="tab-content px-1 pt-1">
-                          <div role="tabpanel" class="tab-pane" id="home3" aria-labelledby="home-tab3" aria-expanded="true">
+                          <div role="tabpanel" class="tab-pane" id="ac" aria-labelledby="home-tab3" aria-expanded="true">
                             <p>Candy canes donut chupa chups candy canes lemon drops oat cake wafer. Cotton candy candy canes marzipan carrot cake. Sesame snaps lemon drops candy marzipan donut brownie tootsie roll. Icing croissant bonbon biscuit gummi bears.</p>
                           </div>
-                          <div class="tab-pane active show" id="profile3" role="tabpanel" aria-labelledby="profile-tab3" aria-expanded="false">
+                          <div class="tab-pane active show" id="tv" role="tabpanel" aria-labelledby="profile-tab3" aria-expanded="false">
                             <p>Pudding candy canes sugar plum cookie chocolate cake powder croissant. Carrot cake tiramisu danish candy cake muffin croissant tart dessert. Tiramisu caramels candy canes chocolate cake sweet roll liquorice icing cupcake.</p>
                           </div>
-                          <div class="tab-pane" id="dropdown31" role="tabpanel" aria-labelledby="dropdown31-tab" aria-expanded="false">
-                            <p>Cake croissant lemon drops gummi bears carrot cake biscuit cupcake croissant. Macaroon lemon drops muffin jelly sugar plum chocolate cupcake danish icing. Soufflé tootsie roll lemon drops sweet roll cake icing cookie halvah cupcake.</p>
+                          <div class="tab-pane" id="lamp" role="tabpanel" aria-labelledby="about-tab3" aria-expanded="false">
+                            <p>Carrot cake dragée chocolate. Lemon drops ice cream wafer gummies dragée. Chocolate bar liquorice cheesecake cookie chupa chups marshmallow oat cake biscuit. Dessert toffee fruitcake ice cream powder tootsie roll cake.</p>
                           </div>
-                          <div class="tab-pane" id="dropdown32" role="tabpanel" aria-labelledby="dropdown32-tab" aria-expanded="false">
-                            <p>Chocolate croissant cupcake croissant jelly donut. Cheesecake toffee apple pie chocolate bar biscuit tart croissant. Lemon drops danish cookie. Oat cake macaroon icing tart lollipop cookie sweet bear claw.</p>
-                          </div>
-                          <div class="tab-pane" id="about3" role="tabpanel" aria-labelledby="about-tab3" aria-expanded="false">
+                          <div class="tab-pane" id="lockdoor" role="tabpanel" aria-labelledby="about-tab3" aria-expanded="false">
                             <p>Carrot cake dragée chocolate. Lemon drops ice cream wafer gummies dragée. Chocolate bar liquorice cheesecake cookie chupa chups marshmallow oat cake biscuit. Dessert toffee fruitcake ice cream powder tootsie roll cake.</p>
                           </div>
                         </div>

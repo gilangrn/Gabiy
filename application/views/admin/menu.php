@@ -9,7 +9,7 @@
 				<div class="logo clearfix">
 					<a href="<?php echo site_url('admin_home')?>" class="logo-text float-left">
 						<div class="logo-img">
-							<img src="assets/img/logo.png" />
+							<img src="<?php echo base_url('assets/img/logo.png')?>" />
 						</div>
 						<span class="text align-middle">APEX</span>
 					</a>
