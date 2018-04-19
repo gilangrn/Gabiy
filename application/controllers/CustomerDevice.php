@@ -5,15 +5,21 @@ class CustomerDevice extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('customer_model');
+		//$this->load->model('customer_model');
+		//redirect jika level bukan admin(1)
+		if($this->session->userdata('level') <> '1')
+		{
+			redirect('login');
+		}
 	}
-	
+
 	public function index()
 	{
 		$this->load->view('head');
-		$this->load->view('menu');
+		$data['username'] = $this->session->userdata('username');
+		$this->load->view('admin/menu',$data);
 		$data['device'] = $this->customer_model->tampil_data_device();
-		$this->load->view('customer_device',$data);
+		$this->load->view('admin/customer_device',$data);
 		$this->load->view('footer'); 
 		$this->load->view('rightmenu');
 		/*$this->load->view('settingtheme');*/
