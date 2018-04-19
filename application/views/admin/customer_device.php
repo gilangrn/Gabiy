@@ -227,8 +227,8 @@
                             <br>
                             <div class="row mt-3">
                                 <div class="form-group col-md-12">
-                                    <div class="row">
-                                        <div class="input-group col-md-4 col-sm-12 mx-auto">
+                                    <!-- <div class="row"> -->
+                                        <div class="input-group col-md-6 col-sm-12 mx-auto">
                                             <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date Begin"/>
                                             <div class="input-group-append">
                                                 <span class="input-group-text">
@@ -236,7 +236,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class="input-group col-md-4 col-sm-12 mx-auto">
+                                        <div class="input-group col-md-6 col-sm-12 mx-auto">
                                             <input type='text' class="form-control text-center pickadate-selectors" placeholder="Date End"/>
                                             <div class="input-group-append">
                                                 <span class="input-group-text">
@@ -244,7 +244,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
+                                   <!--  </div> -->
                                 </div>
                             </div>
                             <div class="text-center">
