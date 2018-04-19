@@ -38,6 +38,7 @@
 	<!-- END VENDOR CSS-->
 	<!-- BEGIN APEX CSS-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/app.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
 	<!-- END APEX CSS-->
 	<!-- BEGIN Page Level CSS-->
 	<!-- END Page Level CSS-->
