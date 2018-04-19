@@ -48,7 +48,7 @@ class CustomerDevice extends CI_Controller {
 	public function hapus_data_device()
 	{
 		$id=$this->input->post('id');
-        $this->customer_model->hapus_data_device($id);
-        redirect('CustomerDevice');
+		$this->customer_model->hapus_data_device($id);
+    redirect('CustomerDevice');
 	}
 }
