@@ -1,7 +1,7 @@
           <div class="main-panel">
             <div class="main-content">
               <div class="content-wrapper">
-                <h3 class="text-center" style="margin-top: 20px;">Ruang Tengah</h3>
+                <h3 class="text-center" style="margin-top: 20px;">Lantai Atas</h3>
                 <div class="text-center" id="txt" style="font-size: 60px; margin-top: 70px;">
                 </div>
                 <br>
@@ -71,21 +71,6 @@
                           <div class="card-block">
                             <p class="card-text">Jumlah Device : 1</p>
                             <a class="btn btn-raised btn-danger text-white" href="#ac" data-toggle="pill" onclick="scrollWin()">Lihat Tabel Device</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12 col-sm-12">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="card-img">
-                            <img class="card-img-top img-fluid" src="assets/img/photos/03-tv.jpg" alt="Card image cap">
-                            <h4 class="card-title">Television</h4>
-                            <i class="icon-screen-desktop btn btn-floating halfway-fab bg-danger"></i>
-                          </div>
-                          <div class="card-block">
-                            <p class="card-text">Jumlah Device : 1</p>
-                            <a class="btn btn-raised btn-danger text-white" href="#tv" data-toggle="pill" onclick="scrollWin()">Lihat Tabel Device</a>
                           </div>
                         </div>
                       </div>
