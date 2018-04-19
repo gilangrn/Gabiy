@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2018 at 09:06 AM
+-- Generation Time: Apr 19, 2018 at 12:44 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -87,7 +87,6 @@ INSERT INTO `master_device` (`device_id`, `name_device`, `kategori`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `level` varchar(2) NOT NULL
@@ -97,9 +96,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `level`) VALUES
-(1, 'admin', '21232F297A57A5A743894A0E4A801FC3', '1'),
-(2, 'customer', '91EC1F9324753048C0096D036A694F86', '2');
+INSERT INTO `users` (`username`, `password`, `level`) VALUES
+('admin', '21232F297A57A5A743894A0E4A801FC3', '1'),
+('customer', '91EC1F9324753048C0096D036A694F86', '2'),
+('customernew', '1B5222884106177E294F48494EF3AE79', '2');
 
 --
 -- Indexes for dumped tables
@@ -109,7 +109,8 @@ INSERT INTO `users` (`id`, `username`, `password`, `level`) VALUES
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-  ADD PRIMARY KEY (`customer_id`);
+  ADD PRIMARY KEY (`customer_id`),
+  ADD KEY `username` (`username`);
 
 --
 -- Indexes for table `customer_device`
@@ -129,7 +130,7 @@ ALTER TABLE `master_device`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -148,14 +149,14 @@ ALTER TABLE `customer_device`
   MODIFY `id` int(7) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `customer`
+--
+ALTER TABLE `customer`
+  ADD CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `customer_device`

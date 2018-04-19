@@ -132,7 +132,7 @@
 							<div class="card">
 								<div class="card-block pt-3">
 									<div class="clearfix">
-										<h5 class="text-bold-500 info float-left">Lamp 1</h5>
+										<h5 class="text-bold-500 info float-left">Lamp</h5>
 										<div class="actions float-right">
 											<div class="form-group mr-1">
 												<input type="checkbox" id="switcherySize3" class="switchery" data-size="xs" checked/>
@@ -149,10 +149,10 @@
 							<div class="card">
 								<div class="card-block pt-3">
 									<div class="clearfix">
-										<h5 class="text-bold-500 info float-left">Lamp 2</h5>
+										<h5 class="text-bold-500 info float-left">Lock Door</h5>
 										<div class="actions float-right">
 											<div class="form-group mr-1">
-												<input type="checkbox" id="switcherySize3" class="switchery lime" data-size="xs" checked/>
+												<input type="checkbox" id="switcherySize3" class="switchery text-warning" data-size="xs" checked/>
 											</div>
 										</div>
 									</div>
