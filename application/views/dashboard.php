@@ -26,7 +26,7 @@
 							<div class="px-3 py-3">
 								<div class="media">
 									<div class="media-body text-left">
-										<h3 class="mb-1 info">10</h3>
+										<h3 class="mb-1 info"><?=$jumlah?></h3>
 										<span>Total Device</span>
 									</div>
 									<div class="media-right align-self-center">
