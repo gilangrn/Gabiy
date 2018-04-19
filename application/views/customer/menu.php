@@ -33,18 +33,6 @@
 								<span data-i18n="" class="menu-title">Home</span>
 							</a>
 						</li>
-						<li class="nav-item <?php if($this->uri->segment(1)=="customers"){echo 'active';}?>">
-							<a href="<?php echo site_url('customers')?>">
-								<i class="ft-users"></i>
-								<span data-i18n="" class="menu-title">Customers</span>
-							</a>
-						</li>
-						<li class="nav-item <?php if($this->uri->segment(1)=="customerdevice"){echo 'active';}?>">
-							<a href="<?php echo site_url('customerdevice')?>">
-								<i class="ft-monitor"></i>
-								<span data-i18n="" class="menu-title">Customer Device</span>
-							</a>
-						</li>
 					</ul>
 				</div>
 			</div>
