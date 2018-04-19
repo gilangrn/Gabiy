@@ -46,12 +46,16 @@
 		});
 
 		$('#custom-icon').on('click', function () {
-			swal({ title: "Sweet!", text: "Here's a custom image.", imageUrl: "app-assets/img/icons/thumbs-up.jpg" });
+			swal({ title: "Sweet!", text: "Here's a custom image.", imageUrl: "assets/img/icons/thumbs-up.jpg" });
 		});
 
 		$('#auto-close').on('click', function () {
 			swal({ title: "Auto close alert!", text: "I will close in 2 seconds.", timer: 2000, showConfirmButton: false });
 		});
+
+		$('#login-error')function() {
+			swal("Error!", "Kombinasi username dan password salah", "error");
+		};
 
 		$('#outside-click').on('click', function () {
 			swal({
