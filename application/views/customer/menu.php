@@ -33,19 +33,25 @@
 								<span data-i18n="" class="menu-title">Home</span>
 							</a>
 						</li>
-						<li class="nav-item <?php if($this->uri->segment(1)=="customers"){echo 'active';}?>">
-							<a href="<?php echo site_url('customers')?>">
-								<i class="ft-users"></i>
-								<span data-i18n="" class="menu-title">Customers</span>
-							</a>
+						<li class="has-sub nav-item"><a href="#"><i class="ft-aperture"></i><span data-i18n="" class="menu-title">Ruangan</span></a>
+							<ul class="menu-content">
+								<li><a href="ruangdepan" class="menu-item <?php if($this->uri->segment(1)=="ruangdepan"){echo 'active';}?>">Ruang Depan</a>
+								</li>
+								<li><a href="ruangtengah" class="menu-item <?php if($this->uri->segment(1)=="ruangtengah"){echo 'active';}?>">Ruang Tengah</a>
+								</li>
+								<li><a href="ruangrapat" class="menu-item <?php if($this->uri->segment(1)=="ruangrapat"){echo 'active';}?>">Ruang Rapat</a>
+								</li>
+								<li><a href="lantaiatas" class="menu-item <?php if($this->uri->segment(1)=="lantaiatas"){echo 'active';}?>">Lantai Atas</a>
+								</li>
+							</ul>
 						</li>
+
 						<li class="nav-item <?php if($this->uri->segment(1)=="customerdevice"){echo 'active';}?>">
 							<a href="<?php echo site_url('customerdevice')?>">
 								<i class="ft-monitor"></i>
 								<span data-i18n="" class="menu-title">Customer Device</span>
 							</a>
-						</li>
-					</ul>
+						</li>					</ul>
 				</div>
 			</div>
 			<!-- main menu content-->
