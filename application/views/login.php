@@ -78,7 +78,7 @@
                                                     </div>
                                                     <?php } ?>
                                                 </form>
-                                            </div>
+                                            </div> 
                                         </div>
                                         <!-- <div class="card-footer">
                                             <div class="float-left"><a (click)="onForgotPassword()" class="white">Recover Password</a></div>
