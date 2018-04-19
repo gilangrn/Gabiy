@@ -27,7 +27,7 @@
 							<div class="px-3 py-3">
 								<div class="media">
 									<div class="media-body text-left">
-										<h3 class="mb-1 info">10</h3>
+										<h3 class="mb-1 info"><?=$jdevice?></h3>
 										<span>Total Device</span>
 									</div>
 									<div class="media-right align-self-center">
@@ -44,7 +44,7 @@
 							<div class="px-3 py-3">
 								<div class="media">
 									<div class="media-body text-left">
-										<h3 class="mb-1 success" id="txt">20</h3>
+										<h3 class="mb-1 success" id="txt"><?=$jcustomer?></h3>
 										<span>Total Customer</span>
 									</div>
 									<div class="media-right align-self-center">
