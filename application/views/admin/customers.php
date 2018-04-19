@@ -243,7 +243,7 @@
                       </button>
                     </div>
                     <!-- form modal detail customer-->
-                    <div class="col-xl-12 col-sm-12 col-lg-12">
+                    <div class="modal-body col-xl-12 col-sm-12 col-lg-12" style="max-height: calc(100vh - 210px); overflow-y: auto;">
                       <form>
                         <div class="position-relative has-icon-right mt-2 mb-2">
                           <input type="text" placeholder="Search Device" class="form-control round" />
@@ -252,8 +252,145 @@
                           </div>
                         </div>
                       </form>
-                      <div class="col-sm-12 col-md-12">
-                        asdasdsd
+                      <div class="col-sm-12 col-md-12 mb-2">
+                        <div class="row" matchHeight="card">
+                          <div class="col-xl-4 col-lg-6 col-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="px-3 py-3">
+                                  <div class="media">
+                                    <div class="media-body text-left">
+                                      <h5 class="text-danger mb-1">Lamp</h5>
+                                      <input type="checkbox" class="switchery">
+                                    </div>
+                                    <div class="media-right align-self-center">
+                                      <i class="icon-rocket danger font-large-2 float-right"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-6 col-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="px-3 py-3">
+                                  <div class="media">
+                                    <div class="media-body text-left">
+                                      <h5 class="text-danger mb-1">Lamp</h5>
+                                      <input type="checkbox" class="switchery text-danger">
+                                    </div>
+                                    <div class="media-right align-self-center">
+                                      <i class="icon-rocket danger font-large-2 float-right"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-6 col-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="px-3 py-3">
+                                  <div class="media">
+                                    <div class="media-body text-left">
+                                      <h5 class="text-danger mb-1">Lamp</h5>
+                                      <input type="checkbox" class="switchery">
+                                    </div>
+                                    <div class="media-right align-self-center">
+                                      <i class="icon-rocket danger font-large-2 float-right"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-6 col-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="px-3 py-3">
+                                  <div class="media">
+                                    <div class="media-body text-left">
+                                      <h5 class="text-danger mb-1">Lamp</h5>
+                                      <input type="checkbox" class="switchery">
+                                    </div>
+                                    <div class="media-right align-self-center">
+                                      <i class="icon-rocket danger font-large-2 float-right"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-6 col-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="px-3 py-3">
+                                  <div class="media">
+                                    <div class="media-body text-left">
+                                      <h5 class="text-danger mb-1">Lamp</h5>
+                                      <input type="checkbox" class="switchery">
+                                    </div>
+                                    <div class="media-right align-self-center">
+                                      <i class="icon-rocket danger font-large-2 float-right"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-6 col-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="px-3 py-3">
+                                  <div class="media">
+                                    <div class="media-body text-left">
+                                      <h5 class="text-danger mb-1">Lamp</h5>
+                                      <input type="checkbox" class="switchery">
+                                    </div>
+                                    <div class="media-right align-self-center">
+                                      <i class="icon-rocket danger font-large-2 float-right"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-6 col-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="px-3 py-3">
+                                  <div class="media">
+                                    <div class="media-body text-left">
+                                      <h5 class="text-danger mb-1">Lamp</h5>
+                                      <input type="checkbox" class="switchery">
+                                    </div>
+                                    <div class="media-right align-self-center">
+                                      <i class="icon-rocket danger font-large-2 float-right"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-6 col-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="px-3 py-3">
+                                  <div class="media">
+                                    <div class="media-body text-left">
+                                      <h5 class="text-danger mb-1">Lamp</h5>
+                                      <input type="checkbox" class="switchery">
+                                    </div>
+                                    <div class="media-right align-self-center">
+                                      <i class="icon-rocket danger font-large-2 float-right"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>  
                     </div>
                     <div class="modal-footer">
