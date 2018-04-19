@@ -23,25 +23,30 @@
                 <span data-i18n="" class="menu-title">Home</span>
               </a>
             </li>
-            <li class="has-sub nav-item"><a href="#"><i class="ft-aperture"></i><span data-i18n="" class="menu-title">Ruangan</span></a>
+            <li class="has-sub nav-item"><a href="#"><i class="ft-list"></i><span data-i18n="" class="menu-title">Ruangan</span></a>
               <ul class="menu-content">
-                <li><a href="ruangdepan" class="menu-item">Ruang Depan</a>
+                <li><a href="<?php echo site_url('ruangdepan')?>" class="menu-item">Ruang Depan</a>
                 </li>
-                <li><a href="ruangtengah" class="menu-item">Ruang Tengah</a>
+                <li><a href="<?php echo site_url('ruangtengah')?>" class="menu-item">Ruang Tengah</a>
                 </li>
-                <li><a href="ruangrapat" class="menu-item">Ruang Rapat</a>
+                <li><a href="<?php echo site_url('ruangrapat')?>" class="menu-item">Ruang Rapat</a>
                 </li>
-                <li><a href="lantaiatas" class="menu-item">Lantai Atas</a>
+                <li><a href="<?php echo site_url('lantaiatas')?>" class="menu-item">Lantai Atas</a>
                 </li>
               </ul>
             </li>
 
-            <li class="nav-item <?php if($this->uri->segment(1)=="customerdevice"){echo 'active';}?>">
-              <a href="<?php echo site_url('customerdevice')?>">
-                <i class="ft-monitor"></i>
-                <span data-i18n="" class="menu-title">Customer Device</span>
-              </a>
-            </li>         </ul>
+            <li class="has-sub nav-item"><a href="#"><i class="ft-user"></i><span data-i18n="" class="menu-title">Account</span></a>
+              <ul class="menu-content">
+                <li><a href="<?php echo site_url('editprofil')?>" class="menu-item">Edit Profil</a>
+                </li>
+                <li><a href="<?php echo site_url('inbox')?>" class="menu-item">Inbox</a>
+                </li>
+                <li><a href="<?php echo site_url('login/keluar')?>" class="menu-item">Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
       <!-- main menu content-->
