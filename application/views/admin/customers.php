@@ -43,6 +43,7 @@
                       <tr>
                         <th>No</th>
                         <th>Customer ID</th>
+                        <th>Username</th>
                         <th>Name</th>
                         <th>IP Address</th>
                         <th>Contact Person</th>
@@ -56,6 +57,7 @@
                       $no = 1;
                       foreach ($customer->result_array() as $u): 
                         $customer_id=$u['customer_id'];
+                        $username=$u['username'];
                         $name=$u['name'];
                         $ip_address=$u['ip_address'];
                         $contact_person=$u['contact_person'];
@@ -68,6 +70,9 @@
                           </td>
                           <td>
                             <?php echo $customer_id; ?>
+                          </td>
+                          <td>
+                            <?php echo $username; ?>
                           </td>
                           <td>
                             <?php echo $name; ?>
@@ -108,6 +113,7 @@
               <?php
               foreach ($customer->result_array() as $i): 
                 $customer_id=$i['customer_id'];
+                $username=$u['username'];
                 $name=$i['name'];
                 $ip_address=$i['ip_address'];
                 $contact_person=$i['contact_person'];
@@ -124,13 +130,19 @@
                         </button>
                       </div>
                       <!-- form modal edit customer-->
-                      <?php echo form_open('customers/edit_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
+                      <?php echo form_open('admin/edit_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
                       <div class="modal-body">
                         <div class="row">
-                          <div class="col-8">
+                          <div class="col-6">
                             <div class="form-group">
                               <label>Customer Id</label>
                               <input name="customer_id" value="<?php echo $customer_id;?>" class="form-control" type="text" placeholder="Customer Id" readonly>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-group">
+                              <label>Username</label>
+                              <input name="username" value="<?php echo $username;?>" class="form-control" type="text" readonly>
                             </div>
                           </div>
                           <div class="col-8">
@@ -188,7 +200,7 @@
                       </button>
                     </div>
                     <!-- form modal add customer-->
-                    <?php echo form_open('customers/tambah_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
+                    <?php echo form_open('admin/tambah_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
                     <div class="modal-body">
                       <div class="row">
                         <div class="col-8">
@@ -215,14 +227,6 @@
                           <div class="form-group">
                             <label>Email</label>
                             <input type="text" class="form-control" name="email" id="email" placeholder="Email Address">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                           </div>
                         </div>
                       </div>
@@ -430,7 +434,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
                         <h3 class="modal-title" id="myModalLabel">Hapus Customer</h3>
                       </div>
-                      <?php echo form_open('customers/hapus_data',array('class'=>'form-horizontal','method'=>'post')); ?>
+                      <?php echo form_open('admin/hapus_data',array('class'=>'form-horizontal','method'=>'post')); ?>
                       <div class="modal-body">
                         <p>Anda yakin mau menghapus <b><?php echo $name;?></b></p>
                       </div>

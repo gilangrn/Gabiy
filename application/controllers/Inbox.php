@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Ruangtengah extends CI_Controller {
+class Inbox extends CI_Controller {
 
   function __construct(){
     parent::__construct();
@@ -21,7 +21,7 @@ class Ruangtengah extends CI_Controller {
     $data['jcustomer'] = $this->statusDashboard_model->JumlahCustomer();
     $data['jdevice'] = $this->statusDashboard_model->JumlahDevice();
     $this->load->view('customer/menu',$data);
-    $this->load->view('customer/ruangtengah/content',$data);
+    $this->load->view('customer/profil/inbox',$data);
     $this->load->view('js');
   }
 }

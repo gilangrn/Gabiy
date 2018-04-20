@@ -3,11 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Login extends CI_Controller {
   public function index() {
     if ($this->session->userdata('level') == '1') {
-      redirect('admin_home');
+      redirect('admin/home');
     }
         //level 2 adalah customer
     elseif ($this->session->userdata('level') == '2') {
-      redirect('customer_home');
+      redirect('customer/home');
     }
         //redirect ke login jika belum ada session
     else {
@@ -27,11 +27,11 @@ class Login extends CI_Controller {
       }
             //level 1 adalah admin
       if ($this->session->userdata('level') == '1') {
-        redirect('admin_home');
+        redirect('admin/home');
       }
             //level 2 adalah customer
       elseif ($this->session->userdata('level') == '2') {
-        redirect('customer_home');
+        redirect('customer/home');
       }
     } else {
       $this->session->set_flashdata('pesan', 'Maaf, kombinasi username dengan password salah.');

@@ -7,7 +7,7 @@
 			<!-- Sidebar Header starts-->
 			<div class="sidebar-header">
 				<div class="logo clearfix">
-					<a href="<?php echo site_url('admin_home')?>" class="logo-text float-left">
+					<a href="<?php echo site_url('admin/home')?>" class="logo-text float-left">
 						<div class="logo-img">
 							<img src="<?php echo base_url('assets/img/logo.png')?>" />
 						</div>
@@ -27,20 +27,20 @@
 			<div class="sidebar-content">
 				<div class="nav-container">
 					<ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
-						<li class="nav-item <?php if($this->uri->segment(1)=="admin_home"){echo 'active';}?>">
-							<a href="<?php echo site_url('admin_home')?>">
+						<li class="nav-item <?php if($this->uri->segment(2)=="home"){echo 'active';}?>">
+							<a href="<?php echo site_url('admin/home')?>">
 								<i class="ft-home"></i>
 								<span data-i18n="" class="menu-title">Home</span>
 							</a>
 						</li>
-						<li class="nav-item <?php if($this->uri->segment(1)=="customers"){echo 'active';}?>">
-							<a href="<?php echo site_url('customers')?>">
+						<li class="nav-item <?php if($this->uri->segment(2)=="customer"){echo 'active';}?>">
+							<a href="<?php echo site_url('admin/customer')?>">
 								<i class="ft-users"></i>
 								<span data-i18n="" class="menu-title">Customers</span>
 							</a>
 						</li>
-						<li class="nav-item <?php if($this->uri->segment(1)=="customerdevice"){echo 'active';}?>">
-							<a href="<?php echo site_url('customerdevice')?>">
+						<li class="nav-item <?php if($this->uri->segment(2)=="customer_device"){echo 'active';}?>">
+							<a href="<?php echo site_url('admin/customer_device')?>">
 								<i class="ft-monitor"></i>
 								<span data-i18n="" class="menu-title">Customer Device</span>
 							</a>

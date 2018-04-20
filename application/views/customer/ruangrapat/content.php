@@ -49,7 +49,7 @@
                       <div class="card">
                         <div class="card-body">
                           <div class="card-img">
-                            <img class="card-img-top img-fluid" src="assets/img/photos/01-lampu.jpg" alt="Card image cap">
+                            <img class="card-img-top img-fluid" src="<?php echo site_url('assets/img/photos/01-lampu.jpg')?>" alt="Card image cap">
                             <h4 class="card-title">Lampu</h4>
                             <i class="icon-bulb btn btn-floating halfway-fab bg-danger"></i>
                           </div>
@@ -64,7 +64,7 @@
                       <div class="card">
                         <div class="card-body">
                           <div class="card-img">
-                            <img class="card-img-top img-fluid" src="assets/img/photos/02-ac.jpg" alt="Card image cap">
+                            <img class="card-img-top img-fluid" src="<?php echo site_url('assets/img/photos/02-ac.jpg')?>" alt="Card image cap">
                             <h4 class="card-title">Air Conditioner</h4>
                             <i class="ft-wind btn btn-floating halfway-fab bg-danger"></i>
                           </div>
@@ -79,7 +79,7 @@
                       <div class="card">
                         <div class="card-body">
                           <div class="card-img">
-                            <img class="card-img-top img-fluid" src="assets/img/photos/04-pintu.jpg" alt="Card image cap">
+                            <img class="card-img-top img-fluid" src="<?php echo site_url('assets/img/photos/04-pintu.jpg')?>" alt="Card image cap">
                             <h4 class="card-title">Lock Door</h4>
                             <i class="icon-lock btn btn-floating halfway-fab bg-danger"></i>
                           </div>
