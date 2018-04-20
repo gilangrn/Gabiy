@@ -25,23 +25,25 @@ class Customers extends CI_Controller {
 		}
 		public function tambah_data_customer()
 		{
+			$username		=$this->input->post('username');
 			$name			=$this->input->post('name');
 			$address 		=$this->input->post('address');
 			$contact_person	=$this->input->post('contact_person');
 			$email 			=$this->input->post('email');
 			$ip_address 	=$this->input->post('ip_address');
-			$this->customer_model->tambah_data_customer($name,$address,$contact_person,$email,$ip_address);
+			$this->customer_model->tambah_data_customer($username,$name,$address,$contact_person,$email,$ip_address);
 			redirect('Customers');
 		}
 		public function edit_data_customer()
 		{
 			$customer_id	=$this->input->post('customer_id');
+			$username		=$this->input->post('username');
 			$name			=$this->input->post('name');
 			$address 		=$this->input->post('address');
 			$contact_person	=$this->input->post('contact_person');
 			$email 			=$this->input->post('email');
 			$ip_address 	=$this->input->post('ip_address');
-			$this->customer_model->edit_data_customer($customer_id,$name,$address,$contact_person,$email,$ip_address);
+			$this->customer_model->edit_data_customer($customer_id,$username,$name,$address,$contact_person,$email,$ip_address);
 			redirect('Customers');
 		}
 		public function hapus_data()
