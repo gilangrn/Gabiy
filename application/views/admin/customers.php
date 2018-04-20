@@ -220,14 +220,6 @@
                       </div>
                       <div class="row">
                         <div class="col-12">
-                          <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
                           <fieldset class="form-group">
                             <label for="address">Address</label>
                             <textarea class="form-control" name="address" id="address" rows="3" placeholder="Full Address"></textarea>
