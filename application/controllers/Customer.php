@@ -11,7 +11,7 @@ class Customer extends CI_Controller {
 		}
 	}
 
-	public function index()
+	public function home()
 	{
 		$this->load->view('head');
 		$data['username'] = $this->session->userdata('username');
@@ -27,8 +27,6 @@ class Customer extends CI_Controller {
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
-    	$data['jcustomer'] = $this->statusDashboard_model->JumlahCustomer();
-    	$data['jdevice'] = $this->statusDashboard_model->JumlahDevice();
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/lantaiatas/content',$data);
     	$this->load->view('js');
@@ -39,8 +37,6 @@ class Customer extends CI_Controller {
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
-    	$data['jcustomer'] = $this->statusDashboard_model->JumlahCustomer();
-    	$data['jdevice'] = $this->statusDashboard_model->JumlahDevice();
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/profil/content',$data);
     	$this->load->view('js');
@@ -50,8 +46,6 @@ class Customer extends CI_Controller {
   	{
     	$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
-    	$data['jcustomer'] = $this->statusDashboard_model->JumlahCustomer();
-    	$data['jdevice'] = $this->statusDashboard_model->JumlahDevice();
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/profil/notification',$data);
     	$this->load->view('js');
@@ -61,8 +55,6 @@ class Customer extends CI_Controller {
   	{
     	$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
-    	$data['jcustomer'] = $this->statusDashboard_model->JumlahCustomer();
-    	$data['jdevice'] = $this->statusDashboard_model->JumlahDevice();
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/profil/inbox',$data);
    		$this->load->view('js');
@@ -72,8 +64,6 @@ class Customer extends CI_Controller {
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
-    	$data['jcustomer'] = $this->statusDashboard_model->JumlahCustomer();
-    	$data['jdevice'] = $this->statusDashboard_model->JumlahDevice();
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/ruangdepan/content',$data);
     	$this->load->view('js');
@@ -83,8 +73,6 @@ class Customer extends CI_Controller {
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
-    	$data['jcustomer'] = $this->statusDashboard_model->JumlahCustomer();
-    	$data['jdevice'] = $this->statusDashboard_model->JumlahDevice();
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/ruangrapat/content',$data);
     	$this->load->view('js');
@@ -94,8 +82,6 @@ class Customer extends CI_Controller {
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
-    	$data['jcustomer'] = $this->statusDashboard_model->JumlahCustomer();
-    	$data['jdevice'] = $this->statusDashboard_model->JumlahDevice();
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/ruangtengah/content',$data);
     	$this->load->view('js');
