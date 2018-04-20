@@ -5,7 +5,7 @@ class Admin extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        //$this->load->model('customer_model');        
+        //$this->load->model('admin_model');        
         //redirect jika level bukan customer(2)
         //redirect jika level bukan admin(1)
         if ($this->session->userdata('level') <> '1') {
@@ -32,7 +32,7 @@ class Admin extends CI_Controller
         $this->load->view('head');
         $data['username'] = $this->session->userdata('username');
         $this->load->view('admin/menu', $data);
-        $data['customer'] = $this->customer_model->tampil_data_customer();
+        $data['customer'] = $this->admin_model->tampil_data_customer();
         $this->load->view('admin/customers', $data);
         $this->load->view('footer');
         $this->load->view('rightmenu');
@@ -48,7 +48,7 @@ class Admin extends CI_Controller
         $contact_person = $this->input->post('contact_person');
         $email          = $this->input->post('email');
         $ip_address     = $this->input->post('ip_address');
-        $this->customer_model->tambah_data_customer($username, $name, $address, $contact_person, $email, $ip_address);
+        $this->admin_model->tambah_data_customer($username, $name, $address, $contact_person, $email, $ip_address);
         redirect('Customers');
     }
 
@@ -61,14 +61,14 @@ class Admin extends CI_Controller
         $contact_person = $this->input->post('contact_person');
         $email          = $this->input->post('email');
         $ip_address     = $this->input->post('ip_address');
-        $this->customer_model->edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address);
+        $this->admin_model->edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address);
         redirect('Customers');
     }
 
     public function hapus_data()
     {
         $customer_id = $this->input->post('customer_id');
-        $this->customer_model->hapus_data($customer_id);
+        $this->admin_model->hapus_data($customer_id);
         redirect('Customers');
     }
 
@@ -78,7 +78,7 @@ class Admin extends CI_Controller
         $this->load->view('head');
         $data['username'] = $this->session->userdata('username');
         $this->load->view('admin/menu', $data);
-        $data['device'] = $this->customer_model->tampil_data_device();
+        $data['device'] = $this->admin_model->tampil_data_device();
         $this->load->view('admin/customer_device', $data);
         $this->load->view('footer');
         $this->load->view('rightmenu');
@@ -94,7 +94,7 @@ class Admin extends CI_Controller
         $keyword      = $this->input->post('keyword');
         $customer_id  = $this->input->post('customer_id');
         $device_id    = $this->input->post('device_id');
-        $this->customer_model->tambah_data_device($device_alias, $pin, $description, $keyword, $customer_id, $device_id);
+        $this->admin_model->tambah_data_device($device_alias, $pin, $description, $keyword, $customer_id, $device_id);
         redirect('CustomerDevice');
     }
 
@@ -107,14 +107,14 @@ class Admin extends CI_Controller
         $keyword      = $this->input->post('keyword');
         $customer_id  = $this->input->post('customer_id');
         $device_id    = $this->input->post('device_id');
-        $this->customer_model->edit_data_device($id, $device_alias, $pin, $description, $keyword, $customer_id, $device_id);
+        $this->admin_model->edit_data_device($id, $device_alias, $pin, $description, $keyword, $customer_id, $device_id);
         redirect('CustomerDevice');
     }
 
     public function hapus_data_device()
     {
         $id = $this->input->post('id');
-        $this->customer_model->hapus_data_device($id);
+        $this->admin_model->hapus_data_device($id);
         redirect('CustomerDevice');
     }
 }
