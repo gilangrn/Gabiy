@@ -130,7 +130,7 @@
                         </button>
                       </div>
                       <!-- form modal edit customer-->
-                      <?php echo form_open('customers/edit_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
+                      <?php echo form_open('admin/edit_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
                       <div class="modal-body">
                         <div class="row">
                           <div class="col-6">
@@ -200,7 +200,7 @@
                       </button>
                     </div>
                     <!-- form modal add customer-->
-                    <?php echo form_open('customers/tambah_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
+                    <?php echo form_open('admin/tambah_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
                     <div class="modal-body">
                       <div class="row">
                         <div class="col-8">
@@ -442,7 +442,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
                         <h3 class="modal-title" id="myModalLabel">Hapus Customer</h3>
                       </div>
-                      <?php echo form_open('customers/hapus_data',array('class'=>'form-horizontal','method'=>'post')); ?>
+                      <?php echo form_open('admin/hapus_data',array('class'=>'form-horizontal','method'=>'post')); ?>
                       <div class="modal-body">
                         <p>Anda yakin mau menghapus <b><?php echo $name;?></b></p>
                       </div>
