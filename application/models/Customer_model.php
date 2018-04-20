@@ -10,15 +10,15 @@ class Customer_model extends CI_Model
 		return $hasil; 
 	}
 
-	public function tambah_data_customer($name,$address,$contact_person,$email,$ip_address)
+	public function tambah_data_customer($username,$name,$address,$contact_person,$email,$ip_address)
 	{
-		$hasil=$this->db->query("INSERT INTO customer (name,address,contact_person,email,ip_address) VALUES ('$name','$address','$contact_person','$email','$ip_address')");
+		$hasil=$this->db->query("INSERT INTO customer (username,name,address,contact_person,email,ip_address) VALUES ('$username','$name','$address','$contact_person','$email','$ip_address')");
 		return $hasil;
 	}
 
-	public function edit_data_customer($customer_id,$name,$address,$contact_person,$email,$ip_address)
+	public function edit_data_customer($customer_id,$username,$name,$address,$contact_person,$email,$ip_address)
 	{
-		$hasil=$this->db->query("UPDATE customer SET name='$name',address='$address',contact_person='$contact_person',email='$email',ip_address='$ip_address' WHERE customer_id='$customer_id'");
+		$hasil=$this->db->query("UPDATE customer SET username='$username',name='$name',address='$address',contact_person='$contact_person',email='$email',ip_address='$ip_address' WHERE customer_id='$customer_id'");
 		return $hasil;
 	}
 
