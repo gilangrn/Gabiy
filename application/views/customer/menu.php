@@ -47,7 +47,9 @@
 						</li>
 						<li class="has-sub nav-item"><a href="#"><i class="ft-user"></i><span data-i18n="" class="menu-title">Account</span></a>
 							<ul class="menu-content">
-								<li><a href="<?php echo site_url('editprofil')?>" class="menu-item <?php if($this->uri->segment(1)=="editprofil"){echo 'active';}?>">Edit Profil</a>
+								<li><a href="<?php echo site_url('profil')?>" class="menu-item <?php if($this->uri->segment(1)=="profil"){echo 'active';}?>">Edit Profil</a>
+								</li>
+								<li><a href="<?php echo site_url('notifications')?>" class="menu-item <?php if($this->uri->segment(1)=="notifications"){echo 'active';}?>">Notification</a>
 								</li>
 								<li><a href="<?php echo site_url('inbox')?>" class="menu-item <?php if($this->uri->segment(1)=="inbox"){echo 'active';}?>">Inbox</a>
 								</li>
