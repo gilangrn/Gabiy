@@ -28,7 +28,7 @@
 				<div class="nav-container">
 					<ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
 						<li class="nav-item <?php if($this->uri->segment(1)=="customer_home"){echo 'active';}?>">
-							<a href="<?php echo site_url('customer_home')?>">
+							<a href="<?php echo site_url('customer')?>">
 								<i class="ft-home"></i>
 								<span data-i18n="" class="menu-title">Home</span>
 							</a>

@@ -17,8 +17,8 @@ class Admin extends CI_Controller
     {
         $this->load->view('head');
         $data['username']  = $this->session->userdata('username');
-        $data['jcustomer'] = $this->statusDashboard_model->JumlahCustomer();
-        $data['jdevice']   = $this->statusDashboard_model->JumlahDevice();
+        $data['jcustomer'] = $this->statusAdmin_model->JumlahCustomer();
+        $data['jdevice']   = $this->statusAdmin_model->JumlahDevice();
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/home', $data);
         $this->load->view('footer');
