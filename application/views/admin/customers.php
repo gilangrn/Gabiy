@@ -230,10 +230,22 @@
                           </div>
                         </div>
                       </div>
-                      <fieldset class="form-group">
-                        <label for="address">Address</label>
-                        <textarea class="form-control" name="address" id="address" rows="3" placeholder="Full Address"></textarea>
-                      </fieldset>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <fieldset class="form-group">
+                            <label for="address">Address</label>
+                            <textarea class="form-control" name="address" id="address" rows="3" placeholder="Full Address"></textarea>
+                          </fieldset>
+                        </div>
+                      </div>
                     </div>
                     <div class="modal-footer">
                       <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
