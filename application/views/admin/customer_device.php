@@ -351,7 +351,7 @@
                       </button>
                     </div>
                     <!-- form modal edit customer-->
-                    <?php echo form_open('customerdevice/edit_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
+                    <?php echo form_open('admin/edit_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
                       <div class="modal-body">
                         <div class="row">
                           <div class="col-4">
@@ -423,7 +423,7 @@
                       </button>
                     </div>
                     <!-- form modal add customer-->
-                    <?php echo form_open('customerdevice/tambah_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
+                    <?php echo form_open('admin/tambah_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
                     <div class="modal-body">
                         <div class="row">
                           <div class="col-4">
@@ -551,7 +551,7 @@
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
                       <h3 class="modal-title" id="myModalLabel">Hapus Customer</h3>
                   </div>
-                  <?php echo form_open('customerdevice/hapus_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
+                  <?php echo form_open('admin/hapus_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
                       <div class="modal-body">
                           <p>Anda yakin mau menghapus <b><?php echo $device_alias;?></b></p>
                       </div>
