@@ -2,12 +2,12 @@
 	<div class="wrapper nav-collapsed menu-collapsed">
 		<!-- main menu-->
 		<!--.main-menu(class="#{menuColor} #{menuOpenType}", class=(menuShadow == true ? 'menu-shadow' : ''))-->
-		<div data-active-color="white" data-background-color="primary" data-image="assets/img/sidebar-bg/01.jpg" class="app-sidebar">
+		<div data-active-color="white" data-background-color="primary" data-image="<?php echo base_url('assets/img/sidebar-bg/01.jpg')?>" class="app-sidebar">
 			<!-- main menu header-->
 			<!-- Sidebar Header starts-->
 			<div class="sidebar-header">
 				<div class="logo clearfix">
-					<a href="<?php echo site_url('customer_home')?>" class="logo-text float-left">
+					<a href="<?php echo site_url('customer/home')?>" class="logo-text float-left">
 						<div class="logo-img">
 							<img src="assets/img/logo.png" />
 						</div>
@@ -27,8 +27,8 @@
 			<div class="sidebar-content">
 				<div class="nav-container">
 					<ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
-						<li class="nav-item <?php if($this->uri->segment(1)=="customer_home"){echo 'active';}?>">
-							<a href="<?php echo site_url('customer_home')?>">
+						<li class="nav-item <?php if($this->uri->segment(2)=="home"){echo 'active';}?>">
+							<a href="<?php echo site_url('customer/home')?>">
 								<i class="ft-home"></i>
 								<span data-i18n="" class="menu-title">Home</span>
 							</a>

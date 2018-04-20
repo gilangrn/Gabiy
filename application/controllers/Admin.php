@@ -13,7 +13,7 @@ class Admin extends CI_Controller
         }
     }
 
-    public function index()
+    public function home()
     {
         $this->load->view('head');
         $data['username']  = $this->session->userdata('username');
