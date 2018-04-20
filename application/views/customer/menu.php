@@ -9,7 +9,7 @@
 				<div class="logo clearfix">
 					<a href="<?php echo site_url('customer_home')?>" class="logo-text float-left">
 						<div class="logo-img">
-							<img src="assets/img/logo.png" />
+							<img src="<?php echo site_url('assets/img/logo.png')?>" />
 						</div>
 						<span class="text align-middle">GABIY</span>
 					</a>
@@ -92,7 +92,7 @@
 						<div id="navbarSupportedContent" class="navbar-collapse">
 							<ul class="navbar-nav">
 								<li class="nav-item mr-1 mt-1"><h4><?php echo $username; ?></h4></li>
-								<li class="dropdown nav-item"><a id="dropdownBasic3" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle"><img src="assets/img/portrait/small/avatar-s-1.png" width="30px" height="30px" style="border-radius: 50%; margin-top: -8px;">
+								<li class="dropdown nav-item"><a id="dropdownBasic3" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle"><img src="<?php echo site_url('assets/img/portrait/small/avatar-s-1.png')?>" width="30px" height="30px" style="border-radius: 50%; margin-top: -8px;">
 									<p class="d-none">User Settings</p></a>
 									<div ngbdropdownmenu="" aria-labelledby="dropdownBasic3" class="dropdown-menu dropdown-menu-right"><a href="<?php echo base_url('editprofil')?>" class="dropdown-item py-1"><i class="ft-settings mr-2"></i><span>Edit Profil</span></a><a href="<?php echo base_url('inbox')?>" class="dropdown-item py-1"><i class="ft-mail mr-2"></i><span>Inbox</span></a>
 										<div class="dropdown-divider"></div><a href="<?php echo base_url('login/keluar')?>" class="dropdown-item"><i class="ft-power mr-2"></i><span>Logout</span></a>

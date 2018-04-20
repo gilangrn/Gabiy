@@ -8,7 +8,7 @@
 						<div class="card-body">
 							<div class="px-3 py-3">
 								<h4 class="text-center">Profile Image</h4>
-								<img src="assets/img/portrait/small/avatar-s-1.png" class="centered-obj" style="border-radius: 20px;" width="200px" height="200px">
+								<img src="<?php echo site_url('assets/img/portrait/small/avatar-s-1.png')?>" class="centered-obj" style="border-radius: 20px;" width="200px" height="200px">
 								<br />
 								<input type="file" class="form-control-file centered-obj" id="basicInputFile">
 								<br>
