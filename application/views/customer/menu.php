@@ -35,21 +35,21 @@
 						</li>
 						<li class="has-sub nav-item"><a href="#"><i class="ft-list"></i><span data-i18n="" class="menu-title">Ruangan</span></a>
 							<ul class="menu-content">
-								<li><a href="<?php echo site_url('ruangdepan')?>" class="menu-item <?php if($this->uri->segment(1)=="ruangdepan"){echo 'active';}?>">Ruang Depan</a>
+								<li><a href="<?php echo site_url('customer/ruangdepan')?>" class="menu-item <?php if($this->uri->segment(1)=="ruangdepan"){echo 'active';}?>">Ruang Depan</a>
 								</li>
-								<li><a href="<?php echo site_url('ruangtengah')?>" class="menu-item <?php if($this->uri->segment(1)=="ruangtengah"){echo 'active';}?>">Ruang Tengah</a>
+								<li><a href="<?php echo site_url('customer/ruangtengah')?>" class="menu-item <?php if($this->uri->segment(1)=="ruangtengah"){echo 'active';}?>">Ruang Tengah</a>
 								</li>
-								<li><a href="<?php echo site_url('ruangrapat')?>" class="menu-item <?php if($this->uri->segment(1)=="ruangrapat"){echo 'active';}?>">Ruang Rapat</a>
+								<li><a href="<?php echo site_url('customer/ruangrapat')?>" class="menu-item <?php if($this->uri->segment(1)=="ruangrapat"){echo 'active';}?>">Ruang Rapat</a>
 								</li>
-								<li><a href="<?php echo site_url('lantaiatas')?>" class="menu-item <?php if($this->uri->segment(1)=="lantaiatas"){echo 'active';}?>">Lantai Atas</a>
+								<li><a href="<?php echo site_url('customer/lantaiatas')?>" class="menu-item <?php if($this->uri->segment(1)=="lantaiatas"){echo 'active';}?>">Lantai Atas</a>
 								</li>
 							</ul>
 						</li>
 						<li class="has-sub nav-item"><a href="#"><i class="ft-user"></i><span data-i18n="" class="menu-title">Account</span></a>
 							<ul class="menu-content">
-								<li><a href="<?php echo site_url('editprofil')?>" class="menu-item <?php if($this->uri->segment(1)=="editprofil"){echo 'active';}?>">Edit Profil</a>
+								<li><a href="<?php echo site_url('customer/profil')?>" class="menu-item <?php if($this->uri->segment(1)=="editprofil"){echo 'active';}?>">Edit Profil</a>
 								</li>
-								<li><a href="<?php echo site_url('inbox')?>" class="menu-item <?php if($this->uri->segment(1)=="inbox"){echo 'active';}?>">Inbox</a>
+								<li><a href="<?php echo site_url('customer/inbox')?>" class="menu-item <?php if($this->uri->segment(1)=="inbox"){echo 'active';}?>">Inbox</a>
 								</li>
 								<li><a href="<?php echo site_url('login/keluar')?>" class="menu-item">Logout</a>
 								</li>
