@@ -31,7 +31,7 @@ class Login extends CI_Controller {
       }
             //level 2 adalah customer
       elseif ($this->session->userdata('level') == '2') {
-        redirect('customer/home');
+        redirect('customer/home/'.$this->session->userdata('username'));
       }
     } else {
       $this->session->set_flashdata('pesan', 'Maaf, kombinasi username dengan password salah.');

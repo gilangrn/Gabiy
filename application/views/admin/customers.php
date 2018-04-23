@@ -112,13 +112,13 @@
               <!-- modal edit customer -->
               <?php
               foreach ($customer->result_array() as $i): 
-                $customer_id=$i['customer_id'];
-                $username=$u['username'];
-                $name=$i['name'];
-                $ip_address=$i['ip_address'];
-                $contact_person=$i['contact_person'];
-                $email=$i['email'];
-                $address=$i['address'];
+                $customer_id    =$i['customer_id'];
+                $username       =$i['username'];
+                $name           =$i['name'];
+                $ip_address     =$i['ip_address'];
+                $contact_person =$i['contact_person'];
+                $email          =$i['email'];
+                $address        =$i['address'];
                 ?>
                 <div class="modal fade text-left" id="modal_edit<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                   <div class="modal-dialog" role="document">
