@@ -13,8 +13,8 @@ class Customer extends CI_Controller {
 
 	public function home()
 	{
-		$this->load->view('head');
 		$data['username'] = $this->session->userdata('username');
+		$this->load->view('head');
 		$this->load->view('customer/menu',$data);
 		$this->load->view('customer/home',$data);
 		$this->load->view('footer');

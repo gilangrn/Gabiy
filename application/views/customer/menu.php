@@ -28,20 +28,20 @@
 				<div class="nav-container">
 					<ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
 						<li class="nav-item <?php if($this->uri->segment(2)=="home"){echo 'active';}?>">
-							<a href="<?php echo site_url('customer/home')?>">
+							<a href="<?php echo site_url('customer/home/'.$this->session->userdata('username'))?>">
 								<i class="ft-home"></i>
 								<span data-i18n="" class="menu-title">Home</span>
 							</a>
 						</li>
 						<li class="has-sub nav-item <?php if($this->uri->segment(2)=="ruangdepan" OR $this->uri->segment(2)=="lantaiatas" OR $this->uri->segment(2)=="ruangrapat" OR $this->uri->segment(2)=="ruangtengah" ){echo 'open';}?>"><a href="#"><i class="ft-list"></i><span data-i18n="" class="menu-title">Ruangan</span></a>
 							<ul class="menu-content">
-								<li class="<?php if($this->uri->segment(2)=="ruangdepan"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangdepan')?>" class="menu-item">Ruang Depan</a>
+								<li class="<?php if($this->uri->segment(2)=="ruangdepan"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangdepan/'.$this->session->userdata('username'))?>" class="menu-item">Ruang Depan</a>
 								</li>
-								<li class="<?php if($this->uri->segment(2)=="ruangtengah"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangtengah')?>" class="menu-item">Ruang Tengah</a>
+								<li class="<?php if($this->uri->segment(2)=="ruangtengah"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangtengah/'.$this->session->userdata('username'))?>" class="menu-item">Ruang Tengah</a>
 								</li>
-								<li class="<?php if($this->uri->segment(2)=="ruangrapat"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangrapat')?>" class="menu-item">Ruang Rapat</a>
+								<li class="<?php if($this->uri->segment(2)=="ruangrapat"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangrapat/'.$this->session->userdata('username'))?>" class="menu-item">Ruang Rapat</a>
 								</li>
-								<li class="<?php if($this->uri->segment(2)=="lantaiatas"){echo 'active';}?>"><a href="<?php echo site_url('customer/lantaiatas')?>" class="menu-item">Lantai Atas</a>
+								<li class="<?php if($this->uri->segment(2)=="lantaiatas"){echo 'active';}?>"><a href="<?php echo site_url('customer/lantaiatas/'.$this->session->userdata('username'))?>" class="menu-item">Lantai Atas</a>
 								</li>
 							</ul>
 						</li>
