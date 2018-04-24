@@ -34,7 +34,7 @@ class Login extends CI_Controller {
         redirect('customer/home/'.$this->session->userdata('username'));
       }
     } else {
-      $this->session->set_flashdata('pesan', 'Maaf, kombinasi username dengan password salah.');
+      $this->session->set_flashdata('info','true');
       redirect('login');
     }
   }
