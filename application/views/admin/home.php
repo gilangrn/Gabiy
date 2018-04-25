@@ -135,7 +135,7 @@
 										<h5 class="text-bold-500 info float-left">Lamp</h5>
 										<div class="actions float-right">
 											<div class="form-group mr-1">
-												<input type="checkbox" id="switcherySize3" class="switchery" data-size="xs" checked/>
+												<input type="checkbox" id="switcherySize3" class="switchery danger" data-size="xs" checked/>
 											</div>
 										</div>
 									</div>

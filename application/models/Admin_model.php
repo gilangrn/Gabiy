@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Customer_model extends CI_Model
+class Admin_model extends CI_Model
 {
 	//data customer
 	public function tampil_data_customer()
@@ -10,21 +10,29 @@ class Customer_model extends CI_Model
 		return $hasil; 
 	}
 
-	public function tambah_data_customer($name,$address,$contact_person,$email,$ip_address)
+	public function tambah_data_customer($username,$name,$address,$contact_person,$email,$ip_address)
 	{
-		$hasil=$this->db->query("INSERT INTO customer (name,address,contact_person,email,ip_address) VALUES ('$name','$address','$contact_person','$email','$ip_address')");
+		$hasil=$this->db->query("INSERT INTO customer (username,name,address,contact_person,email,ip_address) VALUES ('$username','$name','$address','$contact_person','$email','$ip_address')");
 		return $hasil;
 	}
 
-	public function edit_data_customer($customer_id,$name,$address,$contact_person,$email,$ip_address)
+	public function edit_data_customer($customer_id,$username,$name,$address,$contact_person,$email,$ip_address)
 	{
-		$hasil=$this->db->query("UPDATE customer SET name='$name',address='$address',contact_person='$contact_person',email='$email',ip_address='$ip_address' WHERE customer_id='$customer_id'");
+		$hasil=$this->db->query("UPDATE customer SET username='$username',name='$name',address='$address',contact_person='$contact_person',email='$email',ip_address='$ip_address' WHERE customer_id='$customer_id'");
 		return $hasil;
 	}
 
 	public function hapus_data($customer_id){
         $hasil=$this->db->query("DELETE FROM customer WHERE customer_id='$customer_id'");
         return $hasil;
+	}
+
+	// hapus data user
+	public function hapus_data_user($username){
+        /*$hasil=$this->db->query("DELETE FROM users WHERE username='$username'");
+        return $hasil;*/
+        $this->db->delete('users', array('username'=>$username));
+        return;
 	}
 	
 	//data device
@@ -51,4 +59,13 @@ class Customer_model extends CI_Model
         return $hasil;
     }
 
+    public function tampil_data_users(){
+    	$hasil=$this->db->query("SELECT * FROM users WHERE level='2' ORDER BY tanggal_daftar DESC");
+		return $hasil;
+    }
+
+    public function tambah_data_users($username, $password, $level, $tanggal_daftar, $token){
+    	$hasil=$this->db->query("INSERT INTO users (username,password,level,tanggal_daftar,token) VALUES ('$username', '$password', '$level', '$tanggal_daftar','$token')");
+		return $hasil;
+    }
 }
