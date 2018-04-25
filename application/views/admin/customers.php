@@ -7,11 +7,11 @@
             <div class="card">
               <div class="card-header">
                 <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: left;">Table Customer</span>
-                <div class="pull-right">
+                <!-- <div class="pull-right">
                   <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
                     <i class="ft-user-plus"></i> Add Customer
                   </button>
-                </div><br><br>
+                </div><br><br> -->
                 <div class="card row pull-left">
                   <span class="col-md-12 col-sm-12" style="font-size: 25px;">Date Filter</span><br>
                   <div class="form-group col-md-12">
@@ -192,65 +192,7 @@
                 </div>
               <?php endforeach;?>
               <!-- akhir modal edit customer -->
-              <!-- modal add new customer-->
-              <div class="modal fade text-left" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h3 class="modal-title">Add Customer</h3>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <!-- form modal add customer-->
-                    <?php echo form_open('admin/tambah_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
-                    <div class="modal-body">
-                      <div class="row">
-                        <div class="col-8">
-                          <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Customer Name">
-                          </div>
-                        </div>
-                        <div class="col-4">
-                          <div class="form-group">
-                            <label>IP Address</label>
-                            <input type="text" class="form-control" name="ip_address" id="ip_address" placeholder="IP Address">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label>Contact</label>
-                            <input type="text" class="form-control" name="contact_person" id="contact_person" placeholder="Contact Person">
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label>Email</label>
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Email Address">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                          <fieldset class="form-group">
-                            <label for="address">Address</label>
-                            <textarea class="form-control" name="address" id="address" rows="3" placeholder="Full Address"></textarea>
-                          </fieldset>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-                      <input type="submit" class="btn btn-outline-primary btn-lg" value="Add">
-                    </div>
-                    <?php echo form_close() ?>
-                  </div>
-                </div>
-              </div>
-              <!-- akhir modal add customer -->
+
               <!-- modal detail customer -->
               <div class="modal fade text-left" id="detailCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">

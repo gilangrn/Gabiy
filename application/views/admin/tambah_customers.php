@@ -69,7 +69,7 @@
                             </td>
                             <td>
                               <!-- tombol edit users-->
-                              <button type="button" id="addtoCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#modal_add<?php echo $username;?>">
+                              <button type="button" id="addtoCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#addtoCustomer<?php echo $username;?>">
                                 <i class="ft-edit-2"></i> Add to Customer
                               </button>
                               <!-- tombol delete users -->
@@ -84,7 +84,7 @@
                   </div>
                 </div>
                 <!-- modal add to users -->
-             <!-- <div class="modal fade text-left" id="addtoCustomer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+             <div class="modal fade text-left" id="addtoCustomer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -121,7 +121,7 @@
                     <?php echo form_close() ?>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <!-- akhir modal add to customer -->
               <!-- modal add new users-->
               <div class="modal fade text-left" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
