@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2018 at 12:44 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 5.6.32
+-- Generation Time: Apr 23, 2018 at 01:25 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -37,13 +37,6 @@ CREATE TABLE `customer` (
   `email` varchar(50) NOT NULL,
   `ip_address` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `customer`
---
-
-INSERT INTO `customer` (`customer_id`, `username`, `name`, `address`, `contact_person`, `email`, `ip_address`) VALUES
-(1, 'customer', 'customer name', 'asdasd', 'sadasd', 'asdasd', 'asdad');
 
 -- --------------------------------------------------------
 
@@ -89,17 +82,19 @@ INSERT INTO `master_device` (`device_id`, `name_device`, `kategori`) VALUES
 CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `level` varchar(2) NOT NULL
+  `level` varchar(2) NOT NULL,
+  `tanggal_daftar` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`username`, `password`, `level`) VALUES
-('admin', '21232F297A57A5A743894A0E4A801FC3', '1'),
-('customer', '91EC1F9324753048C0096D036A694F86', '2'),
-('customernew', '1B5222884106177E294F48494EF3AE79', '2');
+INSERT INTO `users` (`username`, `password`, `level`, `tanggal_daftar`) VALUES
+('admin', '21232F297A57A5A743894A0E4A801FC3', '1', '0000-00-00 00:00:00'),
+('gilang', '0079fcb602361af76c4fd616d60f9414', '2', '2018-04-23 13:00:54'),
+('gilang1', '0079fcb602361af76c4fd616d60f9414', '2', '2018-04-23 13:07:10'),
+('gilang2', '0079fcb602361af76c4fd616d60f9414', '2', '2018-04-23 13:07:40');
 
 --
 -- Indexes for dumped tables
@@ -140,13 +135,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `customer_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `customer_device`
 --
 ALTER TABLE `customer_device`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

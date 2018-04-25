@@ -26,6 +26,14 @@ class Admin_model extends CI_Model
         $hasil=$this->db->query("DELETE FROM customer WHERE customer_id='$customer_id'");
         return $hasil;
 	}
+
+	// hapus data user
+	public function hapus_data_user($username){
+        /*$hasil=$this->db->query("DELETE FROM users WHERE username='$username'");
+        return $hasil;*/
+        $this->db->delete('users', array('username'=>$username));
+        return;
+	}
 	
 	//data device
 	public function tampil_data_device()
@@ -51,4 +59,13 @@ class Admin_model extends CI_Model
         return $hasil;
     }
 
+    public function tampil_data_users(){
+    	$hasil=$this->db->query("SELECT * FROM users WHERE level='2' ORDER BY tanggal_daftar DESC");
+		return $hasil;
+    }
+
+    public function tambah_data_users($username, $password, $level, $tanggal_daftar){
+    	$hasil=$this->db->query("INSERT INTO users (username,password,level,tanggal_daftar) VALUES ('$username', '$password', '$level', '$tanggal_daftar')");
+		return $hasil;
+    }
 }
