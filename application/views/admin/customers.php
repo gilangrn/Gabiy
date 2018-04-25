@@ -1,17 +1,13 @@
 <div class="main-panel">
   <div class="main-content">
     <div class="content-wrapper">
-      <section id="scroll-dynamic"><!-- <section id="horizontal"> -->
+      <section id="scroll-dynamic">
         <div class="row">
           <div class="col-12">
             <div class="card">
               <div class="card-header">
                 <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: left;">Table Customer</span>
-                <!-- <div class="pull-right">
-                  <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addCustomerModal">
-                    <i class="ft-user-plus"></i> Add Customer
-                  </button>
-                </div><br><br> -->
+                <br><br>
                 <div class="card row pull-left">
                   <span class="col-md-12 col-sm-12" style="font-size: 25px;">Date Filter</span><br>
                   <div class="form-group col-md-12">
