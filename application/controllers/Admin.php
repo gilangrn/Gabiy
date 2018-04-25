@@ -40,18 +40,6 @@ class Admin extends CI_Controller
         $this->load->view('js');
     }
 
-    public function tambah_data_customer()
-    {
-        $username       = $this->input->post('username');
-        $name           = $this->input->post('name');
-        $address        = $this->input->post('address');
-        $contact_person = $this->input->post('contact_person');
-        $email          = $this->input->post('email');
-        $ip_address     = $this->input->post('ip_address');
-        $this->admin_model->tambah_data_customer($username, $name, $address, $contact_person, $email, $ip_address);
-        redirect('Customers');
-    }
-
     public function edit_data_customer()
     {
         $customer_id    = $this->input->post('customer_id');
@@ -69,17 +57,15 @@ class Admin extends CI_Controller
     {
         $customer_id = $this->input->post('customer_id');
         $this->admin_model->hapus_data($customer_id);
-        redirect('Customers');
+        redirect('admin/customer');
     }
-
     // hapus data user
     public function hapus_data_user()
     {
         $username = $this->input->post('username');
         $this->admin_model->hapus_data_user($username);
-        redirect('tambah_customer');
+        redirect('admin/tambah_customer');
     }
-
     //customer device
     public function customer_device()
     {
@@ -129,15 +115,19 @@ class Admin extends CI_Controller
     //tambah customer
     public function tambah_customer()
     {
+        $this->load->library('generate_token');
+        $data['token_get']  = $this->generate_token->get_token(50);
+        $data['customer_id']= $this->format_id_model->IDCustomer();
+
         $this->load->view('head');
-        $data['username'] = $this->session->userdata('username');
+        $data['username']   = $this->session->userdata('username');
         $this->load->view('admin/menu', $data);
-        $data['users'] = $this->admin_model->tampil_data_users();
+        $data['users']      = $this->admin_model->tampil_data_users();
         $this->load->view('admin/tambah_customers', $data);
         $this->load->view('footer');
         $this->load->view('rightmenu');
         /*$this->load->view('settingtheme');*/
-        $this->load->view('js');
+        $this->load->view('js',$data);
     }
 
     public function tambah_data_user()
@@ -146,8 +136,24 @@ class Admin extends CI_Controller
         $password       = md5($this->input->post('password'));
         $level          = $this->input->post('level');
         $tanggal_daftar = date("Y-m-d H:i:s");
-        $this->admin_model->tambah_data_users($username, $password, $level, $tanggal_daftar);
+        $token          = $this->input->post('token');
+        $this->admin_model->tambah_data_users($username, $password, $level, $tanggal_daftar, $token);
         
+        $this->session->set_flashdata('info','true');
+        redirect('admin/tambah_customer');
+    }
+
+    public function tambah_data_customer()
+    {
+        $customer_id    = $this->input->post('customer_id');
+        $username       = $this->input->post('username');
+        $name           = $this->input->post('name');
+        $address        = $this->input->post('address');
+        $contact_person = $this->input->post('contact_person');
+        $email          = $this->input->post('email');
+        $ip_address     = $this->input->post('ip_address');
+        $this->admin_model->tambah_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address);
+
         $this->session->set_flashdata('info','true');
         redirect('admin/tambah_customer');
     }

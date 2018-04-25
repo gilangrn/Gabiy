@@ -72,11 +72,13 @@
                                                             <button type="reset" class="btn btn-secondary btn-block btn-raised">Cancel</button>
                                                         </div>
                                                     </div>
-                                                    <?php if ($this->session->flashdata('pesan') <> '') { ?>
-                                                    <div id="login-error">
-                                                        <?php echo $this->session->flashdata('pesan'); ?>
-                                                    </div>
-                                                    <?php } ?>
+                                                        <?php if ($this->session->flashdata('info')): ?>
+                                                        <div class="alert alert-danger alert-dismissible">
+                                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                            <h4><i class="icon fa fa-check"></i>Info</h4>
+                                                            Maaf Username dan Password salah!
+                                                        </div>
+                                                        <?php endif ?>
                                                 </form>
                                             </div> 
                                         </div>
