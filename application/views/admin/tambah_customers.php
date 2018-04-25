@@ -76,7 +76,7 @@
                             <div class="form-group">
                               <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                                 <button type="button" class="btn btn-raised btn-outline-success" data-toggle="modal" data-target="#addtoCustomerModal"><i class="fa fa-plus"></i> Add to Customer</button>
-                                <a class="btn btn-raised btn-outline-danger" href="<?php echo site_url('admin/hapus_data_user'.$u->username) ?>" onClick="return confirm('Hapus User?')"><i class="fa fa-trash"></i> Delete</a>
+                                <a class="btn btn-raised btn-outline-danger" href="<?php echo site_url('admin/hapus_data_user'.$u->username) ?>" onClick="return confirm('Hapus User?') "><i class="fa fa-trash"></i> Delete</a>
                               </div>
                             </div>
                           </td>
