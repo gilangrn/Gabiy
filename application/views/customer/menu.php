@@ -47,9 +47,9 @@
 						</li>
 						<li class="has-sub nav-item <?php if($this->uri->segment(2)=="profil" OR $this->uri->segment(2)=="notifications" OR $this->uri->segment(2)=="inbox" OR $this->uri->segment(2)=="keluar" ){echo 'open';}?>"><a href="#"><i class="ft-user"></i><span data-i18n="" class="menu-title">Account</span></a>
 							<ul class="menu-content">
-								<li class="<?php if($this->uri->segment(2)=="profil"){echo 'active';}?>"><a href="<?php echo site_url('customer/profil'.$this->session->userdata('token'))?>" class="menu-item">Edit Profil</a>
+								<li class="<?php if($this->uri->segment(2)=="profil"){echo 'active';}?>"><a href="<?php echo site_url('customer/profil/'.$this->session->userdata('token'))?>" class="menu-item">Edit Profil</a>
 								</li>
-								<li class="<?php if($this->uri->segment(2)=="notifications"){echo 'active';}?>"><a href="<?php echo site_url('customer/notifications'.$this->session->userdata('token'))?>" class="menu-item">Notification</a>
+								<li class="<?php if($this->uri->segment(2)=="notifications"){echo 'active';}?>"><a href="<?php echo site_url('customer/notifications/'.$this->session->userdata('token'))?>" class="menu-item">Notification</a>
 								</li>
 								<li class="<?php if($this->uri->segment(2)=="inbox"){echo 'active';}?>"><a href="<?php echo site_url('customer/inbox'.$this->session->userdata('token'))?>" class="menu-item">Inbox</a>
 								</li>
