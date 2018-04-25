@@ -56,8 +56,8 @@ class Admin_model extends CI_Model
 		return $hasil;
     }
 
-    public function tambah_data_users($username, $password, $level, $tanggal_daftar){
-    	$hasil=$this->db->query("INSERT INTO users (username,password,level,tanggal_daftar) VALUES ('$username', '$password', '$level', '$tanggal_daftar')");
+    public function tambah_data_users($username, $password, $level, $tanggal_daftar, $token){
+    	$hasil=$this->db->query("INSERT INTO users (username,password,level,tanggal_daftar,token) VALUES ('$username', '$password', '$level', '$tanggal_daftar','$token')");
 		return $hasil;
     }
 }

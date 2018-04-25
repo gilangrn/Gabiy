@@ -23,6 +23,7 @@ class Login extends CI_Controller {
         $sess_data['id'] = $data->id;
         $sess_data['username'] = $data->username;
         $sess_data['level'] = $data->level;
+        $sess_data['token'] = $data->token;
         $this->session->set_userdata($sess_data);
       }
             //level 1 adalah admin
@@ -31,7 +32,7 @@ class Login extends CI_Controller {
       }
             //level 2 adalah customer
       elseif ($this->session->userdata('level') == '2') {
-        redirect('customer/home/'.$this->session->userdata('username'));
+        redirect('customer/home/'.$this->session->userdata('token'));
       }
     } else {
       $this->session->set_flashdata('info','true');

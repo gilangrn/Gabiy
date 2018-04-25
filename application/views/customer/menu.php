@@ -28,30 +28,30 @@
 				<div class="nav-container">
 					<ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
 						<li class="nav-item <?php if($this->uri->segment(2)=="home"){echo 'active';}?>">
-							<a href="<?php echo site_url('customer/home/'.$this->session->userdata('username'))?>">
+							<a href="<?php echo site_url('customer/home/'.$this->session->userdata('token'))?>">
 								<i class="ft-home"></i>
 								<span data-i18n="" class="menu-title">Home</span>
 							</a>
 						</li>
 						<li class="has-sub nav-item <?php if($this->uri->segment(2)=="ruangdepan" OR $this->uri->segment(2)=="lantaiatas" OR $this->uri->segment(2)=="ruangrapat" OR $this->uri->segment(2)=="ruangtengah" ){echo 'open';}?>"><a href="#"><i class="ft-list"></i><span data-i18n="" class="menu-title">Ruangan</span></a>
 							<ul class="menu-content">
-								<li class="<?php if($this->uri->segment(2)=="ruangdepan"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangdepan/'.$this->session->userdata('username'))?>" class="menu-item">Ruang Depan</a>
+								<li class="<?php if($this->uri->segment(2)=="ruangdepan"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangdepan/'.$this->session->userdata('token'))?>" class="menu-item">Ruang Depan</a>
 								</li>
-								<li class="<?php if($this->uri->segment(2)=="ruangtengah"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangtengah/'.$this->session->userdata('username'))?>" class="menu-item">Ruang Tengah</a>
+								<li class="<?php if($this->uri->segment(2)=="ruangtengah"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangtengah/'.$this->session->userdata('token'))?>" class="menu-item">Ruang Tengah</a>
 								</li>
-								<li class="<?php if($this->uri->segment(2)=="ruangrapat"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangrapat/'.$this->session->userdata('username'))?>" class="menu-item">Ruang Rapat</a>
+								<li class="<?php if($this->uri->segment(2)=="ruangrapat"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangrapat/'.$this->session->userdata('token'))?>" class="menu-item">Ruang Rapat</a>
 								</li>
-								<li class="<?php if($this->uri->segment(2)=="lantaiatas"){echo 'active';}?>"><a href="<?php echo site_url('customer/lantaiatas/'.$this->session->userdata('username'))?>" class="menu-item">Lantai Atas</a>
+								<li class="<?php if($this->uri->segment(2)=="lantaiatas"){echo 'active';}?>"><a href="<?php echo site_url('customer/lantaiatas/'.$this->session->userdata('token'))?>" class="menu-item">Lantai Atas</a>
 								</li>
 							</ul>
 						</li>
 						<li class="has-sub nav-item <?php if($this->uri->segment(2)=="profil" OR $this->uri->segment(2)=="notifications" OR $this->uri->segment(2)=="inbox" OR $this->uri->segment(2)=="keluar" ){echo 'open';}?>"><a href="#"><i class="ft-user"></i><span data-i18n="" class="menu-title">Account</span></a>
 							<ul class="menu-content">
-								<li class="<?php if($this->uri->segment(2)=="profil"){echo 'active';}?>"><a href="<?php echo site_url('customer/profil')?>" class="menu-item">Edit Profil</a>
+								<li class="<?php if($this->uri->segment(2)=="profil"){echo 'active';}?>"><a href="<?php echo site_url('customer/profil'.$this->session->userdata('token'))?>" class="menu-item">Edit Profil</a>
 								</li>
-								<li class="<?php if($this->uri->segment(2)=="notifications"){echo 'active';}?>"><a href="<?php echo site_url('customer/notifications')?>" class="menu-item">Notification</a>
+								<li class="<?php if($this->uri->segment(2)=="notifications"){echo 'active';}?>"><a href="<?php echo site_url('customer/notifications'.$this->session->userdata('token'))?>" class="menu-item">Notification</a>
 								</li>
-								<li class="<?php if($this->uri->segment(2)=="inbox"){echo 'active';}?>"><a href="<?php echo site_url('customer/inbox')?>" class="menu-item">Inbox</a>
+								<li class="<?php if($this->uri->segment(2)=="inbox"){echo 'active';}?>"><a href="<?php echo site_url('customer/inbox'.$this->session->userdata('token'))?>" class="menu-item">Inbox</a>
 								</li>
 								<li><a href="<?php echo site_url('login/keluar')?>" class="menu-item">Logout</a>
 								</li>

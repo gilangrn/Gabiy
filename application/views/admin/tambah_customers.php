@@ -154,6 +154,11 @@
                             <input type="hidden" class="form-control" name="level" id="level" value="2">
                           </div>
                         </div>
+                        <div class="col-4">
+                          <div class="form-group">
+                            <input type="hidden" class="form-control" name="token" id="token" value="<?php echo $token_get; ?>">
+                          </div>
+                        </div>
                       </div>
                     <div class="modal-footer">
                       <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
