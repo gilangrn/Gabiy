@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customer` (
-  `customer_id` int(7) NOT NULL,
+  `customer_id` varchar(7) NOT NULL,
   `username` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
   `address` text NOT NULL,
@@ -45,13 +45,13 @@ CREATE TABLE `customer` (
 --
 
 CREATE TABLE `customer_device` (
-  `id` int(7) NOT NULL,
+  `id` varchar(7) NOT NULL,
   `device_alias` varchar(20) NOT NULL,
   `pin` varchar(2) NOT NULL,
   `description` text NOT NULL,
   `keyword` varchar(200) NOT NULL,
-  `customer_id` int(7) NOT NULL,
-  `device_id` int(7) NOT NULL
+  `customer_id` varchar(7) NOT NULL,
+  `device_id` varchar(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -61,7 +61,7 @@ CREATE TABLE `customer_device` (
 --
 
 CREATE TABLE `master_device` (
-  `device_id` int(4) NOT NULL,
+  `device_id` varchar(4) NOT NULL,
   `name_device` varchar(20) NOT NULL,
   `kategori` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -125,22 +125,6 @@ ALTER TABLE `master_device`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`username`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `customer`
---
-ALTER TABLE `customer`
-  MODIFY `customer_id` int(7) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `customer_device`
---
-ALTER TABLE `customer_device`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

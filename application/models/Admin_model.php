@@ -10,9 +10,9 @@ class Admin_model extends CI_Model
 		return $hasil; 
 	}
 
-	public function tambah_data_customer($username,$name,$address,$contact_person,$email,$ip_address)
+	public function tambah_data_customer($customer_id, $username,$name,$address,$contact_person,$email,$ip_address)
 	{
-		$hasil=$this->db->query("INSERT INTO customer (username,name,address,contact_person,email,ip_address) VALUES ('$username','$name','$address','$contact_person','$email','$ip_address')");
+		$hasil=$this->db->query("INSERT INTO customer (customer_id, username,name,address,contact_person,email,ip_address) VALUES ('$customer_id','$username','$name','$address','$contact_person','$email','$ip_address')");
 		return $hasil;
 	}
 
