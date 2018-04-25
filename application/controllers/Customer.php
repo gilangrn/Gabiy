@@ -13,7 +13,8 @@ class Customer extends CI_Controller {
 
 	public function home()
 	{
-		$data['username'] = $this->session->userdata('username');
+    	$data['username'] = $this->session->userdata('username');
+		$data['token'] = $this->session->userdata('token');
 		$this->load->view('head');
 		$this->load->view('customer/menu',$data);
 		$this->load->view('customer/home',$data);
@@ -27,6 +28,7 @@ class Customer extends CI_Controller {
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
+    	$data['token'] = $this->session->userdata('token');
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/lantaiatas/content',$data);
     	$this->load->view('js');
@@ -37,6 +39,7 @@ class Customer extends CI_Controller {
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
+    	$data['token'] = $this->session->userdata('token');
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/profil/content',$data);
     	$this->load->view('js');
@@ -46,6 +49,7 @@ class Customer extends CI_Controller {
   	{
     	$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
+    	$data['token'] = $this->session->userdata('token');
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/profil/notification',$data);
     	$this->load->view('js');
@@ -55,6 +59,7 @@ class Customer extends CI_Controller {
   	{
     	$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
+    	$data['token'] = $this->session->userdata('token');
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/profil/inbox',$data);
    		$this->load->view('js');
@@ -64,6 +69,7 @@ class Customer extends CI_Controller {
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
+    	$data['token'] = $this->session->userdata('token');
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/ruangdepan/content',$data);
     	$this->load->view('js');
@@ -73,6 +79,7 @@ class Customer extends CI_Controller {
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
+    	$data['token'] = $this->session->userdata('token');
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/ruangrapat/content',$data);
     	$this->load->view('js');
@@ -82,6 +89,7 @@ class Customer extends CI_Controller {
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
+    	$data['token'] = $this->session->userdata('token');
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/ruangtengah/content',$data);
     	$this->load->view('js');

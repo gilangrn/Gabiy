@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2018 at 01:25 PM
+-- Generation Time: Apr 25, 2018 at 07:25 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -83,18 +83,17 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `level` varchar(2) NOT NULL,
-  `tanggal_daftar` datetime NOT NULL
+  `tanggal_daftar` datetime NOT NULL,
+  `token` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`username`, `password`, `level`, `tanggal_daftar`) VALUES
-('admin', '21232F297A57A5A743894A0E4A801FC3', '1', '0000-00-00 00:00:00'),
-('gilang', '0079fcb602361af76c4fd616d60f9414', '2', '2018-04-23 13:00:54'),
-('gilang1', '0079fcb602361af76c4fd616d60f9414', '2', '2018-04-23 13:07:10'),
-('gilang2', '0079fcb602361af76c4fd616d60f9414', '2', '2018-04-23 13:07:40');
+INSERT INTO `users` (`username`, `password`, `level`, `tanggal_daftar`, `token`) VALUES
+('admin', '21232F297A57A5A743894A0E4A801FC3', '1', '0000-00-00 00:00:00', ''),
+('gilang2', '0079fcb602361af76c4fd616d60f9414', '2', '2018-04-25 07:22:09', '2vIuSF8NqGrISiXiDjKxXoxXqZQxUBUCFUVQHVLTPXPVQPRRQZ');
 
 --
 -- Indexes for dumped tables
@@ -135,13 +134,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `customer_id` int(7) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `customer_device`
 --
 ALTER TABLE `customer_device`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

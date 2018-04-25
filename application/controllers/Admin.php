@@ -129,10 +129,13 @@ class Admin extends CI_Controller
     //tambah customer
     public function tambah_customer()
     {
+        $this->load->library('generate_token');
+        $data['token_get']  = $this->generate_token->get_token(50);
+
         $this->load->view('head');
-        $data['username'] = $this->session->userdata('username');
+        $data['username']   = $this->session->userdata('username');
         $this->load->view('admin/menu', $data);
-        $data['users'] = $this->admin_model->tampil_data_users();
+        $data['users']      = $this->admin_model->tampil_data_users();
         $this->load->view('admin/tambah_customers', $data);
         $this->load->view('footer');
         $this->load->view('rightmenu');
@@ -146,7 +149,8 @@ class Admin extends CI_Controller
         $password       = md5($this->input->post('password'));
         $level          = $this->input->post('level');
         $tanggal_daftar = date("Y-m-d H:i:s");
-        $this->admin_model->tambah_data_users($username, $password, $level, $tanggal_daftar);
+        $token          = $this->input->post('token');
+        $this->admin_model->tambah_data_users($username, $password, $level, $tanggal_daftar, $token);
         
         $this->session->set_flashdata('info','true');
         redirect('admin/tambah_customer');
