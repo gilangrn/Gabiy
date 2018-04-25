@@ -32,7 +32,7 @@ class Admin_model extends CI_Model
         /*$hasil=$this->db->query("DELETE FROM users WHERE username='$username'");
         return $hasil;*/
         $this->db->delete('users', array('username'=>$username));
-        return;
+        return; 
 	}
 	
 	//data device
