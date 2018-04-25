@@ -59,7 +59,6 @@ class Admin extends CI_Controller
         $this->admin_model->hapus_data($customer_id);
         redirect('admin/customer');
     }
-
     // hapus data user
     public function hapus_data_user()
     {
@@ -67,7 +66,6 @@ class Admin extends CI_Controller
         $this->admin_model->hapus_data_user($username);
         redirect('admin/tambah_customer');
     }
-
     //customer device
     public function customer_device()
     {
@@ -129,7 +127,7 @@ class Admin extends CI_Controller
         $this->load->view('footer');
         $this->load->view('rightmenu');
         /*$this->load->view('settingtheme');*/
-        $this->load->view('js');
+        $this->load->view('js',$data);
     }
 
     public function tambah_data_user()
