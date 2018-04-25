@@ -192,7 +192,6 @@
                 </div>
               <?php endforeach;?>
               <!-- akhir modal edit customer -->
-
               <!-- modal detail customer -->
               <div class="modal fade text-left" id="detailCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
