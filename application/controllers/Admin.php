@@ -72,6 +72,14 @@ class Admin extends CI_Controller
         redirect('Customers');
     }
 
+    // hapus data user
+    public function hapus_data_user()
+    {
+        $username = $this->input->post('username');
+        $this->admin_model->hapus_data_user($username);
+        redirect('tambah_customer');
+    }
+
     //customer device
     public function customer_device()
     {
