@@ -132,15 +132,34 @@ class Admin extends CI_Controller
 
     public function tambah_data_user()
     {
-        $username       = $this->input->post('username');
-        $password       = md5($this->input->post('password'));
-        $level          = $this->input->post('level');
-        $tanggal_daftar = date("Y-m-d H:i:s");
-        $token          = $this->input->post('token');
-        $this->admin_model->tambah_data_users($username, $password, $level, $tanggal_daftar, $token);
-        
-        $this->session->set_flashdata('info','true');
-        redirect('admin/tambah_customer');
+        $this->form_validation->set_error_delimiter('<div id="error">', '</div>');
+        $this->form_validation->set_rules('username', 'username', 'trim|required|max_length[50]|xss_clean|callback_valid_id');
+        $this->form_validation->set_rules('password', 'password', 'trim|required|max_length[50]|xss_clean');
+        if ($this->form_validation->run() == TRUE){
+            $data = array(
+                $username       = $this->input->post('username'),
+                $password       = md5($this->input->post('password')),
+                $level          = $this->input->post('level'),
+                $tanggal_daftar = date("Y-m-d H:i:s"),
+                $token          = $this->input->post('token')
+            );
+            $this->admin_model->tambah_data_users($data);
+            $this->session->set_flashdata('info','true');
+            redirect('admin/tambah_customer');
+        }
+        else {
+            $this->index();
+        }
+    }
+
+    public function valid_username($username){
+        if ($this->admin_model->valid_username($username) == TRUE) {
+            $this->form_validation->set_message('valid_username', 'Username dengan nama $username sudah terdaftar');
+            return FALSE;
+        }
+        else{
+            return TRUE;
+        }
     }
 
     public function tambah_data_customer()

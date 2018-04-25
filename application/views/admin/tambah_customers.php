@@ -182,6 +182,7 @@
                               <label>Username</label>
                               <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
                             </div>
+                            <?php echo form_error('username'); ?>
                           </div>
                         </div>
                         <div class="row">
