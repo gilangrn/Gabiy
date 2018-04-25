@@ -34,6 +34,9 @@
                       </div>
                     </div>
                   </div>
+                  <div class="pull-left input-group col-md-3">
+                    <input type="submit" class="btn btn-default btn-outline-primary form-control text-center" value="Filter">
+                  </div>
                 </div>
               </div>
               <div class="card-body collapse show">
