@@ -26,6 +26,14 @@ class Admin_model extends CI_Model
         $hasil=$this->db->query("DELETE FROM customer WHERE customer_id='$customer_id'");
         return $hasil;
 	}
+
+	// hapus data user
+	public function hapus_data_user($username){
+        /*$hasil=$this->db->query("DELETE FROM users WHERE username='$username'");
+        return $hasil;*/
+        $this->db->delete('users', array('username'=>$username));
+        return;
+	}
 	
 	//data device
 	public function tampil_data_device()
