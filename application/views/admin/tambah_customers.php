@@ -11,7 +11,7 @@
         <div class="alert alert-danger alert-dismissable">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
           <h4><i class="icon fa fa-close"></i>Info</h4>
-          Gagal
+          Gagal, Username Sudah Ada
         </div>
       <?php elseif($this->session->flashdata('info_berhasil')): ?>
        <div class="alert alert-success alert-dismissible">
@@ -119,11 +119,6 @@
                             <div>
                               <div class="form-group">
                                 <input type="hidden" class="form-control" name="username" id="username" value="<?php echo $username;?>">
-                              </div>
-                            </div>
-                            <div>
-                              <div class="form-group">
-                                <input type="hidden" class="form-control" name="customer_id" id="customer_id" value="<?php echo $customer_id;?>">
                               </div>
                             </div>
                             <div class="col-8">

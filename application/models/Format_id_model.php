@@ -22,10 +22,10 @@ class Format_id_model extends CI_Model
 
     public function IDDevice()
     {
-        $this->db->select("RIGHT(id_perusahaan,4) AS kode ");
-        $this->db->order_by('id_perusahaan', 'DESC');
+        $this->db->select("RIGHT(device_id,4) AS kode ");
+        $this->db->order_by('device_id', 'DESC');
         $this->db->limit(1);
-        $query = $this->db->get('perusahaan');
+        $query = $this->db->get('master_device');
         if($query->num_rows()>0){
             $data = $query->row();
             $kode = intval($data->kode)+1;
@@ -33,16 +33,16 @@ class Format_id_model extends CI_Model
             $kode = 1;
         }
         $kodemax = str_pad($kode,4,"0",STR_PAD_LEFT);
-        $kodejadi  = "PT".$kodemax;
+        $kodejadi  = "MD".$kodemax;
         return $kodejadi;
     }
 
     public function IDCustomerDevice()
     {
-        $this->db->select("RIGHT(id_perusahaan,4) AS kode ");
-        $this->db->order_by('id_perusahaan', 'DESC');
+        $this->db->select("RIGHT(id,4) AS kode ");
+        $this->db->order_by('id', 'DESC');
         $this->db->limit(1);
-        $query = $this->db->get('perusahaan');
+        $query = $this->db->get('customer_device');
         if($query->num_rows()>0){
             $data = $query->row();
             $kode = intval($data->kode)+1;
@@ -50,7 +50,7 @@ class Format_id_model extends CI_Model
             $kode = 1;
         }
         $kodemax = str_pad($kode,4,"0",STR_PAD_LEFT);
-        $kodejadi  = "PT".$kodemax;
+        $kodejadi  = "CD".$kodemax;
         return $kodejadi;
     }
 

@@ -50,7 +50,7 @@ class Admin extends CI_Controller
         $email          = $this->input->post('email');
         $ip_address     = $this->input->post('ip_address');
         $this->admin_model->edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address);
-        redirect('Customers');
+        redirect('admin/customers');
     }
 
     public function hapus_data()
@@ -69,6 +69,7 @@ class Admin extends CI_Controller
     //customer device
     public function customer_device()
     {
+        $data['id']= $this->format_id_model->IDCustomerDevice();
         $this->load->view('head');
         $data['username'] = $this->session->userdata('username');
         $this->load->view('admin/menu', $data);
@@ -82,34 +83,52 @@ class Admin extends CI_Controller
 
     public function tambah_data_device()
     {
+        $id           = $this->format_id_model->IDCustomerDevice();
+
+        $nama_device  = $this->input->post('nama_device');
         $device_alias = $this->input->post('device_alias');
         $pin          = $this->input->post('pin');
         $description  = $this->input->post('description');
-        $keyword      = $this->input->post('keyword');
+        $keyword      = $this->input->post('taging');
+        $kategori     = $this->input->post('kategori');
         $customer_id  = $this->input->post('customer_id');
-        $device_id    = $this->input->post('device_id');
-        $this->admin_model->tambah_data_device($device_alias, $pin, $description, $keyword, $customer_id, $device_id);
-        redirect('CustomerDevice');
+
+        $data = array(
+            'id'            => $id,
+            'nama_device'   => $nama_device,
+            'device_alias'  => $device_alias,
+            'pin'           => $pin,
+            'description'   => $description,
+            'keyword'       => $keyword,
+            'kategori'      => $kategori,
+            'customer_id'   => $customer_id
+        );
+
+        $this->admin_model->tambah_data_device($data);
+
+        $this->session->set_flashdata('info','true');
+        redirect('admin/customer_device');
     }
 
     public function edit_data_device()
     {
         $id           = $this->input->post('id');
+        $nama_device  = $this->input->post('nama_device');
         $device_alias = $this->input->post('device_alias');
         $pin          = $this->input->post('pin');
         $description  = $this->input->post('description');
         $keyword      = $this->input->post('keyword');
+        $kategori     = $this->input->post('kategori');
         $customer_id  = $this->input->post('customer_id');
-        $device_id    = $this->input->post('device_id');
-        $this->admin_model->edit_data_device($id, $device_alias, $pin, $description, $keyword, $customer_id, $device_id);
-        redirect('CustomerDevice');
+        $this->admin_model->edit_data_device($id, $nama_device, $device_alias, $pin, $description, $keyword, $kategori, $customer_id);
+        redirect('admin/customer_device');
     }
 
     public function hapus_data_device()
     {
         $id = $this->input->post('id');
         $this->admin_model->hapus_data_device($id);
-        redirect('CustomerDevice');
+        redirect('admin/customer_device');
     }
 
     //tambah customer
@@ -145,18 +164,28 @@ class Admin extends CI_Controller
         }
     }
 
-    
-
     public function tambah_data_customer()
     {
-        $customer_id    = $this->input->post('customer_id');
+        $customer_id    = $this->format_id_model->IDCustomer();
+
         $username       = $this->input->post('username');
         $name           = $this->input->post('name');
         $address        = $this->input->post('address');
         $contact_person = $this->input->post('contact_person');
         $email          = $this->input->post('email');
         $ip_address     = $this->input->post('ip_address');
-        $this->admin_model->tambah_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address);
+
+        $data = array(
+            'customer_id'   => $customer_id,
+            'username'      => $username,
+            'name'          => $name,
+            'address'       => $address,
+            'contact_person'=> $contact_person,
+            'email'         => $email,
+            'ip_address'    => $ip_address
+        );
+
+        $this->admin_model->tambah_data_customer($data);
 
         $this->session->set_flashdata('info','true');
         redirect('admin/tambah_customers');
