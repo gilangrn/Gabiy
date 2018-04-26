@@ -8,7 +8,7 @@
 							<div class="card-header">
 								<span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: left;">Table Customer Device</span>
 								<div class="pull-right">
-									<button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-secondary btn-min-width" data-toggle="modal" data-target="#addDeviceModal">
+									<button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-success btn-min-width" data-toggle="modal" data-target="#addDeviceModal">
 										<i class="ft-user-plus"></i> Add Customer
 									</button>
 								</div>
@@ -198,13 +198,13 @@
 		</div>
 	<?php endforeach;?>
 	<!-- akhir modal edit customer -->
-	<!-- modal add new customer-->
+	<!-- ========== modal add new customer ================-->
 	<div class="modal fade text-left" id="addDeviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
 		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title">Add Customer Device</h3>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<div class="modal-content border-success" style="border-radius: 8px;">
+				<div class="modal-header bg-success">
+					<h3 class="modal-title white">Add Customer Device</h3>
+					<button type="button" class="close white" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
@@ -261,13 +261,13 @@
 					</div>
 					<div class="modal-footer">
 						<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-						<input type="submit" class="btn btn-outline-primary btn-lg" value="Add">
+						<input type="submit" class="btn btn-outline-success btn-lg" value="Add">
 					</div>
 					<?php echo form_close() ?>
 				</div>
 			</div>
 		</div>
-		<!-- akhir modal add customer -->
+		<!--=========== akhir modal add customer ============-->
 		<!-- modal detail customer -->
 		<div class="modal fade text-left" id="detailCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
 			<div class="modal-dialog modal-lg" role="document">
