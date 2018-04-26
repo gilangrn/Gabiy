@@ -43,8 +43,13 @@ class Admin_model extends CI_Model {
         return $hasil;
     }
     public function tampil_data_users() {
-        $hasil = $this->db->query("SELECT * FROM users WHERE level='2' ORDER BY tanggal_daftar DESC");
-        return $hasil;
+      $this->db->select('*');
+      $this->db->from('users');
+      $this->db->where('level','2');
+      $this->db->order_by('tanggal_daftar','DESC');
+      return $this->db->get();
+        //$hasil = $this->db->query("SELECT * FROM users WHERE level='2' ORDER BY tanggal_daftar DESC");
+        //return $hasil;
     }
     public function tambah_data_users() {
       $username       = $this->input->post('username');
@@ -56,13 +61,10 @@ class Admin_model extends CI_Model {
         "username"       => $username,
         "password"       => $password,
         "level"          => $level,
-        "tanggal_daftar" => $password,
+        "tanggal_daftar" => $tanggal_daftar,
         "token"          => $token
       );
       return $this->db->insert('users',$data);
-
-        //$hasil = $this->db->query("INSERT INTO users (username,password,level,tanggal_daftar,token) VALUES ('$username', '$password', '$level', '$tanggal_daftar','$token')");
-        //return $hasil;
     }
     public function cek_username($username) {
         $this->db->select('*');
