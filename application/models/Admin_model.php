@@ -1,12 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin_model extends CI_Model {
-
-  public function __construct(){
-    parent::__construct();
-    $this->table_user = 'users';
-  }
-
+    
     //data customer
     public function tampil_data_customer() {
         $hasil = $this->db->query("SELECT * FROM customer");
@@ -52,17 +47,29 @@ class Admin_model extends CI_Model {
         $hasil = $this->db->query("SELECT * FROM users WHERE level='2' ORDER BY tanggal_daftar DESC");
         return $hasil;
     }
-    public function tambah_data_users($username, $password, $level, $tanggal_daftar, $token) {
-        $hasil = $this->db->query("INSERT INTO users (username,password,level,tanggal_daftar,token) VALUES ('$username', '$password', '$level', '$tanggal_daftar','$token')");
-        return $hasil;
+    public function tambah_data_users() {
+      $username       = $this->input->post('username');
+      $password       = md5($this->input->post('password'));
+      $level          = $this->input->post('level');
+      $tanggal_daftar = date("Y-m-d H:i:s");
+      $token          = $this->input->post('token');
+      $data = array(
+        "username"       => $username,
+        "password"       => $password,
+        "level"          => $level,
+        "tanggal_daftar" => $password,
+        "token"          => $token
+      );
+      return $this->db->insert('users',$data);
+
+        //$hasil = $this->db->query("INSERT INTO users (username,password,level,tanggal_daftar,token) VALUES ('$username', '$password', '$level', '$tanggal_daftar','$token')");
+        //return $hasil;
     }
-    public function valid_username($username){
-      $query = $this->db->get_where($this->table_user, array('username' => $username));
-      if ($query->num_rows() > 0) {
-        return TRUE;
-      }
-      else {
-        return FALSE;
-      }
+    public function cek_username($username) {
+        $this->db->select('*');
+        $this->db->from('users');
+        $this->db->where('username', $username);
+        $query = $this->db->get();
+        return $query->num_rows();
     }
 }

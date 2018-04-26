@@ -64,7 +64,7 @@ class Admin extends CI_Controller
     {
         $username = $this->input->post('username');
         $this->admin_model->hapus_data_user($username);
-        redirect('admin/tambah_customer');
+        redirect('admin/tambah_customers');
     }
     //customer device
     public function customer_device()
@@ -113,7 +113,7 @@ class Admin extends CI_Controller
     }
 
     //tambah customer
-    public function tambah_customer()
+    public function tambah_customers()
     {
         $this->load->library('generate_token');
         $data['token_get']  = $this->generate_token->get_token(50);
@@ -132,35 +132,20 @@ class Admin extends CI_Controller
 
     public function tambah_data_user()
     {
-        $this->form_validation->set_error_delimiter('<div id="error">', '</div>');
-        $this->form_validation->set_rules('username', 'username', 'trim|required|max_length[50]|xss_clean|callback_valid_id');
-        $this->form_validation->set_rules('password', 'password', 'trim|required|max_length[50]|xss_clean');
-        if ($this->form_validation->run() == TRUE){
-            $data = array(
-                $username       = $this->input->post('username'),
-                $password       = md5($this->input->post('password')),
-                $level          = $this->input->post('level'),
-                $tanggal_daftar = date("Y-m-d H:i:s"),
-                $token          = $this->input->post('token')
-            );
-            $this->admin_model->tambah_data_users($data);
-            $this->session->set_flashdata('info','true');
-            redirect('admin/tambah_customer');
+        $username = $this->input->post('username');
+        $resultcheckusername = $this->admin_model->cek_username($username);
+        if ($resultcheckusername > 0) {
+            $this->session->set_flashdata('usernamesudahada','true');
+            redirect('admin/tambah_customers','refresh');
         }
-        else {
-            $this->index();
+        else{
+            $this->admin_model->tambah_data_users();
+            $this->session->set_flashdata('info_berhasil','true');
+            redirect('admin/tambah_customers');
         }
     }
 
-    public function valid_username($username){
-        if ($this->admin_model->valid_username($username) == TRUE) {
-            $this->form_validation->set_message('valid_username', 'Username dengan nama $username sudah terdaftar');
-            return FALSE;
-        }
-        else{
-            return TRUE;
-        }
-    }
+    
 
     public function tambah_data_customer()
     {
@@ -174,6 +159,6 @@ class Admin extends CI_Controller
         $this->admin_model->tambah_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address);
 
         $this->session->set_flashdata('info','true');
-        redirect('admin/tambah_customer');
+        redirect('admin/tambah_customers');
     }
 }
