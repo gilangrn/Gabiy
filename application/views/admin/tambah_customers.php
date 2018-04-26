@@ -11,7 +11,7 @@
         <div class="alert alert-danger alert-dismissable">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
           <h4><i class="icon fa fa-close"></i>Info</h4>
-          Gagal
+          Gagal, Username Sudah Ada
         </div>
       <?php elseif($this->session->flashdata('info_berhasil')): ?>
        <div class="alert alert-success alert-dismissible">
@@ -76,21 +76,96 @@
                       $username=$u['username'];
                       ?>
                       <tr>
-                        <td>
-                          <?php echo $no++; ?>
-                        </td>
-                        <td>
-                          <?php echo $username; ?>
-                        </td>
-                        <td>
-                          <div class="form-group">
-                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                              <button type="button" class="btn btn-raised btn-outline-success" data-toggle="modal" data-target="#modal_addto<?php echo $username;?>">
-                                <i class="fa fa-plus"></i> Add to Customer
-                              </button>
-                              <button type="button" id="" class="btn btn-raised btn-outline-danger" data-toggle="modal" data-target="#modal_hapus<?php echo $username;?>">
-                                <i class="ft-x"></i> Delete
-                              </button>
+                        <th width="10%">No</th>
+                        <th width="65%">Username</th>
+                        <th width="25%">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php
+                      $no = 1;
+                      foreach ($users->result_array() as $u): 
+                        $username=$u['username'];
+                        ?>
+                        <tr>
+                          <td>
+                            <?php echo $no++; ?>
+                          </td>
+                          <td>
+                            <?php echo $username; ?>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+
+                                <button type="button" class="btn btn-raised btn-outline-success" data-toggle="modal" data-target="#modal_addto<?php echo $username;?>"><i class="fa fa-plus"></i> Add to Customer</button>
+                                <button type="button" id="" class="btn btn-raised btn-outline-danger" data-toggle="modal" data-target="#modal_hapus<?php echo $username;?>">
+                                  <i class="ft-x"></i> Delete
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        <?php endforeach;?>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- ============ modal add to Customer ============ -->
+                <?php 
+                foreach($users->result_array() as $i):
+                  $username=$i['username']; 
+
+                  ?>
+                  <div class="modal fade text-left" id="modal_addto<?php echo $username;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title">Add To Customer</h3>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <?php echo form_open('admin/tambah_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div>
+                              <div class="form-group">
+                                <input type="hidden" class="form-control" name="username" id="username" value="<?php echo $username;?>">
+                              </div>
+                            </div>
+                            <div class="col-8">
+                              <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Customer Name">
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-group">
+                                <label>IP Address</label>
+                                <input type="text" class="form-control" name="ip_address" id="ip_address" placeholder="IP Address">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="form-group">
+                                <label>Contact</label>
+                                <input type="text" class="form-control" name="contact_person" id="contact_person" placeholder="Contact Person">
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12">
+                              <fieldset class="form-group">
+                                <label for="address">Address</label>
+                                <textarea class="form-control" name="address" id="address" rows="3" placeholder="Full Address"></textarea>
+                              </fieldset>
                             </div>
                           </div>
                         </td>

@@ -12,7 +12,7 @@
 										<i class="ft-user-plus"></i> Add Customer
 									</button>
 								</div>
-								<br><br>
+								<!-- <br><br>
 								<div class="card row pull-left">
 									<span class="col-md-12 col-sm-12" style="font-size: 25px;">Date Filter</span><br>
 									<div class="form-group col-md-12">
@@ -38,47 +38,50 @@
 									<div class="pull-left input-group col-md-3">
 										<input type="submit" class="btn btn-default btn-outline-primary form-control text-center" value="Filter">
 									</div>
-								</div>
+								</div> -->
 							</div>
 							<div class="card-body collapse show">
 								<div class="card-block card-dashboard">
 									<table class="table table-striped table-bordered dynamic-height">
 										<thead>
 											<tr>
-												<th>No</th>
-												<th>ID Customer Device</th>
+												<th width="2%">No</th>
+												<!-- <th>ID Customer Device</th>
+												<th>Device ID</th> -->
 												<th>Customer ID</th>
-												<th>Device ID</th>
-												<th>Device Alias</th>
-												<th>PIN</th>
-												<th>Keyword</th>
-												<th>Action</th>
+												<th width="15%">Nama Device</th>
+												<th width="15%">Device Alias</th>
+												<th width="2%">PIN</th>
+												<th width="15%">Keyword</th>
+												<th width="10%">kategori</th>
+												<th width="20%">Action</th>
 											</tr>
 										</thead>
 										<tbody>
 											<?php
 											$no = 1;
 											foreach ($device->result_array() as $u): 
-												$id               =$u['id'];
-												$customer_id  =$u['customer_id'];
-												$device_id        =$u['device_id'];
-												$device_alias =$u['device_alias'];
+												$id             =$u['id'];
+												$customer_id  	=$u['customer_id'];
+												$nama_device  	=$u['nama_device'];
+												$device_alias 	=$u['device_alias'];
 												$pin            =$u['pin'];
-												$description  =$u['description'];
+												$description  	=$u['description'];
 												$keyword        =$u['keyword'];
+												$kategori       =$u['kategori'];
 												?>
 												<tr>
 													<td>
 														<?php echo $no++; ?>
 													</td>
-													<td>
+													<!-- <td>
 														<?php echo $id; ?>
-													</td>
+													</td> -->
 													<td>
 														<?php echo $customer_id; ?>
 													</td>
 													<td>
-														<?php echo $device_id; ?>
+														<?php echo $nama_device; ?>
 													</td>
 													<td>
 														<?php echo $device_alias; ?>
@@ -88,6 +91,9 @@
 													</td>
 													<td>
 														<?php echo $keyword; ?>
+													</td>
+													<td>
+														<?php echo $kategori; ?>
 													</td>
 													<td>
 														<!-- tombol edit device-->
@@ -119,13 +125,14 @@
 	<!-- modal edit customer -->
 	<?php
 	foreach ($device->result_array() as $u): 
-		$id               =$u['id'];
-		$customer_id  =$u['customer_id'];
-		$device_id        =$u['device_id'];
-		$device_alias =$u['device_alias'];
+		$id             =$u['id'];
+		$customer_id  	=$u['customer_id'];
+		$nama_device  	=$u['nama_device'];
+		$device_alias 	=$u['device_alias'];
 		$pin            =$u['pin'];
-		$description  =$u['description'];
+		$description  	=$u['description'];
 		$keyword        =$u['keyword'];
+		$kategori       =$u['kategori'];
 		?>
 		<div class="modal fade text-left" id="modal_edit<?php echo $id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
 			<div class="modal-dialog" role="document">
@@ -154,33 +161,41 @@
 							</div>
 							<div class="col-4">
 								<div class="form-group">
-									<label>Device Id</label>
-									<input name="device_id" value="<?php echo $device_id;?>" class="form-control" type="text" placeholder="Device Id" readonly>
+									<label>Pin</label>
+									<input name="pin" value="<?php echo $pin;?>" class="form-control" type="text" placeholder="Pin" required>
 								</div>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-8">
+							<div class="col-6">
+								<div class="form-group">
+									<label>Nama Device</label>
+									<input name="nama_device" value="<?php echo $nama_device;?>" class="form-control" type="text" placeholder="Nama Device" required>
+								</div>
+							</div>
+							<div class="col-6">
 								<div class="form-group">
 									<label>Device Alias</label>
 									<input name="device_alias" value="<?php echo $device_alias;?>" class="form-control" type="text" placeholder="Device Alias" required>
 								</div>
 							</div>
-							<div class="col-4">
-								<div class="form-group">
-									<label>Pin</label>
-									<input name="pin" value="<?php echo $pin;?>" class="form-control" type="text" placeholder="Pin" required>
-								</div>
-							</div>
+						</div>
+						<div class="row">
 							<div class="col-6">
 								<div class="form-group">
 									<label>Keyword</label>
 									<input name="keyword" value="<?php echo $keyword;?>" class="form-control" type="text" placeholder="Keyword" required>
 								</div>
 							</div>
+							<div class="col-6">
+								<div class="form-group">
+									<label>Kategori</label>
+									<input name="kategori" value="<?php echo $kategori;?>" class="form-control" type="text" placeholder="Kategori" required>
+								</div>
+							</div>
 						</div>
 						<div class="row">
-							<div class="col-6">
+							<div class="col-12">
 								<div class="form-group">
 									<label>Deskripsi</label>
 									<input name="description" value="<?php echo $description;?>" class="form-control" type="text" placeholder="Deskripsi" required>
@@ -212,19 +227,14 @@
 				<?php echo form_open('admin/tambah_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
 				<div class="modal-body">
 					<div class="row">
-						<div class="col-4">
+						<div class="col-6">
 							<div class="form-group">
 								<label>Customer Id</label>
+								<!-- id dari cutomer device -->
 								<input name="customer_id" class="form-control" type="text" placeholder="Customer Id" required>
 							</div>
 						</div>
-						<div class="col-4">
-							<div class="form-group">
-								<label>Device Id</label>
-								<input name="device_id" class="form-control" type="text" placeholder="Device Id" required>
-							</div>
-						</div>
-						<div class="col-4">
+						<div class="col-6">
 							<div class="form-group">
 								<label>Pin</label>
 								<input name="pin" class="form-control" type="text" placeholder="Pin" required>
@@ -232,7 +242,13 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-12">
+						<div class="col-6">
+							<div class="form-group">
+								<label>Nama Device</label>
+								<input name="nama_device" class="form-control" type="text" placeholder="Nama Device" required>
+							</div>
+						</div>
+						<div class="col-6">
 							<div class="form-group">
 								<label>Device Alias</label>
 								<input name="device_alias" class="form-control" type="text" placeholder="Device Alias" required>
@@ -240,15 +256,17 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-12">
-							<fieldset>
-								<label>Keyword</label>
-								<div class="form-group">
-									<div class="case-sensitive form-control" data-tags-input-name="case-sensitive">
-										<input name="keyboard" class="form-control" type="text">   
-									</div>
-								</div>
-							</fieldset>
+						<div class="col-6">
+							<label>Keyword</label>
+							<div class="form-group">
+								<input type="text" value="" name="taging" data-role="tagsinput"/>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label>Kategori</label>
+								<input name="kategori" class="form-control" type="text" placeholder="Kategori" required>
+							</div>
 						</div>
 					</div>
 					<div class="row">
@@ -323,7 +341,6 @@
 		foreach ($device->result_array() as $u): 
 			$id               =$u['id'];
 			$customer_id  =$u['customer_id'];
-			$device_id        =$u['device_id'];
 			$device_alias =$u['device_alias'];
 			$pin            =$u['pin'];
 			$description  =$u['description'];
@@ -352,3 +369,25 @@
 			</div>
 		<?php endforeach;?>
 			<!--END MODAL HAPUS CUSTOMER-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="<?php echo base_url('assets/js/bootstrap-tagsinput.min.js')?>"></script>
+<script>
+   $(function() {
+  		$('input, select').on('change', function(event) {
+    		var $element = $(event.target),
+      		$container = $element.closest('.example');
+
+			if (!$element.data('tagsinput'))
+      		return;
+
+			var val = $element.val();
+    		if (val === null)
+      			val = "null";
+    		$('code', $('pre.val', $container)).html( ($.isArray(val) ? JSON.stringify(val) : "\"" + val.replace('"', '\\"') + "\"") );
+			$('code', $('pre.items', $container)).html(JSON.stringify($element.tagsinput('items')));
+  		}).trigger('change');
+	});
+</script>
