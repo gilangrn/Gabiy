@@ -45,14 +45,21 @@
                 <!-- Fabs (Floating Action Buttons) in cards start -->
                 <section id="weather-examples">
                   <div class="row match-height nav">
+                    <?php
+                      foreach ($customer_device->result_array() as $u): 
+                        $id=$u['id'];
+                        $device_alias=$u['device_alias'];
+                        $pin=$u['pin'];
+                        $description=$u['description'];
+                    ?>
                     <div class="col-lg-3 col-md-12 col-sm-12 hidden-lg">
                      <div class="card">
                       <div class="card-body">
                         <div class="px-3 py-3">
                           <div class="media">
                             <div class="media-body text-left">
-                              <h3 class="mb-1 danger">Lampu 1</h3>
-                              <p>Deskripsi dari lampu pertama ajah gitu loh</p>
+                              <h3 class="mb-1 danger"><?php echo $device_alias;?></h3>
+                              <p><?php echo $description;?></p>
                             </div>
                             <div class="media-right">
                               <input type="checkbox" id="switchery1" class="switchery"/>
@@ -62,6 +69,7 @@
                       </div>
                     </div>
                   </div>
+                    <?php endforeach;?>
                 </div>
               </div>
             </section>
