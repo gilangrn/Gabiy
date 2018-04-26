@@ -4,10 +4,20 @@
       <?php if ($this->session->flashdata('info')): ?>
         <div class="alert alert-success alert-dismissible">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-          <h4>
-            <i class="icon fa fa-check"></i>Info
-          </h4>
+          <h4><i class="icon fa fa-check"></i>Info</h4>
           Berhasil
+        </div>
+       <?php elseif($this->session->flashdata('usernamesudahada')): ?>
+        <div class="alert alert-danger alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+          <h4><i class="icon fa fa-close"></i>Info</h4>
+          Gagal
+        </div>
+      <?php elseif($this->session->flashdata('info_berhasil')): ?>
+       <div class="alert alert-success alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+          <h4><i class="icon fa fa-check"></i>Info</h4>
+          Berhasil add User
         </div>
       <?php endif ?>
       <section id="scroll-dynamic">
@@ -174,7 +184,7 @@
                         </button>
                       </div>
                       <!-- form modal add users-->
-                      <?php echo form_open('admin/tambah_data_user',array('class'=>'form-horizontal','method'=>'post')); ?>
+                      <?php echo form_open('admin/tambah_data_user'); ?> <!-- ,array('class'=>'form-horizontal','method'=>'post') -->
                       <div class="modal-body">
                         <div class="row">
                           <div class="col-12">
@@ -182,6 +192,7 @@
                               <label>Username</label>
                               <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
                             </div>
+                            <?php echo form_error('username'); ?>
                           </div>
                         </div>
                         <div class="row">
