@@ -463,7 +463,7 @@
             <div class="col-12">
               <div class="form-group">
                 <label>Alamat</label>
-                <input name="address" type="text" placeholder="Email" class="form-control" required>
+                <input name="address" type="text" placeholder="Alamat" class="form-control" required>
               </div>
             </div>
           </div>
