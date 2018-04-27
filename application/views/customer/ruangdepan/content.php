@@ -1,11 +1,11 @@
           <div class="main-panel">
             <div class="main-content">
               <div class="content-wrapper">
-                <h3 class="text-center" style="margin-top: 20px;">Ruang Depan</h3>
-                <div class="text-center" id="txt" style="font-size: 60px; margin-top: 70px;">
+                <h3 class="text-center " style="margin-top: 20px;">Ruang Depan</h3>
+                <div class="text-center " id="txt" style="font-size: 60px; margin-top: 70px;">
                 </div>
                 <br>
-                <div class="tanggal text-center" style="margin-bottom: 50px;">
+                <div class="tanggal text-center " style="margin-bottom: 50px;">
                   <script>
                     var today = new Date();
                     var d = new Date();
@@ -59,15 +59,15 @@
                         <div class="px-3 py-3">
                           <div class="media">
                             <div class="media-body text-left">
-                              <h3 class="mb-1 danger">
+                              <h3 class="mb-1 ">
                                 <?php if ($u['device_id'] == 'MD0001'): ?>
                                     <i class="icon-bulb"></i>
                                 <?php elseif ($u['device_id'] == 'MD0002'): ?> 
                                     <i class="ft-wind" style="font-size: 30px;"></i>
                                 <?php endif ?>
-                                <span class="badge badge-danger"><?php echo $u['id'];?></span>
+                                <span class="badge badge-info"><?php echo $u['id'];?></span>
                               </h3>
-                              <h3 class="mb-1 danger"><?php echo $device_alias;?></h3>
+                              <h3 class="mb-1 "><?php echo $device_alias;?></h3>
                               <p><?php echo $description;?></p>
                             </div>
                             <div class="media-right">
