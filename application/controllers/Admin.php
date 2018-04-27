@@ -21,9 +21,7 @@ class Admin extends CI_Controller
         $data['jdevice']   = $this->statusAdmin_model->JumlahDevice();
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/home', $data);
-        $this->load->view('footer');
         $this->load->view('rightmenu');
-        /*$this->load->view('settingtheme');*/
         $this->load->view('js');
     }
 
