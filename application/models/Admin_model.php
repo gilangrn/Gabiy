@@ -7,13 +7,18 @@ class Admin_model extends CI_Model {
         $hasil = $this->db->query("SELECT * FROM customer");
         return $hasil;
     }
+
     public function tambah_data_customer($data) {
         $this->db->insert('customer',$data);
     }
+
+    
+
     public function edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address) {
         $hasil = $this->db->query("UPDATE customer SET username='$username',name='$name',address='$address',contact_person='$contact_person',email='$email',ip_address='$ip_address' WHERE customer_id='$customer_id'");
         return $hasil;
     }
+
     public function hapus_data($customer_id) {
         $hasil = $this->db->query("DELETE FROM customer WHERE customer_id='$customer_id'");
         return $hasil;

@@ -27,17 +27,52 @@ class Admin extends CI_Controller
         $this->load->view('js');
     }
 
-    public function customer()
+    public function customers()
     {
-        $this->load->view('head');
+        $this->load->library('generate_token');
+        $data['token_get']= $this->generate_token->get_token(50);
         $data['username'] = $this->session->userdata('username');
-        $this->load->view('admin/menu', $data);
         $data['customer'] = $this->admin_model->tampil_data_customer();
+
+        $this->load->view('head');
+        $this->load->view('admin/menu', $data);
         $this->load->view('admin/customers', $data);
         $this->load->view('footer');
         $this->load->view('rightmenu');
         /*$this->load->view('settingtheme');*/
         $this->load->view('js');
+    }
+
+    public function tambah_data_customer()
+    {
+        $customer_id    = $this->format_id_model->IDCustomer();
+
+        $username       = $this->input->post('username');
+        $password       = $this->input->post('password');
+        $name           = $this->input->post('name');
+        $address        = $this->input->post('address');
+        $contact_person = $this->input->post('contact_person');
+        $email          = $this->input->post('email');
+        $ip_address     = $this->input->post('ip_address');
+        $token_get      = $this->input->post('token_get');
+
+        $data = array(
+            'customer_id'   => $customer_id,
+            'username'      => $username,
+            'password'      => md5($password),
+            'name'          => $name,
+            'address'       => $address,
+            'contact_person'=> $contact_person,
+            'email'         => $email,
+            'ip_address'    => $ip_address,
+            'token'         => $token_get,
+            'level'         => '2'
+        );
+
+        $this->admin_model->tambah_data_customer($data);
+
+        $this->session->set_flashdata('info','true');
+        redirect('admin/customers');
     }
 
     public function edit_data_customer()
@@ -57,7 +92,7 @@ class Admin extends CI_Controller
     {
         $customer_id = $this->input->post('customer_id');
         $this->admin_model->hapus_data($customer_id);
-        redirect('admin/customer');
+        redirect('admin/customers');
     }
     // hapus data user
     public function hapus_data_user()
@@ -162,32 +197,5 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('info_berhasil','true');
             redirect('admin/tambah_customers');
         }
-    }
-
-    public function tambah_data_customer()
-    {
-        $customer_id    = $this->format_id_model->IDCustomer();
-
-        $username       = $this->input->post('username');
-        $name           = $this->input->post('name');
-        $address        = $this->input->post('address');
-        $contact_person = $this->input->post('contact_person');
-        $email          = $this->input->post('email');
-        $ip_address     = $this->input->post('ip_address');
-
-        $data = array(
-            'customer_id'   => $customer_id,
-            'username'      => $username,
-            'name'          => $name,
-            'address'       => $address,
-            'contact_person'=> $contact_person,
-            'email'         => $email,
-            'ip_address'    => $ip_address
-        );
-
-        $this->admin_model->tambah_data_customer($data);
-
-        $this->session->set_flashdata('info','true');
-        redirect('admin/tambah_customers');
     }
 }
