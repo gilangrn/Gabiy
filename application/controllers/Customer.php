@@ -33,11 +33,11 @@ class Customer extends CI_Controller {
         $data['customer_device']   = $this->customer_model->tampil_data_customer_device();
 
         $this->load->view('customer/menu',$data);
-        $this->load->view('customer/ruangdepan/content',$data);
+        $this->load->view('customer/device_list',$data);
         $this->load->view('js');
     }
 
-	public function lantaiatas()
+	/*public function lantaiatas()
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
@@ -45,7 +45,7 @@ class Customer extends CI_Controller {
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/lantaiatas/content',$data);
     	$this->load->view('js');
-	}
+	}*/
 
 	//profil, notification, inbox
 	public function profil()
