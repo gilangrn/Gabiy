@@ -12,33 +12,6 @@
 										<i class="ft-user-plus"></i> Add Customer
 									</button>
 								</div>
-								<!-- <br><br>
-								<div class="card row pull-left">
-									<span class="col-md-12 col-sm-12" style="font-size: 25px;">Date Filter</span><br>
-									<div class="form-group col-md-12">
-										<div class="row">
-											<div class="pull-left input-group col-md-6 col-sm-12">
-												<input type='text' class="form-control text-center pickadate-selectors" placeholder="Date Begin"/>
-												<div class="input-group-append">
-													<span class="input-group-text">
-														<span class="fa fa-calendar-o"></span>
-													</span>
-												</div>
-											</div>
-											<div class="pull-left input-group col-md-6 col-sm-12">
-												<input type='text' class="form-control text-center pickadate-selectors" placeholder="Date End"/>
-												<div class="input-group-append">
-													<span class="input-group-text">
-														<span class="fa fa-calendar-o"></span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="pull-left input-group col-md-3">
-										<input type="submit" class="btn btn-default btn-outline-primary form-control text-center" value="Filter">
-									</div>
-								</div> -->
 							</div>
 							<div class="card-body collapse show">
 								<div class="card-block card-dashboard">
@@ -122,6 +95,11 @@
 			<!--Table customer device -->
 		</div>
 	</div>
+<!-- </div> -->
+</div>
+	<footer class="footer footer-static footer-light">
+	<p class="clearfix text-muted text-sm-center px-2"><span>Copyright  &copy; <?php echo date('Y')?> <a href="https://sdtech.co.id/" target="_blank" class="text-bold-800 primary darken-2">PT Sinergi Digital Teknologi </a>, All rights reserved. </span></p>
+</footer>
 	<!-- modal edit customer -->
 	<?php
 	foreach ($device->result_array() as $u): 
