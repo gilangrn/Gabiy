@@ -33,25 +33,12 @@
 								<span data-i18n="" class="menu-title">Home</span>
 							</a>
 						</li>
-						<li class="has-sub nav-item <?php if($this->uri->segment(2)=="ruangdepan" OR $this->uri->segment(2)=="lantaiatas" OR $this->uri->segment(2)=="ruangrapat" OR $this->uri->segment(2)=="ruangtengah" ){echo 'open';}?>"><a href="#"><i class="ft-list"></i><span data-i18n="" class="menu-title">Ruangan</span></a>
-							<ul class="menu-content">
-								<li class="<?php if($this->uri->segment(2)=="ruangdepan"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangdepan/'.$this->session->userdata('token'))?>" class="menu-item">Ruang Depan</a>
+						<li class="<?php if($this->uri->segment(2)=="devicelist"){echo 'active';}?>"><a href="<?php echo site_url('customer/devicelist/'.$this->session->userdata('token'))?>" class="menu-item"><i class="ft-tv"></i>
+								<span data-i18n="" class="menu-title">List Device</span></a>
 								</li>
-								<li class="<?php if($this->uri->segment(2)=="ruangtengah"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangtengah/'.$this->session->userdata('token'))?>" class="menu-item">Ruang Tengah</a>
-								</li>
-								<li class="<?php if($this->uri->segment(2)=="ruangrapat"){echo 'active';}?>"><a href="<?php echo site_url('customer/ruangrapat/'.$this->session->userdata('token'))?>" class="menu-item">Ruang Rapat</a>
-								</li>
-								<li class="<?php if($this->uri->segment(2)=="lantaiatas"){echo 'active';}?>"><a href="<?php echo site_url('customer/lantaiatas/'.$this->session->userdata('token'))?>" class="menu-item">Lantai Atas</a>
-								</li>
-							</ul>
-						</li>
 						<li class="has-sub nav-item <?php if($this->uri->segment(2)=="profil" OR $this->uri->segment(2)=="notifications" OR $this->uri->segment(2)=="inbox" OR $this->uri->segment(2)=="keluar" ){echo 'open';}?>"><a href="#"><i class="ft-user"></i><span data-i18n="" class="menu-title">Account</span></a>
 							<ul class="menu-content">
 								<li class="<?php if($this->uri->segment(2)=="profil"){echo 'active';}?>"><a href="<?php echo site_url('customer/profil/'.$this->session->userdata('token'))?>" class="menu-item">Edit Profil</a>
-								</li>
-								<li class="<?php if($this->uri->segment(2)=="notifications"){echo 'active';}?>"><a href="<?php echo site_url('customer/notifications/'.$this->session->userdata('token'))?>" class="menu-item">Notification</a>
-								</li>
-								<li class="<?php if($this->uri->segment(2)=="inbox"){echo 'active';}?>"><a href="<?php echo site_url('customer/inbox'.$this->session->userdata('token'))?>" class="menu-item">Inbox</a>
 								</li>
 								<li><a href="<?php echo site_url('login/keluar')?>" class="menu-item">Logout</a>
 								</li>
@@ -94,14 +81,11 @@
 							<li class="nav-item mr-1 mt-1"><h4><?php echo $username; ?></h4></li>
 							<li class="dropdown nav-item"><a id="dropdownBasic3" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle"><img src="<?php echo site_url('assets/img/portrait/small/avatar-s-1.png')?>" width="30px" height="30px" style="border-radius: 50%; margin-top: -8px;">
 								<p class="d-none">User Settings</p></a>
-								<div ngbdropdownmenu="" aria-labelledby="dropdownBasic3" class="dropdown-menu dropdown-menu-right"><a href="<?php echo base_url('editprofil')?>" class="dropdown-item py-1"><i class="ft-settings mr-2"></i><span>Edit Profil</span></a><a href="<?php echo base_url('inbox')?>" class="dropdown-item py-1"><i class="ft-mail mr-2"></i><span>Inbox</span></a>
-									<div class="dropdown-divider"></div><a href="<?php echo base_url('login/keluar')?>" class="dropdown-item"><i class="ft-power mr-2"></i><span>Logout</span></a>
+								<div ngbdropdownmenu="" aria-labelledby="dropdownBasic3" class="dropdown-menu dropdown-menu-right"><a href="<?php echo base_url('customer/profil/'.$this->session->userdata('token'))?>" class="dropdown-item py-1"><i class="ft-settings mr-2"></i><span>Edit Profil</span></a><a href="<?php echo base_url('login/keluar')?>" class="dropdown-item"><i class="ft-power mr-2"></i><span>Logout</span></a>
 								</div>
 							</li>
 							<li class="nav-item mr-1"><a id="navbar-fullscreen" href="javascript:;" class="nav-link apptogglefullscreen"><i class="ft-maximize font-medium-3 blue-grey darken-4"></i>
 								<p class="d-none">fullscreen</p></a></li>
-								<li class="nav-item"><a href="javascript:;" class="nav-link position-relative notification-sidebar-toggle"><i class="ft-align-left font-medium-3 blue-grey darken-4"></i>
-									<p class="d-none">Notifications Sidebar</p></a></li>
 								</ul>
 							</div>
 						</div>

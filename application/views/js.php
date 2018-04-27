@@ -1,3 +1,5 @@
+
+
 <!-- BEGIN VENDOR JS-->
 <script src="<?php echo base_url('assets/vendors/js/core/jquery-3.2.1.min.js')?>" type="text/javascript"></script>
 <script src="<?php echo base_url('assets/vendors/js/core/popper.min.js')?>" type="text/javascript"></script>
@@ -41,77 +43,75 @@
 
 <!-- waktu uptime -->
 <script>
-	function startTime() {
-		var today = new Date();
-		var h = today.getHours();
-		var m = today.getMinutes();
-		var s = today.getSeconds();
-		m = checkTime(m);
-		s = checkTime(s);
-		document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
-		var t = setTimeout(startTime, 500);
-	}
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+  }
 
-	function checkTime(i) {
-		if (i < 10) {
-			i = "0" + i
-		}; // add zero in front of numbers < 10
-		return i;
-	}
+  function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i
+    }; // add zero in front of numbers < 10
+    return i;
+  }
 
 </script>
 <script>
-	$(document).ready(function () {
-	// Delete Customer
-	$('.deleteusername').on('click', function () {
-		var username = $(this).attr('username');
-			$.ajax({
-				url: "<?php echo base_url('admin/hapus_data_user')?>",
-				type: "POST",
-				data: {username:username},
-				success:function(data){
-					swal(
-						title: 'Data berhasil dihapus',
-            type: 'success',
-            showLoaderOnConfirm: true},
-            function(){
-              location.reload();
-            });
-				},error:function(){
-					swal('Data gagal dihapus', 'error');
-				})
-	});
+  $(document).ready(function () {
+  // Delete Customer
+  $('.deleteusername').on('click', function () {
+    var username = $(this).attr('username');
+    $.ajax({
+      url: "<?php echo base_url('admin/hapus_data_user')?>",
+      type: "POST",
+      data: {username:username},
+      success:function(data){
+        swal(
+          title: 'Data berhasil dihapus',
+          type: 'success',
+          showLoaderOnConfirm: true},
+          function(){
+            location.reload();
+          });
+      },error:function(){
+        swal('Data gagal dihapus', 'error');
+      })
+  });
 
-	// Delete Device
-	$('#deleteDevice').on('click', function () {
-		swal({
-			title: 'Delete Device?',
-			type: 'warning',
-			showCancelButton: true,
-			confirmButtonColor: '#0CC27E',
-			cancelButtonColor: '#FF586B',
-			confirmButtonText: 'Delete',
-			cancelButtonText: 'Cancel',
-			confirmButtonClass: 'btn btn-success btn-raised mr-5',
-			cancelButtonClass: 'btn btn-danger btn-raised',
-			buttonsStyling: false
-		}).then(function () {
-			swal(
-				'Deleted!',
-				'Success delete device'
-				)
-		})
-	});
+  // Delete Device
+  $('#deleteDevice').on('click', function () {
+    swal({
+      title: 'Delete Device?',
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#0CC27E',
+      cancelButtonColor: '#FF586B',
+      confirmButtonText: 'Delete',
+      cancelButtonText: 'Cancel',
+      confirmButtonClass: 'btn btn-success btn-raised mr-5',
+      cancelButtonClass: 'btn btn-danger btn-raised',
+      buttonsStyling: false
+    }).then(function () {
+      swal(
+        'Deleted!',
+        'Success delete device'
+        )
+    })
+  });
 });
 </script>
 <script>
-	function scrollWin() {
-		window.scrollTo(0, document.body.scrollHeight);
-	}
+  function scrollWin() {
+    window.scrollTo(0, document.body.scrollHeight);
+  }
 </script>
-</body>
 
 <!-- Mirrored from pixinvent.com/apex-angular-4-bootstrap-admin-template/html-demo-2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Mar 2018 10:55:36 GMT -->
 
 </html>
-

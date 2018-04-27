@@ -1,11 +1,11 @@
           <div class="main-panel">
             <div class="main-content">
               <div class="content-wrapper">
-                <h3 class="text-center" style="margin-top: 20px;">Ruang Depan</h3>
-                <div class="text-center" id="txt" style="font-size: 60px; margin-top: 70px;">
+                <h3 class="text-center " style="margin-top: 20px;">Ruang Depan</h3>
+                <div class="text-center " id="txt" style="font-size: 60px; margin-top: 70px;">
                 </div>
                 <br>
-                <div class="tanggal text-center" style="margin-bottom: 50px;">
+                <div class="tanggal text-center " style="margin-bottom: 50px;">
                   <script>
                     var today = new Date();
                     var d = new Date();
@@ -58,11 +58,14 @@
                         <div class="px-3 py-3">
                           <div class="media">
                             <div class="media-body text-left">
-                              <h3 class="mb-1 danger"><?php echo $device_alias;?></h3>
+                              <h3 class="mb-1 ">
+                                <span class="badge badge-info"><?php echo $u['id'];?></span>
+                              </h3>
+                              <h3 class="mb-1 "><?php echo $device_alias;?></h3>
                               <p><?php echo $description;?></p>
                             </div>
                             <div class="media-right">
-                              <input type="checkbox" id="switchery1" class="switchery"/>
+                              <input type="checkbox" id=<?php echo $u['id'] ?> onchange='oncheckchange(this,<?php echo $u['pin'];?>)'  class="switchery"/>
                             </div>
                           </div>
                         </div>
@@ -327,4 +330,21 @@
           </div>
         </div>
       </aside>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript" src="http://rnd.lenna.id:3000/socket.io/socket.io.js"></script>
+
+<script>
+      var socket = io.connect("http://rnd.lenna.id:3000");
+      function oncheckchange(elm,pin)
+      {
+          var x = $(elm);
+            var id = x.attr("id");
+            var arr = {"deviceid":id,"state": x.is(":checked"),pin:pin};
+            
+            //- socket.emit(id, x.is(":checked"));
+            socket.emit("device_event",JSON.stringify(arr));
+      }
+</script>
         <!-- END Notification Sidebar-->
