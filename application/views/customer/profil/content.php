@@ -39,9 +39,9 @@
 								<h4>Other Information</h4>
 								Customer ID :
 								<p>1</p>
-								Nama : <a class="badge badge-success" href="#nama"><i class="ft-edit"></i></a>
+								Nama :
 								<p>Nama Customer</p>
-								Alamat : <a class="badge badge-success" href="#alamat"><i class="ft-edit"></i></a>
+								Alamat : 
 								<p>Ruko Kebayoran Square Blok C2</p>
 								Contact Person : <a class="badge badge-success" href="#contact"><i class="ft-edit"></i></a>
 								<p>081234567890</p>
@@ -62,16 +62,6 @@
 								<div class="form-group">
 									<label for="email">Email</label>
 									<input type="text" id="email" class="form-control"  name="email" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Email" value="email@gmail.com">
-								</div>
-
-								<div class="form-group">
-									<label for="nama">Nama</label>
-									<input type="text" id="nama" class="form-control"  name="nama" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Nama Lengkap" value="Nama Customer">
-								</div>
-
-								<div class="form-group">
-									<label for="alamat">Alamat</label>
-									<input type="text" id="alamat" class="form-control"  name="alamat" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Alamat Lengkap" value="Alamat Customer">
 								</div>
 
 								<div class="form-group">
