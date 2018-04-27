@@ -21,9 +21,7 @@ class Admin extends CI_Controller
         $data['jdevice']   = $this->statusAdmin_model->JumlahDevice();
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/home', $data);
-        $this->load->view('footer');
         $this->load->view('rightmenu');
-        /*$this->load->view('settingtheme');*/
         $this->load->view('js');
     }
 
@@ -37,11 +35,25 @@ class Admin extends CI_Controller
         $this->load->view('head');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/customers', $data);
-        $this->load->view('footer');
+        $this->load->view('rightmenu');
+        $this->load->view('js');
+    }
+
+    //customer device
+    public function customer_device()
+    {
+        $data['id']= $this->format_id_model->IDCustomerDevice();
+        $this->load->view('head');
+        $data['username'] = $this->session->userdata('username');
+        $this->load->view('admin/menu', $data);
+        $data['device'] = $this->admin_model->tampil_data_device();
+        $this->load->view('admin/customer_device', $data);
+        //$this->load->view('footer');
         $this->load->view('rightmenu');
         /*$this->load->view('settingtheme');*/
         $this->load->view('js');
     }
+
 
     public function tambah_data_customer()
     {
@@ -100,20 +112,6 @@ class Admin extends CI_Controller
         $username = $this->input->post('username');
         $this->admin_model->hapus_data_user($username);
         redirect('admin/tambah_customers');
-    }
-    //customer device
-    public function customer_device()
-    {
-        $data['id']= $this->format_id_model->IDCustomerDevice();
-        $this->load->view('head');
-        $data['username'] = $this->session->userdata('username');
-        $this->load->view('admin/menu', $data);
-        $data['device'] = $this->admin_model->tampil_data_device();
-        $this->load->view('admin/customer_device', $data);
-        $this->load->view('footer');
-        $this->load->view('rightmenu');
-        /*$this->load->view('settingtheme');*/
-        $this->load->view('js');
     }
 
     public function tambah_data_device()

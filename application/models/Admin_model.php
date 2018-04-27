@@ -4,15 +4,18 @@ class Admin_model extends CI_Model {
     
     //data customer
     public function tampil_data_customer() {
-        $hasil = $this->db->query("SELECT * FROM customer");
-        return $hasil;
+      $this->db->select('*');
+      $this->db->from('customer');
+      $this->db->where('level','2');
+      $this->db->order_by('customer_id','DESC');
+      return $this->db->get();
     }
 
     public function tambah_data_customer($data) {
         $this->db->insert('customer',$data);
     }
 
-    
+
 
     public function edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address) {
         $hasil = $this->db->query("UPDATE customer SET username='$username',name='$name',address='$address',contact_person='$contact_person',email='$email',ip_address='$ip_address' WHERE customer_id='$customer_id'");
