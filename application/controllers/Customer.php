@@ -65,7 +65,7 @@ class Customer extends CI_Controller {
    		$this->load->view('js');
   	}
 
-	public function ruangdepan()
+	public function devicelist()
 	{
 		$this->load->view('head');
     	$data['username']          = $this->session->userdata('username');
@@ -73,26 +73,6 @@ class Customer extends CI_Controller {
         $data['customer_device']   = $this->customer_model->tampil_data_customer_device();
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/ruangdepan/content',$data);
-    	$this->load->view('js');
-	}
-
-	public function ruangrapat()
-	{
-		$this->load->view('head');
-    	$data['username'] = $this->session->userdata('username');
-    	$data['token'] = $this->session->userdata('token');
-    	$this->load->view('customer/menu',$data);
-    	$this->load->view('customer/ruangrapat/content',$data);
-    	$this->load->view('js');
-	}
-
-	public function ruangtengah()
-	{
-		$this->load->view('head');
-    	$data['username'] = $this->session->userdata('username');
-    	$data['token'] = $this->session->userdata('token');
-    	$this->load->view('customer/menu',$data);
-    	$this->load->view('customer/ruangtengah/content',$data);
     	$this->load->view('js');
 	}
 }
