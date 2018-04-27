@@ -52,7 +52,6 @@
                         $device_alias=$u['device_alias'];
                         $pin=$u['pin'];
                         $description=$u['description'];
-                        $kategori=$u['kategori'];
                     ?>
                     <div class="col-lg-3 col-md-12 col-sm-12 hidden-lg">
                      <div class="card">
@@ -61,11 +60,6 @@
                           <div class="media">
                             <div class="media-body text-left">
                               <h3 class="mb-1 ">
-                                <?php if ($u['kategori'] == 'Lampu'): ?>
-                                    <i class="icon-bulb"></i>
-                                <?php elseif ($u['kategori'] == 'AC'): ?> 
-                                    <i class="ft-wind" style="font-size: 30px;"></i>
-                                <?php endif ?>
                                 <span class="badge badge-info"><?php echo $u['id'];?></span>
                               </h3>
                               <h3 class="mb-1 "><?php echo $device_alias;?></h3>
