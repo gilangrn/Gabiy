@@ -48,6 +48,7 @@
                     <?php
                       foreach ($customer_device->result_array() as $u): 
                         $id=$u['id'];
+                        $customer_id=$u['customer_id'];
                         $device_alias=$u['device_alias'];
                         $pin=$u['pin'];
                         $description=$u['description'];
@@ -62,7 +63,7 @@
                                 <span class="badge badge-info"><?php echo $u['id'];?></span>
                               </h3>
                               <h3 class="mb-1 "><?php echo $device_alias;?></h3>
-                              <p><?php echo $description;?></p>
+                              <p><?php echo $customer_id;?> <?php echo $customer_id?></p>
                             </div>
                             <div class="media-right">
                               <input type="checkbox" id=<?php echo $u['id'] ?> onchange='oncheckchange(this,<?php echo $u['pin'];?>)'  class="switchery"/>
