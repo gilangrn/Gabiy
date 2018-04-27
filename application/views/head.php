@@ -39,6 +39,9 @@
 	<!-- BEGIN APEX CSS-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/app.css')?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
+
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-tagsinput.css')?>">
 	<!-- END APEX CSS-->
 	<!-- BEGIN Page Level CSS-->
 	<!-- END Page Level CSS-->

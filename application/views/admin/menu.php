@@ -46,9 +46,9 @@
 							</a>
 						</li>
 						<li class="nav-item <?php if($this->uri->segment(2)=="tambah_customer"){echo 'active';}?>">
-							<a href="<?php echo site_url('admin/tambah_customer')?>">
-								<i class="ft-users"></i>
-								<span data-i18n="" class="menu-title">Tambah Customers</span>
+							<a href="<?php echo site_url('admin/tambah_customers')?>">
+								<i class="ft-user-plus"></i>
+								<span data-i18n="" class="menu-title">Tambah Customer</span>
 							</a>
 						</li>
 					</ul>

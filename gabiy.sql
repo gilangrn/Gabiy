@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2018 at 07:25 AM
+-- Generation Time: Apr 25, 2018 at 12:36 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customer` (
-  `customer_id` int(7) NOT NULL,
+  `customer_id` varchar(7) NOT NULL,
   `username` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
   `address` text NOT NULL,
@@ -38,6 +38,13 @@ CREATE TABLE `customer` (
   `ip_address` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`customer_id`, `username`, `name`, `address`, `contact_person`, `email`, `ip_address`) VALUES
+('CUS001', 'gilang', 'gilang romadhon nurohman', 'jakarta barat', '08888', 'gilang@gilang.com', '192.192');
+
 -- --------------------------------------------------------
 
 --
@@ -45,14 +52,30 @@ CREATE TABLE `customer` (
 --
 
 CREATE TABLE `customer_device` (
-  `id` int(7) NOT NULL,
+  `id` varchar(7) NOT NULL,
   `device_alias` varchar(20) NOT NULL,
   `pin` varchar(2) NOT NULL,
   `description` text NOT NULL,
   `keyword` varchar(200) NOT NULL,
-  `customer_id` int(7) NOT NULL,
-  `device_id` int(7) NOT NULL
+  `customer_id` varchar(7) NOT NULL,
+  `device_id` varchar(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer_device`
+--
+
+INSERT INTO `customer_device` (`id`, `device_alias`, `pin`, `description`, `keyword`, `customer_id`, `device_id`) VALUES
+('CD0001', 'Lampu Depan', '12', 'Lampu depan adalah lampu yang ada didepan dan bukan dibelakang', 'oke banget', 'CUS001', 'MD0001'),
+('CD0002', 'AC Ruang Tengah', '14', 'ac yang ada di ruang tengah', 'oke cuy', 'CUS001', 'MD0002'),
+('CD0003', 'Lampu Belakang', '21', 'Lampu belakang adalah lampu yang ada didepan dan bukan didepan', 'oke banget', 'CUS001', 'MD0001'),
+('CD0004', 'AC Ruang Depan', '27', 'ac yang ada di ruang depan dan ngga ada di ruang manapun selain ruang depan', 'oke cuy', 'CUS001', 'MD0002'),
+('CD0005', 'Lampu WC', '90', 'Lampu WC merek philips menerangimu saat mencari inspirasi', 'oke banget', 'CUS001', 'MD0001'),
+('CD0006', 'Lampu Taman', '90', 'Lampu taman yang ada di taman masa ada di wc', 'oke banget', 'CUS001', 'MD0001'),
+('CD0007', 'Lampu Meja', '90', 'Lampu yang ada di meja ya iya lah', 'oke banget', 'CUS001', 'MD0001'),
+('CD0008', 'Lampu Meeting', '90', 'Lampu nya ikut meeting kalo ngga ruang meeting gelap dong', 'oke banget', 'CUS001', 'MD0001'),
+('CD0009', 'Lampu Dapur', '90', 'Lampu nya harus terang', 'oke banget', 'CUS001', 'MD0001'),
+('CD0010', 'Lampu Kamar', '90', 'Lampu WC merek philips menerangimu saat mencari inspirasi', 'oke banget', 'CUS001', 'MD0001');
 
 -- --------------------------------------------------------
 
@@ -61,7 +84,7 @@ CREATE TABLE `customer_device` (
 --
 
 CREATE TABLE `master_device` (
-  `device_id` int(4) NOT NULL,
+  `device_id` varchar(7) NOT NULL,
   `name_device` varchar(20) NOT NULL,
   `kategori` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -71,7 +94,8 @@ CREATE TABLE `master_device` (
 --
 
 INSERT INTO `master_device` (`device_id`, `name_device`, `kategori`) VALUES
-(1, 'lampu dapur', 'lampu');
+('MD0001', 'lampu dapur', 'lampu'),
+('MD0002', 'AC ruang tengah', 'AC');
 
 -- --------------------------------------------------------
 
@@ -93,7 +117,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`username`, `password`, `level`, `tanggal_daftar`, `token`) VALUES
 ('admin', '21232F297A57A5A743894A0E4A801FC3', '1', '0000-00-00 00:00:00', ''),
-('gilang2', '0079fcb602361af76c4fd616d60f9414', '2', '2018-04-25 07:22:09', '2vIuSF8NqGrISiXiDjKxXoxXqZQxUBUCFUVQHVLTPXPVQPRRQZ');
+('gilang', '0079fcb602361af76c4fd616d60f9414', '2', '2018-04-25 11:55:51', 'LPCjsHEaoJpVEGGsFjFVOoNORsvQxzECPWWYNITGNSMZLPVXQW');
 
 --
 -- Indexes for dumped tables
@@ -125,22 +149,6 @@ ALTER TABLE `master_device`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`username`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `customer`
---
-ALTER TABLE `customer`
-  MODIFY `customer_id` int(7) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `customer_device`
---
-ALTER TABLE `customer_device`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

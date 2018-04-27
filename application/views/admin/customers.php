@@ -90,16 +90,16 @@
                           </td>
                           <td>
                             <!-- tombol edit customer-->
-                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#modal_edit<?php echo $customer_id;?>">
+                            <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-outline-success btn-sm" data-toggle="modal" data-target="#modal_edit<?php echo $customer_id;?>">
                               <i class="ft-edit-2"></i> Edit
                             </button>
                             <!-- tombol delete customer -->
-                            <button type="button" id="" class="btn mr-1 mb-1 btn-danger btn-sm" data-toggle="modal" data-target="#modal_hapus<?php echo $customer_id;?>">
+                            <button type="button" id="" class="btn mr-1 mb-1 btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal_hapus<?php echo $customer_id;?>">
                               <i class="ft-x"></i> Delete
                             </button>                            
                             <!-- tombol detail customer -->
-                            <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal" class="btn mr-1 mb-1 btn-info btn-sm">
-                              <i class="icon-info"></i> Detail
+                            <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal" class="btn mr-1 mb-1 btn-outline-info btn-sm">
+                              <i class="ft-info"></i> Detail
                             </button>
                           </td>
                         </tr>
@@ -121,10 +121,10 @@
                 ?>
                 <div class="modal fade text-left" id="modal_edit<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                   <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h3 class="modal-title">Edit Customer</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-content border-success" style="border-radius: 8px;">
+                      <div class="modal-header bg-success">
+                        <h3 class="modal-title white">Edit Customer</h3>
+                        <button type="button" class="close white" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
@@ -180,7 +180,7 @@
                       </div>
                       <div class="modal-footer">
                         <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-                        <input type="submit" class="btn btn-outline-primary btn-lg" value="Edit">
+                        <input type="submit" class="btn btn-outline-success btn-lg" value="Edit">
                       </div>
                       <?php echo form_close() ?>
                     </div>
@@ -191,10 +191,10 @@
               <!-- modal detail customer -->
               <div class="modal fade text-left" id="detailCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h3 class="modal-title">Detail Device Customer</h3>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <div class="modal-content border-info" style="border-radius: 8px;">
+                    <div class="modal-header bg-info">
+                      <h3 class="modal-title white">Detail Device Customer</h3>
+                      <button type="button" class="close white" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
@@ -369,10 +369,10 @@
                 <!-- ============ MODAL HAPUS CUSTOMER =============== -->
                 <div class="modal fade" id="modal_hapus<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
                   <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                        <h3 class="modal-title" id="myModalLabel">Hapus Customer</h3>
+                    <div class="modal-content border-red" style="border-radius: 8px;">
+                      <div class="modal-header bg-danger">
+                        <h3 class="modal-title white" id="myModalLabel">Hapus Customer</h3>
+                        <button type="button" class="close white" data-dismiss="modal" aria-hidden="true">x</button>
                       </div>
                       <?php echo form_open('admin/hapus_data',array('class'=>'form-horizontal','method'=>'post')); ?>
                       <div class="modal-body">
@@ -380,8 +380,8 @@
                       </div>
                       <div class="modal-footer">
                         <input type="hidden" name="customer_id" value="<?php echo $customer_id;?>">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Tutup</button>
-                        <button id="deleteCustomer" class="btn btn-danger">Hapus</button>
+                        <button class="btn btn-outline-secondary" data-dismiss="modal" aria-hidden="true">Close</button>
+                        <button id="deleteCustomer" class="btn btn-outline-danger">Hapus</button>
                       </div>
                       <?php echo form_close() ?>
                     </div>
