@@ -27,6 +27,10 @@ class Generate_token extends CI_Model
   return $token;
   }
 
+  function token_customer(){
+    $token_customer = get_token(50);
+    return $token_customer;
+  }
   // panjang 15 karakter
   // echo get_token(15);
 
