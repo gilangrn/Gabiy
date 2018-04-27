@@ -3,7 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+
 -- Generation Time: Apr 27, 2018 at 10:26 AM
+
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -45,6 +47,7 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
+
 INSERT INTO `customer` (`customer_id`, `username`, `password`, `name`, `address`, `contact_person`, `email`, `ip_address`, `token`, `level`) VALUES
 ('admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin SD Tech', 'PT. Sinergi Digital Ruko Bintaro', '', '', '', '', 1);
 
@@ -63,9 +66,9 @@ CREATE TABLE `customer_device` (
   `keyword` varchar(200) NOT NULL,
   `kategori` varchar(50) NOT NULL,
   `customer_id` varchar(7) NOT NULL
+
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
 -- Indexes for dumped tables
 --
 
@@ -82,6 +85,7 @@ ALTER TABLE `customer_device`
   ADD PRIMARY KEY (`id`),
   ADD KEY `customer_id` (`customer_id`);
 
+
 --
 -- Constraints for dumped tables
 --
@@ -91,6 +95,7 @@ ALTER TABLE `customer_device`
 --
 ALTER TABLE `customer_device`
   ADD CONSTRAINT `customer_device_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -51,11 +51,12 @@ class Customer extends CI_Controller {
 	public function profil()
 	{
 		$this->load->view('head');
-    	$data['username'] = $this->session->userdata('username');
-    	$data['token'] = $this->session->userdata('token');
-    	$this->load->view('customer/menu',$data);
-    	$this->load->view('customer/profil/content',$data);
-    	$this->load->view('js');
+  	$data['username'] = $this->session->userdata('username');
+  	$data['token'] = $this->session->userdata('token');
+    $data['customer_device']   = $this->customer_model->tampil_data_customer_device();
+  	$this->load->view('customer/menu',$data);
+  	$this->load->view('customer/profil/content',$data);
+  	$this->load->view('js');
   	}
 
  	public function notification()
