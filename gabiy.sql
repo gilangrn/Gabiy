@@ -45,7 +45,6 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
-('CUS001', 'gilang', 'gilang romadhon nurohman', 'jakarta barat', '08888', 'gilang@gilang.com', '192.192'),
 
 INSERT INTO `customer` (`customer_id`, `username`, `password`, `name`, `address`, `contact_person`, `email`, `ip_address`, `token`, `level`) VALUES
 ('admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin SD Tech', 'PT. Sinergi Digital Ruko Bintaro', '', '', '', '', 1);
