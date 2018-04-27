@@ -31,14 +31,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `customer` (
   `customer_id` varchar(7) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
   `address` text NOT NULL,
   `contact_person` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `ip_address` varchar(15) NOT NULL,
-  `token` varchar(50) NOT NULL,
-  `level` int(2) NOT NULL
+  `ip_address` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -84,7 +81,8 @@ INSERT INTO `customer_device` (`id`, `nama_device`, `device_alias`, `pin`, `desc
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-  ADD PRIMARY KEY (`customer_id`);
+  ADD PRIMARY KEY (`customer_id`),
+  ADD KEY `username` (`username`);
 
 --
 -- Indexes for table `customer_device`
@@ -96,6 +94,12 @@ ALTER TABLE `customer_device`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `customer`
+--
+ALTER TABLE `customer`
+  ADD CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `customer_device`
