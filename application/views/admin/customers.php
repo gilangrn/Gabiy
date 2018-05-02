@@ -188,12 +188,12 @@
                               </div>
                             </div>
                           </div>
-                          <div class="modal-footer">
-                            <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-                            <input type="submit" class="btn btn-outline-success btn-lg" value="Edit">
-                          </div>
-                        </form>
-                      </div>
+                        </div>
+                        <div class="modal-footer">
+                          <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
+                          <input type="submit" class="btn btn-outline-success btn-lg" name="edit" value="Edit">
+                        </div>
+                      </form>
                     </div>
                   </div>
                 <?php endforeach;?>

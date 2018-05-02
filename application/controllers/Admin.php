@@ -118,8 +118,7 @@ class Admin extends CI_Controller
             'email'             => $email,
             'ip_address'        => $ip_address
         );
-
-        $this->admin_model->edit_data_customer(customer_id,$data,'customer');
+        $this->admin_model->edit_data_customer($customer_id,$data,'customer');
         redirect('admin/customers');
     }
 
