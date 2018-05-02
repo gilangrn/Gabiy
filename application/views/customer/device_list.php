@@ -344,15 +344,6 @@
 <script type="text/javascript" src="http://rnd.lenna.id:3000/socket.io/socket.io.js"></script>
 
 <script>
-      var socket = io.connect("http://rnd.lenna.id:3000");
-      function oncheckchange(elm,pin)
-      {
-          var x = $(elm);
-            var id = x.attr("id");
-            var arr = {"deviceid":id,"state": x.is(":checked"),pin:pin};
-            
-            //- socket.emit(id, x.is(":checked"));
-            socket.emit("device_event",JSON.stringify(arr));
-      }
+      var _0xc24c=["\x68\x74\x74\x70\x3A\x2F\x2F\x72\x6E\x64\x2E\x6C\x65\x6E\x6E\x61\x2E\x69\x64\x3A\x33\x30\x30\x30","\x63\x6F\x6E\x6E\x65\x63\x74","\x69\x64","\x61\x74\x74\x72","\x3A\x63\x68\x65\x63\x6B\x65\x64","\x69\x73","\x64\x65\x76\x69\x63\x65\x5F\x65\x76\x65\x6E\x74","\x73\x74\x72\x69\x6E\x67\x69\x66\x79","\x65\x6D\x69\x74"];var socket=io[_0xc24c[1]](_0xc24c[0]);function oncheckchange(_0x4887x3,_0x4887x4){var _0x4887x5=$(_0x4887x3);var _0x4887x6=_0x4887x5[_0xc24c[3]](_0xc24c[2]);var _0x4887x7={"\x64\x65\x76\x69\x63\x65\x69\x64":_0x4887x6,"\x73\x74\x61\x74\x65":_0x4887x5[_0xc24c[5]](_0xc24c[4]),pin:_0x4887x4};socket[_0xc24c[8]](_0xc24c[6],JSON[_0xc24c[7]](_0x4887x7))}
 </script>
         <!-- END Notification Sidebar-->
