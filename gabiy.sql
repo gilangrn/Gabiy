@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2018 at 11:45 AM
+-- Generation Time: Apr 27, 2018 at 12:40 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -73,8 +73,8 @@ CREATE TABLE `customer_device` (
 
 INSERT INTO `customer_device` (`id`, `nama_device`, `device_alias`, `pin`, `description`, `keyword`, `kategori`, `customer_id`) VALUES
 ('CD0001', 'Lampu lantai 2', 'Lampu biasa', '15', 'Lampu', 'lampu,lantai,dua', 'Lampu', 'CUS001'),
-('CD0002', 'AC', 'AC Ruang tengah', '19', 'ac', 'ac,ruang,tengah', 'AC', 'CUS002'),
-('CD0003', 'Lampu sorot', 'Lampu sorot lampu te', '13', 'Lampu', 'oke,lampu,sorot,tengah', 'Lampu', 'CUS001');
+('CD0002', 'AC', 'AC Ruang tengah', '13', 'ac', 'ac,ruang,tengah', 'AC', 'CUS001'),
+('CD0003', 'Lampu sorot', 'Lampu sorot lampu te', '19', 'Lampu', 'oke,lampu,sorot,tengah', 'Lampu', 'CUS001');
 
 --
 -- Indexes for dumped tables
