@@ -138,42 +138,38 @@
                       <form class="form-horizontal" method="post" action="<?php echo site_url("admin/edit_data_customer"); ?>">
                         <div class="modal-body">
                           <div class="row">
-                            <div class="col-6">
+                            <div class="col-12">
                               <div class="form-group">
                                 <label>Username</label>
                                 <input name="username" id="username" value="<?php echo($username);?>" class="form-control" type="text">
                                 <input type="hidden" class="form-control" id="customer_id" name="customer_id" value="<?php echo($customer_id); ?>">
                               </div>
                             </div>
-                            <div class="col-6">
-                              <div class="form-group">
-                                <label>Password</label>
-                                <input name="password" id="password" value="<?php echo($password);?>" class="form-control" type="password">
-                              </div>
-                            </div>
                           </div>
                           <div class="row">
-                            <div class="col-6">
+                            <div class="col-12">
                               <div class="form-group">
                                 <label>Nama</label>
                                 <input name="name" id="name" value="<?php echo($name);?>" class="form-control" type="text">
-                              </div>
+                              </div>  
                             </div>
+                          </div>
+                          <div class="row">
                             <div class="col-6">
                               <div class="form-group">
                                 <label>IP Address</label>
                                 <input name="ip_address" id="ip_address" value="<?php echo($ip_address);?>" class="form-control" type="text">
                               </div>
                             </div>
-                          </div>
-                          <div class="row">
                             <div class="col-6">
                               <div class="form-group">
                                 <label>Contact Person</label>
                                 <input name="contact_person" id="contact_person" value="<?php echo($contact_person);?>" class="form-control" type="text">
                               </div>
                             </div>
-                            <div class="col-6">
+                          </div>
+                          <div class="row">
+                            <div class="col-12">
                               <div class="form-group">
                                 <label>Email</label>
                                 <input name="email" id="email" value="<?php echo($email);?>" class="form-control" type="text">
@@ -182,10 +178,10 @@
                           </div>
                           <div class="row">
                             <div class="col-12">
-                              <div class="form-group">
+                              <fieldset class="form-group">
                                 <label>Alamat</label>
-                                <input name="address" id="address" type="text" value="<?php echo($address);?>" class="form-control">
-                              </div>
+                                  <textarea name="address" id="address" type="text" class="form-control"><?php echo($address);?></textarea>
+                              </fieldset>
                             </div>
                           </div>
                         </div>
