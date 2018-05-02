@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2018 at 11:45 AM
+-- Generation Time: Apr 27, 2018 at 12:40 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -31,11 +31,14 @@ SET time_zone = "+00:00";
 CREATE TABLE `customer` (
   `customer_id` varchar(7) NOT NULL,
   `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
   `address` text NOT NULL,
   `contact_person` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `ip_address` varchar(15) NOT NULL
+  `ip_address` varchar(15) NOT NULL,
+  `token` varchar(50) NOT NULL,
+  `level` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -70,8 +73,8 @@ CREATE TABLE `customer_device` (
 
 INSERT INTO `customer_device` (`id`, `nama_device`, `device_alias`, `pin`, `description`, `keyword`, `kategori`, `customer_id`) VALUES
 ('CD0001', 'Lampu lantai 2', 'Lampu biasa', '15', 'Lampu', 'lampu,lantai,dua', 'Lampu', 'CUS001'),
-('CD0002', 'AC', 'AC Ruang tengah', '19', 'ac', 'ac,ruang,tengah', 'AC', 'CUS002'),
-('CD0003', 'Lampu sorot', 'Lampu sorot lampu te', '13', 'Lampu', 'oke,lampu,sorot,tengah', 'Lampu', 'CUS001');
+('CD0002', 'AC', 'AC Ruang tengah', '13', 'ac', 'ac,ruang,tengah', 'AC', 'CUS001'),
+('CD0003', 'Lampu sorot', 'Lampu sorot lampu te', '19', 'Lampu', 'oke,lampu,sorot,tengah', 'Lampu', 'CUS001');
 
 --
 -- Indexes for dumped tables
@@ -81,8 +84,7 @@ INSERT INTO `customer_device` (`id`, `nama_device`, `device_alias`, `pin`, `desc
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-  ADD PRIMARY KEY (`customer_id`),
-  ADD KEY `username` (`username`);
+  ADD PRIMARY KEY (`customer_id`);
 
 --
 -- Indexes for table `customer_device`
@@ -94,12 +96,6 @@ ALTER TABLE `customer_device`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `customer`
---
-ALTER TABLE `customer`
-  ADD CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `customer_device`
