@@ -7,13 +7,13 @@
             <div class="card">
               <div class="card-header">
                 <span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: left;">Table Customer</span>
-                <br><br>
+                <!-- <br><br> -->
                 <div class="pull-right">
                   <button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-success btn-min-width" data-toggle="modal" data-target="#addCustomersModal">
                     <i class="ft-user-plus"></i> Add Customer
                   </button>
                 </div>
-                <div class="card row pull-left">
+                <!-- <div class="card row pull-left">
                   <span class="col-md-12 col-sm-12" style="font-size: 25px;">Date Filter</span><br>
                   <div class="form-group col-md-12">
                     <div class="row">
@@ -38,7 +38,7 @@
                   <div class="pull-left input-group col-md-3">
                     <input type="submit" class="btn btn-default btn-outline-primary form-control text-center" value="Filter">
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class="card-body collapse show">
                 <div class="card-block card-dashboard">
@@ -480,7 +480,16 @@
         </div>
       </div>
     </div>
-    <footer class="footer footer-static footer-light">
-      <p class="clearfix text-muted text-sm-center px-2"><span>Copyright  &copy; <?php echo date('Y')?> <a href="https://sdtech.co.id/" target="_blank" class="text-bold-800 primary darken-2">PT Sinergi Digital Teknologi </a>, All rights reserved. </span></p>
-    </footer>
+    <!--=========== akhir modal add customer ============-->
   </div>
+</div>
+</div>
+<footer class="footer footer-static footer-light">
+  <p class="clearfix text-muted text-sm-center px-2"><span>Copyright  &copy; <?php echo date('Y')?> <a href="https://sdtech.co.id/" target="_blank" class="text-bold-800 primary darken-2">PT Sinergi Digital Teknologi </a>, All rights reserved. </span></p>
+</footer>
+</div>
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable();
+  } );
+</script>

@@ -370,3 +370,8 @@ foreach ($device->result_array() as $u):
 		}).trigger('change');
 	});
 </script>
+<script>
+  $(document).ready(function() {
+      $('#example').DataTable();
+  } );
+</script>
