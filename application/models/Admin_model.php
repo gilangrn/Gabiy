@@ -15,11 +15,21 @@ class Admin_model extends CI_Model {
         $this->db->insert('customer',$data);
     }
 
-
-
-    public function edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address) {
-        $hasil = $this->db->query("UPDATE customer SET username='$username',name='$name',address='$address',contact_person='$contact_person',email='$email',ip_address='$ip_address' WHERE customer_id='$customer_id'");
-        return $hasil;
+    public function edit_data_customer($customer_id, $data, $table) {
+      /*$data = array(
+        'username'      => $username,
+        'name'          => $name,
+        'address'       => $address,
+        'contact_person'=> $contact_person,
+        'email'         => $email,
+        'ip_address'    => $ip_address
+      );
+      $this->db->where('customer_id',$customer_id);
+      $this->db->update('customer', $data);*/
+      $this->db->where('customer_id', $customer_id);
+      return $this->db->update($table,$data);
+        /*$hasil = $this->db->query("UPDATE customer SET username='$username',name='$name',address='$address',contact_person='$contact_person',email='$email',ip_address='$ip_address' WHERE customer_id='$customer_id'");
+        return $hasil;*/
     }
 
     public function hapus_data($customer_id) {
