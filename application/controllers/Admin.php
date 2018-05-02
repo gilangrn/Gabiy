@@ -87,19 +87,6 @@ class Admin extends CI_Controller
         redirect('admin/customers');
     }
 
-    /*public function edit_data_customer()
-    {
-        $customer_id    = $this->input->post('customer_id');
-        $username       = $this->input->post('username');
-        $name           = $this->input->post('name');
-        $address        = $this->input->post('address');
-        $contact_person = $this->input->post('contact_person');
-        $email          = $this->input->post('email');
-        $ip_address     = $this->input->post('ip_address');
-        $this->admin_model->edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address);
-        redirect('admin/customers');
-    }*/
-
     public function edit_data_customer(){
         $customer_id            = $this->input->post('customer_id');
         $username               = $this->input->post('username');
