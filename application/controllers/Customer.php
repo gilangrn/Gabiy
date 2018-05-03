@@ -5,10 +5,10 @@ class Customer extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		//redirect jika level bukan customer(2)
-		if($this->session->userdata('level') <> '2')
-		{
-			redirect('login');
-		}
+		// if($this->session->userdata('level') <> '2')
+		// {
+		// 	redirect('login');
+		// }
 	}
 
 	public function home()
@@ -78,4 +78,25 @@ class Customer extends CI_Controller {
     	$this->load->view('customer/profil/inbox',$data);
    		$this->load->view('js');
   	}
+
+    public function getstate($device_id){
+      $devicedata = $this->db->get_where('customer_device',array('id'=>$device_id))->row();
+
+      echo $devicedata->state;
+    }
+
+   public function setstate(){
+      $postData = $this->input->post();
+
+      $object = array(
+        'state' => $postData['state'],
+      );
+
+      $this->db->where('id',$postData['device_id']);
+      $this->db->where('customer_id',$postData['customer_id']);
+
+      $this->db->update('customer_device',$object);
+
+    }
+
 }
