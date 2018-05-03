@@ -73,7 +73,7 @@
                               <p><?php echo $description;?></p>
                             </div>
                             <div class="media-right">
-                              <input type="checkbox" id=<?php echo $u['id'] ?> onchange='oncheckchange(this,<?php echo $u['pin'];?>)'  class="switchery"/>
+                              <input type="checkbox" id=<?php echo $u['customer_id'] ?> onchange='oncheckchange(this,<?php echo $u['pin'];?>)'  class="switchery"/>
                             </div>
                           </div>
                         </div>
