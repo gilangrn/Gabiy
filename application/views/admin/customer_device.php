@@ -9,7 +9,7 @@
 								<span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: left;">Table Customer Device</span>
 								<div class="pull-right">
 									<button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-success btn-min-width" data-toggle="modal" data-target="#addDeviceModal">
-										<i class="ft-user-plus"></i> Add Device
+										<i class="ft-user-plus"></i> Add Customer
 									</button>
 								</div>
 							</div>
@@ -369,9 +369,4 @@ foreach ($device->result_array() as $u):
 			$('code', $('pre.items', $container)).html(JSON.stringify($element.tagsinput('items')));
 		}).trigger('change');
 	});
-</script>
-<script>
-  $(document).ready(function() {
-      $('#example').DataTable();
-  } );
 </script>
