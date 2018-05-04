@@ -186,6 +186,7 @@
 <!-- akhir modal edit customer -->
 <!-- modal detail customer -->
 <?php
+$no = 1;
   foreach ($customer->result_array() as $u):
     $customer_id=$u['customer_id'];
     $username=$u['username'];
@@ -214,46 +215,23 @@
            </div>
          </div>
        </form> -->
-        <div class="card-body collapse show">
-                <div class="card-block card-dashboard">
-                  <table class="table table-striped table-bordered dynamic-height">
-                    <thead>
-                      <tr>
-                        <th>No</th>
-                        <th>Customer ID</th>
-                        <th>Username</th>
-                        <th>Name</th>
-                        <th>IP Address</th>
-                        <th>Contact Person</th>
-                        <th>Email</th>
-                        <th>Address</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php
-                        $no = 1;
-                        foreach ($customer->result_array() as $u):
-                         $customer_id=$u['customer_id'];
-                         $username=$u['username'];
-                         $name=$u['name'];
-                         $ip_address=$u['ip_address'];
-                         $contact_person=$u['contact_person'];
-                         $email=$u['email'];
-                         $address=$u['address'];
-                         ?>
+       <!--Responsive tables Starts-->
+          <div class="card-body">
+              <div class="card-block">
+                  <table class="table table-responsive-sm">
+                      <thead>
+                          <tr>
+                              <th>No</th>
+                              <th>IP Address</th>
+                              <th>Contact Person</th>
+                              <th>Email</th>
+                              <th>Address</th>
+                          </tr>
+                      </thead>
+                      <tbody>
                       <tr>
                         <td>
                           <?php echo $no++; ?>
-                        </td>
-                        <td>
-                          <?php echo $customer_id; ?>
-                        </td>
-                        <td>
-                          <?php echo $username; ?>
-                        </td>
-                        <td>
-                          <?php echo $name; ?>
                         </td>
                        <td>
                          <?php echo $ip_address; ?>
@@ -267,31 +245,10 @@
                        <td>
                          <?php echo $address; ?>
                        </td>
-                        <td>
-                          <!-- tombol edit customer-->
-                          <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-outline-success btn-sm" data-toggle="modal" data-target="#modal_edit<?php echo $customer_id;?>">
-                          <i class="ft-edit-2"></i> Edit
-                          </button>
-                          <!-- tombol delete customer -->
-                          <button type="button" id="" class="btn mr-1 mb-1 btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal_hapus<?php echo $customer_id;?>">
-                          <i class="ft-x"></i> Delete
-                          </button>                            
-                          <!-- tombol detail customer -->
-                          <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal<?php echo $customer_id;?>" class="btn mr-1 mb-1 btn-outline-info btn-sm">
-                          <i class="ft-info"></i> Detail
-                          </button>
-                          <!-- tombol add device -->
-                          <button type="button" class="btn mr-1 mb-1 btn-outline-secondary btn-sm" data-toggle="modal" data-target="#addDeviceModal<?php echo $customer_id;?>">
-                            <i class="ft-user-plus"></i> Add Device
-                          </button>
-                        </td>
-                      </tr>
-                      <?php endforeach ?>
-                    </tbody>
+                      </tbody>
                   </table>
-                </div>
               </div>
-      
+          </div>
       </div>
       <div class="modal-footer">
         <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
