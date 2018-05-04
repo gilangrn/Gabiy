@@ -214,7 +214,7 @@
            </div>
          </div>
        </form> -->
-        <div class="card-body collapse show">
+        <div class="card-body collapse show"> 
                 <div class="card-block card-dashboard">
                   <table class="table table-striped table-bordered dynamic-height">
                     <thead>
