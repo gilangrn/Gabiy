@@ -31,7 +31,6 @@ class Admin extends CI_Controller
         $data['token_get']  = $this->generate_token->get_token(50);
         $data['username']   = $this->session->userdata('username');
         $data['customer']   = $this->admin_model->tampil_data_customer();
-        $data['detailcustomer'] =$this->admin_model->detail_customer();
         $this->load->view('head');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/customers', $data);

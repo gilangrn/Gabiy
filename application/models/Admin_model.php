@@ -12,10 +12,8 @@ class Admin_model extends CI_Model {
   }
 
   public function detail_customer(){
-    
       $sql = "select a.*,b.* from customer a INNER JOIN customer_device b on a.customer_id = b.customer_id where level = 2";
       $query = $this->db->query($sql);
-
       return $query->result(); 
   }
 

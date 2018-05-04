@@ -23,10 +23,10 @@
                         <th>Customer ID</th>
                         <th>Username</th>
                         <th>Name</th>
-                        <th>IP Address</th>
+                        <!-- <th>IP Address</th>
                         <th>Contact Person</th>
                         <th>Email</th>
-                        <th>Address</th>
+                        <th>Address</th> -->
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -55,18 +55,18 @@
                         <td>
                           <?php echo $name; ?>
                         </td>
-                        <td>
-                          <?php echo $ip_address; ?>
-                        </td>
-                        <td>
-                          <?php echo $contact_person; ?>
-                        </td>
-                        <td>
-                          <?php echo $email; ?>
-                        </td>
-                        <td>
-                          <?php echo $address; ?>
-                        </td>
+                       <!--  <td>
+                         <?php echo $ip_address; ?>
+                       </td>
+                       <td>
+                         <?php echo $contact_person; ?>
+                       </td>
+                       <td>
+                         <?php echo $email; ?>
+                       </td>
+                       <td>
+                         <?php echo $address; ?>
+                       </td> -->
                         <td>
                           <!-- tombol edit customer-->
                           <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-outline-success btn-sm" data-toggle="modal" data-target="#modal_edit<?php echo $customer_id;?>">
@@ -79,6 +79,10 @@
                           <!-- tombol detail customer -->
                           <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal<?php echo $customer_id;?>" class="btn mr-1 mb-1 btn-outline-info btn-sm">
                           <i class="ft-info"></i> Detail
+                          </button>
+                          <!-- tombol add device -->
+                          <button type="button" class="btn mr-1 mb-1 btn-outline-secondary btn-sm" data-toggle="modal" data-target="#addDeviceModal">
+                            <i class="ft-user-plus"></i> Add Device
                           </button>
                         </td>
                       </tr>
@@ -182,8 +186,16 @@
 <!-- akhir modal edit customer -->
 <!-- modal detail customer -->
 <?php
-  foreach ($detailcustomer as $u):?>
-<div class="modal fade text-left" id="detailCustomerModal<?php echo $u->customer_id?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+  foreach ($customer->result_array() as $u):
+    $customer_id=$u['customer_id'];
+    $username=$u['username'];
+    $name=$u['name'];
+    $ip_address=$u['ip_address'];
+    $contact_person=$u['contact_person'];
+    $email=$u['email'];
+    $address=$u['address'];
+    ?>
+<div class="modal fade text-left" id="detailCustomerModal<?php echo $customer_id?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content border-info" style="border-radius: 8px;">
       <div class="modal-header bg-info">
@@ -194,19 +206,92 @@
       </div>
       <!-- form modal detail customer-->
       <div class="modal-body col-xl-12 col-sm-12 col-lg-12" style="max-height: calc(100vh - 210px); overflow-y: auto;">
-        <form>
-          <div class="position-relative has-icon-right mt-2 mb-2">
-            <input type="text" placeholder="Search Device" class="form-control round" />
-            <div class="form-control-position">
-              <i class="ft-search"></i>
-            </div>
-          </div>
-        </form>
-        <?php foreach ($detailcustomer as $u): ?>
-        <td>
-          <?php echo $this->session->kategori; ?>
-        </td>
-      <?php endforeach; ?>
+       <!--  <form>
+         <div class="position-relative has-icon-right mt-2 mb-2">
+           <input type="text" placeholder="Search Device" class="form-control round" />
+           <div class="form-control-position">
+             <i class="ft-search"></i>
+           </div>
+         </div>
+       </form> -->
+        <div class="card-body collapse show">
+                <div class="card-block card-dashboard">
+                  <table class="table table-striped table-bordered dynamic-height">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Customer ID</th>
+                        <th>Username</th>
+                        <th>Name</th>
+                        <th>IP Address</th>
+                        <th>Contact Person</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php
+                        $no = 1;
+                        foreach ($customer->result_array() as $u):
+                         $customer_id=$u['customer_id'];
+                         $username=$u['username'];
+                         $name=$u['name'];
+                         $ip_address=$u['ip_address'];
+                         $contact_person=$u['contact_person'];
+                         $email=$u['email'];
+                         $address=$u['address'];
+                         ?>
+                      <tr>
+                        <td>
+                          <?php echo $no++; ?>
+                        </td>
+                        <td>
+                          <?php echo $customer_id; ?>
+                        </td>
+                        <td>
+                          <?php echo $username; ?>
+                        </td>
+                        <td>
+                          <?php echo $name; ?>
+                        </td>
+                       <td>
+                         <?php echo $ip_address; ?>
+                       </td>
+                       <td>
+                         <?php echo $contact_person; ?>
+                       </td>
+                       <td>
+                         <?php echo $email; ?>
+                       </td>
+                       <td>
+                         <?php echo $address; ?>
+                       </td>
+                        <td>
+                          <!-- tombol edit customer-->
+                          <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-outline-success btn-sm" data-toggle="modal" data-target="#modal_edit<?php echo $customer_id;?>">
+                          <i class="ft-edit-2"></i> Edit
+                          </button>
+                          <!-- tombol delete customer -->
+                          <button type="button" id="" class="btn mr-1 mb-1 btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal_hapus<?php echo $customer_id;?>">
+                          <i class="ft-x"></i> Delete
+                          </button>                            
+                          <!-- tombol detail customer -->
+                          <button type="button" id="detailCustomer" data-toggle="modal" data-target="#detailCustomerModal<?php echo $customer_id;?>" class="btn mr-1 mb-1 btn-outline-info btn-sm">
+                          <i class="ft-info"></i> Detail
+                          </button>
+                          <!-- tombol add device -->
+                          <button type="button" class="btn mr-1 mb-1 btn-outline-secondary btn-sm" data-toggle="modal" data-target="#addDeviceModal<?php echo $customer_id;?>">
+                            <i class="ft-user-plus"></i> Add Device
+                          </button>
+                        </td>
+                      </tr>
+                      <?php endforeach ?>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+      
       </div>
       <div class="modal-footer">
         <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
@@ -328,16 +413,80 @@
   </div>
 </div>
 <!--=========== akhir modal add customer ============-->
-<!--  </div>
+<!-- ========== modal add new device ================-->
+<div class="modal fade text-left" id="addDeviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content border-success" style="border-radius: 8px;">
+      <div class="modal-header bg-success">
+        <h3 class="modal-title white">Add Customer Device</h3>
+        <button type="button" class="close white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- form modal add device-->
+      <?php echo form_open('admin/tambah_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label>Customer Id</label>
+              <!-- id dari cutomer device -->
+              <input name="customer_id" class="form-control" type="text" placeholder="Customer Id" required>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label>Pin</label>
+              <input name="pin" class="form-control" type="text" placeholder="Pin" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label>Nama Device</label>
+              <input name="nama_device" class="form-control" type="text" placeholder="Nama Device" required>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label>Device Alias</label>
+              <input name="device_alias" class="form-control" type="text" placeholder="Device Alias" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label>Keyword</label>
+            <div class="form-group">
+              <input type="text" value="" name="taging" data-role="tagsinput"/>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label>Kategori</label>
+              <input name="kategori" class="form-control" type="text" placeholder="Kategori" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label>Deskripsi</label>
+              <textarea name="description" rows="5" class="form-control" placeholder="Deskripsi"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
+        <input type="submit" class="btn btn-outline-success btn-lg" value="Add">
+      </div>
+      <?php echo form_close() ?>
+    </div>
   </div>
-  =========== akhir modal add customer ============
-  </div>
-  </div>
-  </div> -->
-<!-- <footer class="footer footer-static footer-light">
-  <p class="clearfix text-muted text-sm-center px-2"><span>Copyright  &copy; <?php echo date('Y')?> <a href="https://sdtech.co.id/" target="_blank" class="text-bold-800 primary darken-2">PT Sinergi Digital Teknologi </a>, All rights reserved. </span></p>
-</footer> -->
-<!-- </div> -->
+</div>
+<!--=========== akhir modal add new device ============-->
 <script>
   $(document).ready(function() {
     $('#example').DataTable();
