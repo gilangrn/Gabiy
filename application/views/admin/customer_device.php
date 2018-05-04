@@ -96,7 +96,7 @@
 	<p class="clearfix text-muted text-sm-center px-2"><span>Copyright  &copy; <?php echo date('Y')?> <a href="https://sdtech.co.id/" target="_blank" class="text-bold-800 primary darken-2">PT Sinergi Digital Teknologi </a>, All rights reserved. </span></p>
 </footer>
 </div>
-<!-- modal edit customer -->
+<!-- ============== MODAL EDIT DEVICE ============= -->
 <?php
 foreach ($device->result_array() as $u): 
 	$id             =$u['id'];
@@ -186,9 +186,9 @@ foreach ($device->result_array() as $u):
 		</div>
 	</div>
 <?php endforeach;?>
-<!-- akhir modal edit customer -->
+<!-- ================ END MODAL EDIT DEVICE ============== -->
 
-	<!-- ============ MODAL HAPUS CUSTOMER =============== -->
+	<!-- ============ MODAL DELETE CUSTOMER =============== -->
 <?php
 foreach ($device->result_array() as $u): 
 	$id               =$u['id'];
@@ -200,7 +200,7 @@ foreach ($device->result_array() as $u):
 			<div class="modal-content border-red" style="border-radius: 8px;">
 				<div class="modal-header bg-danger white">
 					<h3 class="modal-title" id="myModalLabel">Delete Customer</h3>
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+					<button type="button" class="close white" data-dismiss="modal" aria-hidden="true">x</button>
 				</div>
 				<?php echo form_open('admin/hapus_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
 				<div class="modal-body">
