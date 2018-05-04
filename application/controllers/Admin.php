@@ -28,10 +28,9 @@ class Admin extends CI_Controller
     public function customers()
     {
         $this->load->library('generate_token');
-        $data['token_get']= $this->generate_token->get_token(50);
-        $data['username'] = $this->session->userdata('username');
-        $data['customer'] = $this->admin_model->tampil_data_customer();
-
+        $data['token_get']  = $this->generate_token->get_token(50);
+        $data['username']   = $this->session->userdata('username');
+        $data['customer']   = $this->admin_model->tampil_data_customer();
         $this->load->view('head');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/customers', $data);
@@ -48,9 +47,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/menu', $data);
         $data['device'] = $this->admin_model->tampil_data_device();
         $this->load->view('admin/customer_device', $data);
-        //$this->load->view('footer');
         $this->load->view('rightmenu');
-        /*$this->load->view('settingtheme');*/
         $this->load->view('js');
     }
 
@@ -87,25 +84,16 @@ class Admin extends CI_Controller
         redirect('admin/customers');
     }
 
-    public function edit_data_customer(){
-        $customer_id            = $this->input->post('customer_id');
-        $username               = $this->input->post('username');
-        $name                   = $this->input->post('name');
-        $address                = $this->input->post('address');
-        $contact_person         = $this->input->post('contact_person');
-        $email                  = $this->input->post('email');
-        $ip_address             = $this->input->post('ip_address');
-
-        $data = array(
-            'customer_id'       => $customer_id,
-            'username'          => $username,
-            'name'              => $name,
-            'address'           => $address,
-            'contact_person'    => $contact_person,
-            'email'             => $email,
-            'ip_address'        => $ip_address
-        );
-        $this->admin_model->edit_data_customer($customer_id,$data,'customer');
+    public function edit_data_customer()
+    {
+        $customer_id    = $this->input->post('customer_id');
+        $username       = $this->input->post('username');
+        $name           = $this->input->post('name');
+        $address        = $this->input->post('address');
+        $contact_person = $this->input->post('contact_person');
+        $email          = $this->input->post('email');
+        $ip_address     = $this->input->post('ip_address');
+        $this->admin_model->edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address);
         redirect('admin/customers');
     }
 

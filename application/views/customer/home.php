@@ -94,7 +94,7 @@
 				</div>
 				<div class="col-xl-6 col-lg-6 col-sm-6">
 					<div class="row">
-						<div class="col-xl-6 col-lg-6 col-sm-6">
+						<div class="col-xl-6 col-lg-6 col-sm-6"> 
 							<div class="card bg-danger">
 								<div class="card-body">
 									<div class="px-3 py-3">
