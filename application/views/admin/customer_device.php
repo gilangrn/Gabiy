@@ -95,6 +95,7 @@
 <footer class="footer footer-static footer-light">
 	<p class="clearfix text-muted text-sm-center px-2"><span>Copyright  &copy; <?php echo date('Y')?> <a href="https://sdtech.co.id/" target="_blank" class="text-bold-800 primary darken-2">PT Sinergi Digital Teknologi </a>, All rights reserved. </span></p>
 </footer>
+</div>
 <!-- modal edit customer -->
 <?php
 foreach ($device->result_array() as $u): 
@@ -109,10 +110,10 @@ foreach ($device->result_array() as $u):
 	?>
 	<div class="modal fade text-left" id="modal_edit<?php echo $id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
 		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
+			<div class="modal-content border-success" style="border-radius: 8px;">
+				<div class="modal-header bg-success white">
 					<h3 class="modal-title">Edit Customer Device</h3>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<button type="button" class="close white" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
@@ -177,8 +178,8 @@ foreach ($device->result_array() as $u):
 					</div>
 				</div>
 				<div class="modal-footer">
-					<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-					<input type="submit" class="btn btn-outline-primary btn-lg" value="Edit">
+					<input type="reset" class="btn btn-secondary btn-lg" data-dismiss="modal" value="Close">
+					<input type="submit" class="btn btn-success btn-lg" value="Edit">
 				</div>
 				<?php echo form_close() ?>
 			</div>
@@ -186,89 +187,36 @@ foreach ($device->result_array() as $u):
 	</div>
 <?php endforeach;?>
 <!-- akhir modal edit customer -->
-<!-- modal detail customer -->
-<div class="modal fade text-left" id="detailCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
-	<div class="modal-dialog modal-lg" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h3 class="modal-title">Detail Device Customer</h3>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<!-- form modal detail customer-->
-			<div class="col-xl-12 col-sm-12 col-lg-12">
-				<div class="justified-tabs">
-					<ul class="nav nav-tabs nav-justified">
-						<li class="nav-item">
-							<a class="nav-link" id="home-tab3" data-toggle="tab" href="#ac" aria-controls="ac" aria-expanded="true">AC</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" id="profile-tab3" data-toggle="tab" href="#tv" aria-controls="tv" aria-expanded="false">TV</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="about-tab3" data-toggle="tab" href="#lamp" aria-controls="lamp" aria-expanded="false">Lamp</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="about-tab3" data-toggle="tab" href="#lockdoor" aria-controls="lockdoor" aria-expanded="false">Lamp</a>
-						</li>
-					</ul>
-					<div class="tab-content px-1 pt-1">
-						<div role="tabpanel" class="tab-pane" id="ac" aria-labelledby="home-tab3" aria-expanded="true">
-							<p>Candy canes donut chupa chups candy canes lemon drops oat cake wafer. Cotton candy candy canes marzipan carrot cake. Sesame snaps lemon drops candy marzipan donut brownie tootsie roll. Icing croissant bonbon biscuit gummi bears.</p>
-						</div>
-						<div class="tab-pane active show" id="tv" role="tabpanel" aria-labelledby="profile-tab3" aria-expanded="false">
-							<p>Pudding candy canes sugar plum cookie chocolate cake powder croissant. Carrot cake tiramisu danish candy cake muffin croissant tart dessert. Tiramisu caramels candy canes chocolate cake sweet roll liquorice icing cupcake.</p>
-						</div>
-						<div class="tab-pane" id="lamp" role="tabpanel" aria-labelledby="about-tab3" aria-expanded="false">
-							<p>Carrot cake dragée chocolate. Lemon drops ice cream wafer gummies dragée. Chocolate bar liquorice cheesecake cookie chupa chups marshmallow oat cake biscuit. Dessert toffee fruitcake ice cream powder tootsie roll cake.</p>
-						</div>
-						<div class="tab-pane" id="lockdoor" role="tabpanel" aria-labelledby="about-tab3" aria-expanded="false">
-							<p>Carrot cake dragée chocolate. Lemon drops ice cream wafer gummies dragée. Chocolate bar liquorice cheesecake cookie chupa chups marshmallow oat cake biscuit. Dessert toffee fruitcake ice cream powder tootsie roll cake.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-				<input type="submit" class="btn btn-outline-primary btn-lg" value="Edit">
-			</div>
-		</div>
-	</div>
-</div>
-<!-- akhir modal detail customer -->
+
+	<!-- ============ MODAL HAPUS CUSTOMER =============== -->
 <?php
 foreach ($device->result_array() as $u): 
 	$id               =$u['id'];
 	$customer_id  =$u['customer_id'];
 	$device_alias =$u['device_alias'];
-	$pin            =$u['pin'];
-	$description  =$u['description'];
-	$keyword        =$u['keyword'];
 	?>
-	<!-- ============ MODAL HAPUS CUSTOMER =============== -->
 	<div class="modal fade" id="modal_hapus<?php echo $id;?>" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
 		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
+			<div class="modal-content border-red" style="border-radius: 8px;">
+				<div class="modal-header bg-danger white">
+					<h3 class="modal-title" id="myModalLabel">Delete Customer</h3>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-					<h3 class="modal-title" id="myModalLabel">Hapus Customer</h3>
 				</div>
 				<?php echo form_open('admin/hapus_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
 				<div class="modal-body">
-					<p>Anda yakin mau menghapus <b><?php echo $device_alias;?></b></p>
+					<p>Anda yakin mau menghapus <b><?php echo $device_alias;?> ?</b></p>
 				</div>
 				<div class="modal-footer">
 					<input type="hidden" name="id" value="<?php echo $id;?>">
-					<button class="btn" data-dismiss="modal" aria-hidden="true">Tutup</button>
-					<button id="deleteCustomer" class="btn btn-danger">Hapus</button>
+					<button class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Close</button>
+					<button id="deleteCustomer" class="btn btn-danger">Delete</button>
 				</div>
 				<?php echo form_close() ?>
 			</div>
 		</div>
 	</div>
 <?php endforeach;?>
-<!--END MODAL HAPUS CUSTOMER-->
+<!-- ================= END MODAL HAPUS CUSTOMER ===============-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
