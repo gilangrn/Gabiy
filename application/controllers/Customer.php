@@ -37,7 +37,7 @@ class Customer extends CI_Controller {
         $this->load->view('js');
     }
 
-	public function lantaiatas()
+	/*public function lantaiatas()
 	{
 		$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
@@ -45,7 +45,7 @@ class Customer extends CI_Controller {
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/lantaiatas/content',$data);
     	$this->load->view('js');
-	}
+	}*/
 
 	//profil, notification, inbox
 	public function profil()
@@ -73,7 +73,7 @@ class Customer extends CI_Controller {
         redirect('customer/profil');
     }
 
- 	public function notification()
+ 	/*public function notification()
   	{
     	$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
@@ -81,9 +81,9 @@ class Customer extends CI_Controller {
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/profil/notification',$data);
     	$this->load->view('js');
-  	}
+  	}*/
 
-  	public function inbox()
+  	/*public function inbox()
   	{
     	$this->load->view('head');
     	$data['username'] = $this->session->userdata('username');
@@ -91,7 +91,7 @@ class Customer extends CI_Controller {
     	$this->load->view('customer/menu',$data);
     	$this->load->view('customer/profil/inbox',$data);
    		$this->load->view('js');
-  	}
+  	}*/
 
     public function getstate($device_id){
       $devicedata = $this->db->get_where('customer_device',array('id'=>$device_id))->row();

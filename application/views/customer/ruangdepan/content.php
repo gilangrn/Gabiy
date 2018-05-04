@@ -46,44 +46,6 @@
 
                   </script>
                 </div>
-                <div class="row">
-                  <div class="col-md-3">
-                  </div>
-                  <div class="col-sm-6 col-xl-3 col-lg-6 col-12">
-                    <div class="card bg-danger">
-                      <div class="card-body">
-                        <div class="px-3 py-3">
-                          <div class="media">
-                            <div class="media-body text-left white">
-                              <h3 class="mb-1">2557 <sup>hrs</sup></h3>
-                              <span>Total Pemakaian Lampu</span>
-                            </div>
-                            <div class="media-right align-self-center">
-                              <i class="icon-bulb font-large-2 float-right white"></i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-xl-3 col-lg-6 col-12">
-                    <div class="card bg-success">
-                      <div class="card-body">
-                        <div class="px-3 py-3">
-                          <div class="media">
-                            <div class="media-body text-left white">
-                              <h3 class="mb-1">974 <sup>hrs</sup></h3>
-                              <span>Total Pemakaian AC</span>
-                            </div>
-                            <div class="media-right align-self-center">
-                              <i class="ft-wind white font-large-2 float-right"></i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <hr style="width: 50%; border-color: #E3E3E3;">
                 <!-- Fabs (Floating Action Buttons) in cards start -->
                 <section id="weather-examples">
@@ -96,6 +58,7 @@
                       $pin=$u['pin'];
                       $description=$u['description'];
                       $kategori=$u['kategori'];
+                      $pemakaian=$u['pemakaian']
                       ?>
                       <div class="col-lg-3 col-md-12 col-sm-12 hidden-lg">
                        <div class="card bg">
@@ -112,9 +75,10 @@
 
                                   <span class="badge badge-info"><?php echo $u['id'];?></span>
                                 </h3>
-                                <h3 class="mb-1 "><?php echo $device_alias;?></h3>
-                                <p><?php echo $description;?></p>
-                                <h4 id="beg2">0:0</h4>
+                                <h4><?php echo $device_alias;?></h4>
+                                <p><i><?php echo $description;?></i></p>
+                                <p>Total Pemakaian</p>
+                                <h3 class="badge badge-danger"><?= $pemakaian; ?></h3>
                               </div>
                               <div class="media-right">
                                 <label class="switch">
