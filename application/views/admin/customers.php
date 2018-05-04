@@ -261,10 +261,6 @@ $no = 1;
   foreach ($customer->result_array() as $i): 
     $customer_id=$i['customer_id'];
     $name=$i['name'];
-    $ip_address=$i['ip_address'];
-    $contact_person=$i['contact_person'];
-    $email=$i['email'];
-    $address=$i['address'];
     ?>
 <!-- ============ MODAL HAPUS CUSTOMER =============== -->
 <div class="modal fade" id="modal_hapus<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
@@ -370,8 +366,8 @@ $no = 1;
 <!--=========== akhir modal add customer ============-->
 <!-- ========== modal add new device ================-->
 <?php
-  foreach ($customer as $i): 
-
+  foreach ($customer->result_array() as $i):  
+    $customer_id    =$i['customer_id'];
     ?>
 <div class="modal fade text-left" id="addDeviceModal<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
   <div class="modal-dialog" role="document">
