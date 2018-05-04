@@ -7,11 +7,6 @@
 						<div class="card">
 							<div class="card-header">
 								<span class="col-md-6 col-sm-12 pull-left mb-2" style="font-size: 25px;text-align: left;">Table Customer Device</span>
-								<div class="pull-right">
-									<button type="button" class="mr-1 mb-1 btn btn-raised btn-outline-success btn-min-width" data-toggle="modal" data-target="#addDeviceModal">
-										<i class="ft-user-plus"></i> Add Customer
-									</button>
-								</div>
 							</div>
 							<div class="card-body collapse show">
 								<div class="card-block card-dashboard">
@@ -191,80 +186,6 @@ foreach ($device->result_array() as $u):
 	</div>
 <?php endforeach;?>
 <!-- akhir modal edit customer -->
-<!-- ========== modal add new customer ================-->
-<div class="modal fade text-left" id="addDeviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content border-success" style="border-radius: 8px;">
-			<div class="modal-header bg-success">
-				<h3 class="modal-title white">Add Customer Device</h3>
-				<button type="button" class="close white" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<!-- form modal add customer-->
-			<?php echo form_open('admin/tambah_data_device',array('class'=>'form-horizontal','method'=>'post')); ?>
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-6">
-						<div class="form-group">
-							<label>Customer Id</label>
-							<!-- id dari cutomer device -->
-							<input name="customer_id" class="form-control" type="text" placeholder="Customer Id" required>
-						</div>
-					</div>
-					<div class="col-6">
-						<div class="form-group">
-							<label>Pin</label>
-							<input name="pin" class="form-control" type="text" placeholder="Pin" required>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-6">
-						<div class="form-group">
-							<label>Nama Device</label>
-							<input name="nama_device" class="form-control" type="text" placeholder="Nama Device" required>
-						</div>
-					</div>
-					<div class="col-6">
-						<div class="form-group">
-							<label>Device Alias</label>
-							<input name="device_alias" class="form-control" type="text" placeholder="Device Alias" required>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-6">
-						<label>Keyword</label>
-						<div class="form-group">
-							<input type="text" value="" name="taging" data-role="tagsinput"/>
-						</div>
-					</div>
-					<div class="col-6">
-						<div class="form-group">
-							<label>Kategori</label>
-							<input name="kategori" class="form-control" type="text" placeholder="Kategori" required>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12">
-						<div class="form-group">
-							<label>Deskripsi</label>
-							<textarea name="description" rows="5" class="form-control" placeholder="Deskripsi"></textarea>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-				<input type="submit" class="btn btn-outline-success btn-lg" value="Add">
-			</div>
-			<?php echo form_close() ?>
-		</div>
-	</div>
-</div>
-<!--=========== akhir modal add customer ============-->
 <!-- modal detail customer -->
 <div class="modal fade text-left" id="detailCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">
