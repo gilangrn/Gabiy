@@ -37,7 +37,7 @@
 								Email : <a class="badge badge-success" href="#email"><i class="ft-edit"></i></a>
 								<p><?php echo $email; ?></p>
 								IP :
-								<p><?php echo $ip_address; ?>/p>
+								<p><?php echo $ip_address; ?></p>
 							</div>
 						</div>
 					</div>
