@@ -1,3 +1,8 @@
+<script>
+  var base_url =' <?php echo base_url(); ?>';
+
+</script>
+
           <div class="main-panel">
             <div class="main-content">
               <div class="content-wrapper">
@@ -112,20 +117,21 @@
                                 <h4 id="beg2">0:0</h4>
                               </div>
                               <div class="media-right">
-                                <input
-                                type="checkbox"
-                                id="<?php echo $u['id'] ?>"
-                                onchange='oncheckchange(this,<?php echo $u['pin'];?>,"<?php echo $u['id'];?>","<?php echo $u['customer_id'];?>")'
-    <?php 
-      if($u['state']=="true"){
-        echo 'checked';
-      }
-      else
+                                <label class="switch">
+                                  <input
+                                  type="checkbox"
+                                  id="<?php echo $u['id'] ?>"
+                                  onchange='oncheckchange(this,<?php echo $u['pin'];?>,"<?php echo $u['id'];?>","<?php echo $u['customer_id'];?>")'
+                                    <?php 
+                                      if($u['state']=="true"){
+                                        echo 'checked';
+                                      }
+                                      else
 
-    ?>
-
-                          
-                                >
+                                    ?>
+                                  >
+                                  <span class="slider round"></span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -151,21 +157,24 @@
     <script type="text/javascript" src="http://rnd.lenna.id:3000/socket.io/socket.io.js"></script>
 
     <script>
+      
       var socket = io.connect("http://rnd.lenna.id:3000");
 
             socket.on("device_event", function(data){
-              var base_url = window.location.origin;
-
+              // var base_url = window.location.origin;
+              // console.log(base_url);
               arr = JSON.parse(data);
               $.ajax({
-                url: base_url+"/Gabiy/customer/getstate/"+arr.deviceid,
+                url: base_url+"/customer/getstate/"+arr.deviceid,
                success: function(result){
 
                   if(result=='true'){
-                    $("#"+arr.deviceid).attr('checked',true);   
+                    // $('#CD0001').prop('checked', true);
+                    $("#"+arr.deviceid).prop('checked',true);   
                   }
                   else if(result=='false'){
-                    $("#"+arr.deviceid).removeAttr("checked");
+                    // $("#"+arr.deviceid).removeAttr("checked");
+                    $("#"+arr.deviceid).prop('checked',false);  
                   }
 
 
@@ -185,11 +194,11 @@
               state : x.is(":checked")
             };
 
-            var base_url = window.location.origin;
+            // var base_url = window.location.origin;
 
 
           $.ajax({
-                url: base_url+"/Gabiy/customer/setstate/",
+                url: base_url+"/customer/setstate/",
                 type : "POST",
                 data :dataString,
 
