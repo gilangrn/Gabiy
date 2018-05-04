@@ -492,3 +492,24 @@
     $('#example').DataTable();
   } );
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="<?php echo base_url('assets/js/bootstrap-tagsinput.min.js')?>"></script>
+<script>
+  $(function() {
+    $('input, select').on('change', function(event) {
+      var $element = $(event.target),
+      $container = $element.closest('.example');
+
+      if (!$element.data('tagsinput'))
+        return;
+
+      var val = $element.val();
+      if (val === null)
+        val = "null";
+      $('code', $('pre.val', $container)).html( ($.isArray(val) ? JSON.stringify(val) : "\"" + val.replace('"', '\\"') + "\"") );
+      $('code', $('pre.items', $container)).html(JSON.stringify($element.tagsinput('items')));
+    }).trigger('change');
+  });
+</script>
