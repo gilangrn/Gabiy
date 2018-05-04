@@ -28,10 +28,9 @@ class Admin extends CI_Controller
     public function customers()
     {
         $this->load->library('generate_token');
-        $data['token_get']= $this->generate_token->get_token(50);
-        $data['username'] = $this->session->userdata('username');
-        $data['customer'] = $this->admin_model->tampil_data_customer();
-
+        $data['token_get']  = $this->generate_token->get_token(50);
+        $data['username']   = $this->session->userdata('username');
+        $data['customer']   = $this->admin_model->tampil_data_customer();
         $this->load->view('head');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/customers', $data);
@@ -48,9 +47,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/menu', $data);
         $data['device'] = $this->admin_model->tampil_data_device();
         $this->load->view('admin/customer_device', $data);
-        //$this->load->view('footer');
         $this->load->view('rightmenu');
-        /*$this->load->view('settingtheme');*/
         $this->load->view('js');
     }
 
@@ -117,7 +114,6 @@ class Admin extends CI_Controller
     public function tambah_data_device()
     {
         $id           = $this->format_id_model->IDCustomerDevice();
-
         $nama_device  = $this->input->post('nama_device');
         $device_alias = $this->input->post('device_alias');
         $pin          = $this->input->post('pin');
@@ -138,9 +134,8 @@ class Admin extends CI_Controller
         );
 
         $this->admin_model->tambah_data_device($data);
-
         $this->session->set_flashdata('info','true');
-        redirect('admin/customer_device');
+        redirect('admin/customers');
     }
 
     public function edit_data_device()
