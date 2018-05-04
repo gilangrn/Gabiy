@@ -10,7 +10,13 @@
   <meta name="description" content="Apex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
   <meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
   <meta name="author" content="PIXINVENT">
-  <title>Admin</title>
+  <title>Gabiy | 
+    <?php if($this->uri->segment(2)=="home"){echo 'Home';}?>
+    <?php if($this->uri->segment(2)=="devicelist"){echo 'Device List';}?>
+    <?php if($this->uri->segment(2)=="profil"){echo 'Edit Profil';}?>
+    <?php if($this->uri->segment(2)=="customers"){echo 'Customers';}?>
+    <?php if($this->uri->segment(2)=="customer_device"){echo 'Customer Device';}?>
+  </title>
   <link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url('assets/img/ico/apple-icon-60.html')?>">
   <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url('assets/img/ico/apple-icon-76.html')?>">
   <link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url('assets/img/ico/apple-icon-120.html')?>">
