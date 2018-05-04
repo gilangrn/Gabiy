@@ -12,21 +12,11 @@
 								<br />
 								<input type="file" class="form-control-file centered-obj" id="basicInputFile">
 								<br>
-								<a href="#" class="btn btn-success centered-obj">Save</a>
+								<a href="#" class="btn btn-success centered-obj">Saveasd</a>
 							</div>
 						</div>
 					</div>
 				</div>
-                  <?php
-                  	foreach ($customer->result_array() as $u): 
-                       $customer_id=$u['customer_id'];
-                       $username=$u['username'];
-                       $name=$u['name'];
-                       $ip_address=$u['ip_address'];
-                       $contact_person=$u['contact_person'];
-                       $email=$u['email'];
-                       $address=$u['address'];
-                  ?>
 				<div class="col-md-4">
 					<div class="card">
 						<div class="card-body">
@@ -35,9 +25,9 @@
 								Username :
 								<p><?php echo $username; ?></p>
 								Email : <a class="badge badge-success" href="#email"><i class="ft-edit"></i></a>
-								<p><?php echo $email;?></p>
+								<p>email@gmail.com</p>
 								IP :
-								<p><?php echo $ip_address;?></p>
+								<p>192.168.100.43</p>
 							</div>
 						</div>
 					</div>
@@ -48,13 +38,13 @@
 							<div class="px-3 py-3">
 								<h4>Other Information</h4>
 								Customer ID :
-								<p><?php echo $customer_id;?></p>
+								<p>1</p>
 								Nama :
-								<p><?php echo $name;?></p>
+								<p>Nama Customer</p>
 								Alamat : 
-								<p><?php echo $address?></p>
+								<p>Ruko Kebayoran Square Blok C2</p>
 								Contact Person : <a class="badge badge-success" href="#contact"><i class="ft-edit"></i></a>
-								<p><?php echo $contact_person;?></p>
+								<p>081234567890</p>
 							</div>
 						</div>
 					</div>
@@ -66,31 +56,28 @@
 					<div class="card">
 						<div class="card-body">
 							<div class="px-3 py-3">
-								<?php echo form_open('customer/edit_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
-									<div class="form-body">
-										<input type="hidden" id="customer_id" name="customer_id" value="<?php echo $customer_id;?>">
-										<input type="hidden" id="username" name="username" value="<?php echo $username;?>">
-										<input type="hidden" id="name" name="name" value="<?php echo $name;?>">
-										<input type="hidden" id="ip_address" name="ip_address" value="<?php echo $ip_address;?>">
-										<input type="hidden" id="address" name="address" value="<?php echo $address;?>">
-										<div class="form-group">
-											<label for="email">Email</label>
-											<input type="text" id="email" class="form-control"  name="email" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Email" value="<?php echo $email;?>">
-										</div>
-										<div class="form-group">
-											<label for="contact">Contact Person</label>
-											<input type="text" id="contact_person" class="form-control"  name="contact_person" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Nomor Telepon" value="<?php echo $contact_person;?>">
-										</div>
-										<button type="submit" class="btn btn-raised btn-primary">
-											<i class="fa fa-check-square-o"></i> Save
-										</button>
-									</div>
-                      			<?php echo form_close() ?>
+								<form class="form">
+							<div class="form-body">
+
+								<div class="form-group">
+									<label for="email">Email</label>
+									<input type="text" id="email" class="form-control"  name="email" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Email" value="email@gmail.com">
+								</div>
+
+								<div class="form-group">
+									<label for="contact">Contact Person</label>
+									<input type="text" id="contact" class="form-control"  name="contact" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Nomor Telepon" value="081234567890">
+								</div>
+								
+								<button type="button" class="btn btn-raised btn-primary">
+									<i class="fa fa-check-square-o"></i> Save
+								</button>
+							</div>
+						</form>
 							</div>
 						</div>
 					</div>
 				</div>
-                <?php endforeach;?>
 			</div>
 		</div>
 	</div>

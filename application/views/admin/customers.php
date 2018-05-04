@@ -202,11 +202,11 @@
             </div>
           </div>
         </form>
-        <?php foreach ($detailcustomer as $u) : ?>
+        <?php foreach ($detailcustomer as $u): ?>
         <td>
           <?php echo $this->session->kategori; ?>
         </td>
-      <?php endforeach ?>
+      <?php endforeach; ?>
       </div>
       <div class="modal-footer">
         <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
@@ -215,7 +215,7 @@
     </div>
   </div>
 </div>
-<?php endforeach ?> 
+<?php endforeach; ?> 
 <!-- akhir modal detail customer -->
 <?php
   foreach ($customer->result_array() as $i): 
