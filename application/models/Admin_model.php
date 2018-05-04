@@ -2,13 +2,21 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin_model extends CI_Model {
 
-    //data customer
+  //data customer
   public function tampil_data_customer() {
     $this->db->select('*');
     $this->db->from('customer');
     $this->db->where('level','2');
     $this->db->order_by('customer_id','DESC');
     return $this->db->get();
+  }
+
+  public function detail_customer(){
+    
+      $sql = "select a.*,b.* from customer a INNER JOIN customer_device b on a.customer_id = b.customer_id where level = 2";
+      $query = $this->db->query($sql);
+
+      return $query->result(); 
   }
 
   public function tambah_data_customer($data) {
