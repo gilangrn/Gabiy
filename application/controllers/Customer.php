@@ -70,7 +70,7 @@ class Customer extends CI_Controller {
         $email          = $this->input->post('email');
         $ip_address     = $this->input->post('ip_address');
         $this->admin_model->edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address);
-        redirect('admin/customers');
+        redirect('customer/profil');
     }
 
  	public function notification()
