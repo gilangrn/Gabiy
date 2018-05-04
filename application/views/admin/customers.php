@@ -23,10 +23,6 @@
                         <th>Customer ID</th>
                         <th>Username</th>
                         <th>Name</th>
-                        <!-- <th>IP Address</th>
-                        <th>Contact Person</th>
-                        <th>Email</th>
-                        <th>Address</th> -->
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -37,10 +33,6 @@
                          $customer_id=$u['customer_id'];
                          $username=$u['username'];
                          $name=$u['name'];
-                         $ip_address=$u['ip_address'];
-                         $contact_person=$u['contact_person'];
-                         $email=$u['email'];
-                         $address=$u['address'];
                          ?>
                       <tr>
                         <td>
@@ -55,18 +47,6 @@
                         <td>
                           <?php echo $name; ?>
                         </td>
-                       <!--  <td>
-                         <?php echo $ip_address; ?>
-                       </td>
-                       <td>
-                         <?php echo $contact_person; ?>
-                       </td>
-                       <td>
-                         <?php echo $email; ?>
-                       </td>
-                       <td>
-                         <?php echo $address; ?>
-                       </td> -->
                         <td>
                           <!-- tombol edit customer-->
                           <button type="button" id="editCustomer" class="btn mr-1 mb-1 btn-outline-success btn-sm" data-toggle="modal" data-target="#modal_edit<?php echo $customer_id;?>">
@@ -102,7 +82,7 @@
   <p class="clearfix text-muted text-sm-center px-2"><span>Copyright  &copy; <?php echo date('Y')?> <a href="https://sdtech.co.id/" target="_blank" class="text-bold-800 primary darken-2">PT Sinergi Digital Teknologi </a>, All rights reserved. </span></p>
 </footer>
 </div>
-<!-- modal edit customer -->
+<!-- =============== MODAL EDIT CUSTOMER ================ -->
 <?php
   foreach ($customer->result_array() as $i): 
     $customer_id    =$i['customer_id'];
@@ -181,8 +161,8 @@
   </div>
 </div>
 <?php endforeach;?>
-<!-- akhir modal edit customer -->
-<!-- modal detail customer -->
+<!-- ================ AKHIR MODAL EDIT CUSTOMER =================== -->
+<!-- ================ MODAL DETAIL CUSTOMER ================== -->
 <?php
 $no = 1;
   foreach ($customer->result_array() as $u):
@@ -205,15 +185,6 @@ $no = 1;
       </div>
       <!-- form modal detail customer-->
       <div class="modal-body col-xl-12 col-sm-12 col-lg-12" style="max-height: calc(100vh - 210px); overflow-y: auto;">
-       <!--  <form>
-         <div class="position-relative has-icon-right mt-2 mb-2">
-           <input type="text" placeholder="Search Device" class="form-control round" />
-           <div class="form-control-position">
-             <i class="ft-search"></i>
-           </div>
-         </div>
-       </form> -->
-       <!--Responsive tables Starts-->
           <div class="card-body">
               <div class="card-block">
                   <table class="table table-responsive-sm">
@@ -256,13 +227,13 @@ $no = 1;
   </div>
 </div>
 <?php endforeach; ?> 
-<!-- akhir modal detail customer -->
+<!-- ================= END MODAL DETAIL CUSTOMER ==================== -->
+<!-- ============ MODAL HAPUS CUSTOMER =============== -->
 <?php
   foreach ($customer->result_array() as $i): 
     $customer_id=$i['customer_id'];
     $name=$i['name'];
     ?>
-<!-- ============ MODAL HAPUS CUSTOMER =============== -->
 <div class="modal fade" id="modal_hapus<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content border-red" style="border-radius: 8px;">
@@ -284,13 +255,8 @@ $no = 1;
   </div>
 </div>
 <?php endforeach;?>
-<!--END MODAL HAPUS CUSTOMER-->
-<!--  </div>
-  </div>
-  </div> -->
-<!-- </section> -->
-<!--Table customer -->
-<!-- ========== modal add new customer ================-->
+<!-- ================== END MODAL HAPUS CUSTOMER ================= -->
+<!-- ========== MODAL ADD NEW CUSTOMER ================-->
 <div class="modal fade text-left" id="addCustomersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content border-success" style="border-radius: 8px;">
@@ -300,7 +266,6 @@ $no = 1;
         <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <!-- form modal add customer-->
       <?php echo form_open('admin/tambah_data_customer',array('class'=>'form-horizontal','method'=>'post')); ?>
       <div class="modal-body">
         <div class="row">
@@ -363,8 +328,8 @@ $no = 1;
     </div>
   </div>
 </div>
-<!--=========== akhir modal add customer ============-->
-<!-- ========== modal add new device ================-->
+<!--=========== END MODAL ADD CUSTOMER ============-->
+<!-- ========== MODAL ADD NEW DEVICE ================-->
 <?php
   foreach ($customer->result_array() as $i):  
     $customer_id    =$i['customer_id'];
@@ -412,15 +377,22 @@ $no = 1;
         </div>
         <div class="row">
           <div class="col-6">
-            <label>Keyword</label>
             <div class="form-group">
-              <input type="text" value="" name="taging" data-role="tagsinput"/>
+            <label>Keyword</label>
+              <input type="text" class="tagging" value="" name="taging" data-role="tagsinput"/>
             </div>
           </div>
           <div class="col-6">
             <div class="form-group">
               <label>Kategori</label>
-              <input name="kategori" class="form-control" type="text" placeholder="Kategori" required>
+              <fieldset class="form-group position-relative">
+                <select class="form-control form-control-md" name="kategori" required>
+                  <option selected="">Select Category</option>
+                  <option value="AC">AC</option>
+                  <option value="Lamp">Lamp</option>
+                  <option value="TV">TV</option>
+                </select>
+              </fieldset>
             </div>
           </div>
         </div>
@@ -442,7 +414,7 @@ $no = 1;
   </div>
 </div>
 <?php endforeach; ?>
-<!--=========== akhir modal add new device ============-->
+<!--=========== END MODAL ADD NEW DEVICE  ============-->
 <script>
   $(document).ready(function() {
     $('#example').DataTable();
