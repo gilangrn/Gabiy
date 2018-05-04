@@ -9,7 +9,7 @@
     <meta name="description" content="Apex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Login Page - Apex responsive bootstrap 4 admin template</title>
+    <title>Gabiy | Login Page</title>
     <link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url('assets/img/ico/apple-icon-60.html') ?>">
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/ico/apple-icon-76.html')?>">
     <link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url('assets/img/ico/apple-icon-120.html') ?>">
