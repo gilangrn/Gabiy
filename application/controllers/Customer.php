@@ -54,10 +54,24 @@ class Customer extends CI_Controller {
   	$data['username'] = $this->session->userdata('username');
   	$data['token'] = $this->session->userdata('token');
     $data['customer_device']   = $this->customer_model->tampil_data_customer_device();
+    $data['customer']   = $this->customer_model->tampil_data_customer();
   	$this->load->view('customer/menu',$data);
   	$this->load->view('customer/profil/content',$data);
   	$this->load->view('js');
   	}
+
+    public function edit_data_customer()
+    {
+        $customer_id    = $this->input->post('customer_id');
+        $username       = $this->input->post('username');
+        $name           = $this->input->post('name');
+        $address        = $this->input->post('address');
+        $contact_person = $this->input->post('contact_person');
+        $email          = $this->input->post('email');
+        $ip_address     = $this->input->post('ip_address');
+        $this->admin_model->edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address);
+        redirect('admin/customers');
+    }
 
  	public function notification()
   	{
