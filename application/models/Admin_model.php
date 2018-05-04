@@ -1,21 +1,25 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin_model extends CI_Model {
-    
-    //data customer
-    public function tampil_data_customer() {
-      $this->db->select('*');
-      $this->db->from('customer');
-      $this->db->where('level','2');
-      $this->db->order_by('customer_id','DESC');
-      return $this->db->get();
-    }
 
-    public function tambah_data_customer($data) {
-        $this->db->insert('customer',$data);
-    }
+  //data customer
+  public function tampil_data_customer() {
+    $this->db->select('*');
+    $this->db->from('customer');
+    $this->db->where('level','2');
+    $this->db->order_by('customer_id','DESC');
+    return $this->db->get();
+  }
 
+  public function detail_customer(){
+      $sql = "select a.*,b.* from customer a INNER JOIN customer_device b on a.customer_id = b.customer_id where level = 2";
+      $query = $this->db->query($sql);
+      return $query->result(); 
+  }
 
+  public function tambah_data_customer($data) {
+    $this->db->insert('customer',$data);
+  }
 
     public function edit_data_customer($customer_id, $username, $name, $address, $contact_person, $email, $ip_address) {
         $hasil = $this->db->query("UPDATE customer SET username='$username',name='$name',address='$address',contact_person='$contact_person',email='$email',ip_address='$ip_address' WHERE customer_id='$customer_id'");
