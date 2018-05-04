@@ -444,8 +444,3 @@ $no = 1;
   </div>
 </div>
 <!--=========== akhir modal add new device ============-->
-<script>
-  $(document).ready(function() {
-    $('#example').DataTable();
-  } );
-</script>
