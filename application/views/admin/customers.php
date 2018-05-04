@@ -81,7 +81,7 @@
                           <i class="ft-info"></i> Detail
                           </button>
                           <!-- tombol add device -->
-                          <button type="button" class="btn mr-1 mb-1 btn-outline-secondary btn-sm" data-toggle="modal" data-target="#addDeviceModal">
+                          <button type="button" class="btn mr-1 mb-1 btn-outline-secondary btn-sm" data-toggle="modal" data-target="#addDeviceModal<?php echo $customer_id;?>">
                             <i class="ft-user-plus"></i> Add Device
                           </button>
                         </td>
@@ -134,8 +134,6 @@
                 <input type="hidden" class="form-control" id="customer_id" name="customer_id" value="<?php echo($customer_id); ?>">
               </div>
             </div>
-          <!-- </div>
-          <div class="row"> -->
             <div class="col-6">
               <div class="form-group">
                 <label>Email</label>
@@ -263,10 +261,6 @@ $no = 1;
   foreach ($customer->result_array() as $i): 
     $customer_id=$i['customer_id'];
     $name=$i['name'];
-    $ip_address=$i['ip_address'];
-    $contact_person=$i['contact_person'];
-    $email=$i['email'];
-    $address=$i['address'];
     ?>
 <!-- ============ MODAL HAPUS CUSTOMER =============== -->
 <div class="modal fade" id="modal_hapus<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
@@ -371,10 +365,14 @@ $no = 1;
 </div>
 <!--=========== akhir modal add customer ============-->
 <!-- ========== modal add new device ================-->
-<div class="modal fade text-left" id="addDeviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+<?php
+  foreach ($customer->result_array() as $i):  
+    $customer_id    =$i['customer_id'];
+    ?>
+<div class="modal fade text-left" id="addDeviceModal<?php echo $customer_id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content border-success" style="border-radius: 8px;">
-      <div class="modal-header bg-success">
+    <div class="modal-content border-secondary" style="border-radius: 8px;">
+      <div class="modal-header bg-secondary">
         <h3 class="modal-title white">Add Customer Device</h3>
         <button type="button" class="close white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -388,7 +386,7 @@ $no = 1;
             <div class="form-group">
               <label>Customer Id</label>
               <!-- id dari cutomer device -->
-              <input name="customer_id" class="form-control" type="text" placeholder="Customer Id" required>
+              <input name="customer_id" class="form-control" type="text" value="<?php echo $customer_id;?>" required readonly>
             </div>
           </div>
           <div class="col-6">
@@ -437,12 +435,13 @@ $no = 1;
       </div>
       <div class="modal-footer">
         <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
-        <input type="submit" class="btn btn-outline-success btn-lg" value="Add">
+        <input type="submit" class="btn btn-outline-secondary btn-lg" value="Add">
       </div>
       <?php echo form_close() ?>
     </div>
   </div>
 </div>
+<?php endforeach; ?>
 <!--=========== akhir modal add new device ============-->
 <script>
   $(document).ready(function() {
