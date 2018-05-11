@@ -389,7 +389,7 @@ $no = 1;
                 <select class="form-control form-control-md" name="kategori" required>
                   <option selected="">Select Category</option>
                   <option value="AC">AC</option>
-                  <option value="Lamp">Lamp</option>
+                  <option value="Lampu">Lampu</option>
                   <option value="TV">TV</option>
                 </select>
               </fieldset>
