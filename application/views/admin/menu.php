@@ -33,13 +33,14 @@
                 <span data-i18n="" class="menu-title">Home</span>
               </a>
             </li>
-            <li class="<?php if($this->uri->segment(2)=="devicelist"){echo 'active';}?>"><a href="<?php echo site_url('customer/devicelist/'.$this->session->userdata('token'))?>" class="menu-item"><i class="ft-tv"></i>
-                <span data-i18n="" class="menu-title">List Device</span></a>
+            <li class="<?php if($this->uri->segment(2)=="devicelist"){echo 'active';}?>"><a href="<?php echo site_url('admin/customers/'.$this->session->userdata('token'))?>" class="menu-item"><i class="ft-user"></i>
+                <span data-i18n="" class="menu-title">Customers</span></a>
+                </li>
+            <li class="<?php if($this->uri->segment(2)=="devicelist"){echo 'active';}?>"><a href="<?php echo site_url('admin/customer_device/'.$this->session->userdata('token'))?>" class="menu-item"><i class="ft-tv"></i>
+                <span data-i18n="" class="menu-title">Customer Device</span></a>
                 </li>
             <li class="has-sub nav-item <?php if($this->uri->segment(2)=="profil" OR $this->uri->segment(2)=="notifications" OR $this->uri->segment(2)=="inbox" OR $this->uri->segment(2)=="keluar" ){echo 'open';}?>"><a href="#"><i class="ft-user"></i><span data-i18n="" class="menu-title">Account</span></a>
               <ul class="menu-content">
-                <li class="<?php if($this->uri->segment(2)=="profil"){echo 'active';}?>"><a href="<?php echo site_url('customer/profil/'.$this->session->userdata('token'))?>" class="menu-item">Edit Profil</a>
-                </li>
                 <li><a href="<?php echo site_url('login/keluar')?>" class="menu-item">Logout</a>
                 </li>
               </ul>
